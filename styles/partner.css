@@ -1,0 +1,890 @@
+/* Partner Pages Specific Styles */
+
+.partner-hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.partner-hero.christmas-theme {
+    background: linear-gradient(135deg, #ff9a56 0%, #ff6b35 100%);
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><pattern id="music-pattern" patternUnits="userSpaceOnUse" width="100" height="100"><rect width="100" height="100" fill="%23000" opacity="0.2"/><circle cx="25" cy="25" r="15" fill="%23fff" opacity="0.1"/><circle cx="75" cy="75" r="10" fill="%23fff" opacity="0.15"/><path d="M40 40 Q60 30 80 40 Q60 50 40 40" fill="%23fff" opacity="0.1"/></pattern></defs><rect width="1200" height="800" fill="url(%23music-pattern)"/></svg>');
+}
+
+.partner-hero.dj-theme {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><pattern id="dj-pattern" patternUnits="userSpaceOnUse" width="150" height="150"><rect width="150" height="150" fill="%23000" opacity="0.3"/><circle cx="75" cy="75" r="40" fill="%23fff" opacity="0.1"/><circle cx="75" cy="75" r="20" fill="%23fff" opacity="0.2"/><rect x="65" y="35" width="20" height="80" fill="%23fff" opacity="0.1"/></pattern></defs><rect width="1200" height="800" fill="url(%23dj-pattern)"/></svg>');
+}
+
+.partner-hero.dance-theme {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><pattern id="dance-pattern" patternUnits="userSpaceOnUse" width="120" height="120"><rect width="120" height="120" fill="%23000" opacity="0.2"/><path d="M60 20 Q80 40 60 60 Q40 80 60 100" stroke="%23fff" stroke-width="2" fill="none" opacity="0.1"/><circle cx="30" cy="30" r="8" fill="%23fff" opacity="0.15"/><circle cx="90" cy="90" r="6" fill="%23fff" opacity="0.1"/></pattern></defs><rect width="1200" height="800" fill="url(%23dance-pattern)"/></svg>');
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+    animation: fadeInUp 1s ease;
+}
+
+.event-category {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.event-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.detail-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #ff6b35;
+}
+
+.detail-item i {
+    color: #ff6b35;
+    font-size: 18px;
+    width: 20px;
+}
+
+.detail-item span {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #ff6b35;
+    color: #fff;
+    padding: 18px 40px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background: #e55a2e;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(255, 107, 53, 0.4);
+}
+
+.cta-button i {
+    font-size: 18px;
+}
+
+/* Event Info Section */
+.event-info {
+    padding: 100px 0;
+    background: #f8f9fa;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+}
+
+.info-content h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.info-content h2::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background: #ff6b35;
+    bottom: -10px;
+    left: 0;
+}
+
+.info-content h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin: 40px 0 20px;
+}
+
+.info-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.feature-list {
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.feature-list i {
+    color: #ff6b35;
+    font-size: 16px;
+    width: 20px;
+}
+
+.artists-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.artist-card {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.artist-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.artist-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #ff6b35, #ff9a56);
+    margin: 0 auto 15px;
+    position: relative;
+}
+
+.artist-image::before {
+    content: '♪';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 24px;
+}
+
+.artist-card h4 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.artist-card p {
+    font-size: 0.9rem;
+    color: #888;
+    margin: 0;
+}
+
+/* Sidebar */
+.info-sidebar > div {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.info-sidebar h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.ticket-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.ticket-type:last-of-type {
+    border-bottom: none;
+}
+
+.ticket-type.premium {
+    background: linear-gradient(135deg, #ff6b35, #ff9a56);
+    color: #fff;
+    margin: 10px -30px;
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+
+.ticket-type .type {
+    font-weight: 600;
+}
+
+.ticket-type .price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ff6b35;
+}
+
+.ticket-type.premium .price {
+    color: #fff;
+}
+
+.buy-tickets-btn {
+    width: 100%;
+    background: #ff6b35;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.buy-tickets-btn:hover {
+    background: #e55a2e;
+    transform: translateY(-2px);
+}
+
+.venue-detail {
+    margin-bottom: 20px;
+}
+
+.venue-detail strong {
+    display: block;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.venue-detail p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.venue-features {
+    display: grid;
+    gap: 10px;
+}
+
+.venue-features span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.venue-features i {
+    color: #ff6b35;
+    width: 16px;
+}
+
+.share-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.share-btn {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.share-btn:hover {
+    transform: translateY(-5px);
+}
+
+.share-btn.facebook {
+    background: #3b5998;
+}
+
+.share-btn.twitter {
+    background: #1da1f2;
+}
+
+.share-btn.linkedin {
+    background: #0077b5;
+}
+
+.share-btn.whatsapp {
+    background: #25d366;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 100px 0;
+    background: #fff;
+}
+
+.gallery h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.gallery h2::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 4px;
+    background: #ff6b35;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    height: 250px;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.3s ease;
+}
+
+.gallery-image.christmas-1 {
+    background: linear-gradient(45deg, #ff6b35, #ff9a56);
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250"><rect width="300" height="250" fill="%23000" opacity="0.2"/><circle cx="150" cy="125" r="60" fill="%23fff" opacity="0.1"/><path d="M120 95 L180 95 L150 155 Z" fill="%23fff" opacity="0.15"/></svg>');
+}
+
+.gallery-image.christmas-2 {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250"><rect width="300" height="250" fill="%23000" opacity="0.3"/><rect x="100" y="75" width="100" height="100" fill="%23fff" opacity="0.1"/></svg>');
+}
+
+.gallery-image.christmas-3 {
+    background: linear-gradient(45deg, #fa709a, #fee140);
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250"><rect width="300" height="250" fill="%23000" opacity="0.2"/><circle cx="100" cy="100" r="40" fill="%23fff" opacity="0.1"/><circle cx="200" cy="150" r="30" fill="%23fff" opacity="0.15"/></svg>');
+}
+
+.gallery-image.christmas-4 {
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250"><rect width="300" height="250" fill="%23000" opacity="0.25"/><polygon points="150,50 200,150 150,200 100,150" fill="%23fff" opacity="0.1"/></svg>');
+}
+
+.gallery-image.christmas-5 {
+    background: linear-gradient(45deg, #a8edea, #fed6e3);
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250"><rect width="300" height="250" fill="%23000" opacity="0.2"/><path d="M50 125 Q150 50 250 125 Q150 200 50 125" fill="%23fff" opacity="0.1"/></svg>');
+}
+
+.gallery-image.christmas-6 {
+    background: linear-gradient(45deg, #ff9a9e, #fecfef);
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250"><rect width="300" height="250" fill="%23000" opacity="0.2"/><circle cx="75" cy="75" r="25" fill="%23fff" opacity="0.1"/><circle cx="225" cy="175" r="35" fill="%23fff" opacity="0.1"/></svg>');
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-overlay i {
+    color: #fff;
+    font-size: 30px;
+}
+
+/* Related Events Section */
+.related-events {
+    padding: 100px 0;
+    background: #f8f9fa;
+}
+
+.related-events h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.related-events h2::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 4px;
+    background: #ff6b35;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+}
+
+.event-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.event-card:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+}
+
+.event-image {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.event-image.dj-theme {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250"><rect width="400" height="250" fill="%23000" opacity="0.3"/><circle cx="200" cy="125" r="60" fill="%23fff" opacity="0.1"/><circle cx="200" cy="125" r="30" fill="%23fff" opacity="0.2"/></svg>');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.event-image.dance-theme {
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250"><rect width="400" height="250" fill="%23000" opacity="0.2"/><path d="M200 50 Q250 100 200 150 Q150 200 200 250" stroke="%23fff" stroke-width="3" fill="none" opacity="0.1"/></svg>');
+}
+
+.event-content {
+    padding: 30px;
+}
+
+.event-tag {
+    display: inline-block;
+    background: #ff6b35;
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.event-content h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.event-content p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* DJ Artist Images */
+.artist-image.dj-1::before {
+    content: '🎧';
+    font-size: 20px;
+}
+
+.artist-image.dj-2::before {
+    content: '🎵';
+    font-size: 20px;
+}
+
+.artist-image.dj-3::before {
+    content: '🎶';
+    font-size: 20px;
+}
+
+.artist-image.dj-1 {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+}
+
+.artist-image.dj-2 {
+    background: linear-gradient(45deg, #f093fb, #f5576c);
+}
+
+.artist-image.dj-3 {
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+}
+
+/* Dancer Artist Images */
+.artist-image.dancer-1::before {
+    content: '💃';
+    font-size: 20px;
+}
+
+.artist-image.dancer-2::before {
+    content: '🩰';
+    font-size: 20px;
+}
+
+.artist-image.dancer-3::before {
+    content: '🕺';
+    font-size: 20px;
+}
+
+.artist-image.dancer-1 {
+    background: linear-gradient(45deg, #fa709a, #fee140);
+}
+
+.artist-image.dancer-2 {
+    background: linear-gradient(45deg, #a8edea, #fed6e3);
+}
+
+.artist-image.dancer-3 {
+    background: linear-gradient(45deg, #ff9a9e, #fecfef);
+}
+
+/* DJ Gallery Images */
+.gallery-image.dj-gallery-1 {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250"><rect width="300" height="250" fill="%23000" opacity="0.3"/><circle cx="150" cy="125" r="50" fill="%23fff" opacity="0.1"/><circle cx="150" cy="125" r="25" fill="%23fff" opacity="0.2"/></svg>');
+}
+
+.gallery-image.dj-gallery-2 {
+    background: linear-gradient(45deg, #f093fb, #f5576c);
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250"><rect width="300" height="250" fill="%23000" opacity="0.25"/><rect x="100" y="100" width="100" height="50" fill="%23fff" opacity="0.15"/></svg>');
+}
+
+.gallery-image.dj-gallery-3 {
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250"><rect width="300" height="250" fill="%23000" opacity="0.3"/><polygon points="150,75 200,125 150,175 100,125" fill="%23fff" opacity="0.1"/></svg>');
+}
+
+.gallery-image.dj-gallery-4 {
+    background: linear-gradient(45deg, #43e97b, #38f9d7);
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250"><rect width="300" height="250" fill="%23000" opacity="0.2"/><circle cx="100" cy="100" r="30" fill="%23fff" opacity="0.1"/><circle cx="200" cy="150" r="25" fill="%23fff" opacity="0.15"/></svg>');
+}
+
+.gallery-image.dj-gallery-5 {
+    background: linear-gradient(45deg, #fa709a, #fee140);
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250"><rect width="300" height="250" fill="%23000" opacity="0.25"/><path d="M75 125 Q150 75 225 125 Q150 175 75 125" fill="%23fff" opacity="0.1"/></svg>');
+}
+
+.gallery-image.dj-gallery-6 {
+    background: linear-gradient(45deg, #a8edea, #fed6e3);
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250"><rect width="300" height="250" fill="%23000" opacity="0.2"/><rect x="50" y="50" width="200" height="150" rx="20" fill="%23fff" opacity="0.1"/></svg>');
+}
+
+/* Dance Gallery Images */
+.gallery-image.dance-gallery-1 {
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250"><rect width="300" height="250" fill="%23000" opacity="0.2"/><path d="M150 50 Q200 100 150 150 Q100 200 150 250" stroke="%23fff" stroke-width="3" fill="none" opacity="0.15"/></svg>');
+}
+
+.gallery-image.dance-gallery-2 {
+    background: linear-gradient(45deg, #fa709a, #fee140);
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250"><rect width="300" height="250" fill="%23000" opacity="0.2"/><circle cx="150" cy="125" r="60" fill="%23fff" opacity="0.1"/><path d="M120 95 L180 95 L150 155 Z" fill="%23fff" opacity="0.1"/></svg>');
+}
+
+.gallery-image.dance-gallery-3 {
+    background: linear-gradient(45deg, #a8edea, #fed6e3);
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250"><rect width="300" height="250" fill="%23000" opacity="0.2"/><polygon points="150,75 175,125 150,175 125,125" fill="%23fff" opacity="0.15"/></svg>');
+}
+
+.gallery-image.dance-gallery-4 {
+    background: linear-gradient(45deg, #ff9a9e, #fecfef);
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250"><rect width="300" height="250" fill="%23000" opacity="0.2"/><circle cx="100" cy="100" r="40" fill="%23fff" opacity="0.1"/><circle cx="200" cy="150" r="30" fill="%23fff" opacity="0.1"/></svg>');
+}
+
+.gallery-image.dance-gallery-5 {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250"><rect width="300" height="250" fill="%23000" opacity="0.25"/><path d="M75 200 Q150 100 225 200" stroke="%23fff" stroke-width="4" fill="none" opacity="0.1"/></svg>');
+}
+
+.gallery-image.dance-gallery-6 {
+    background: linear-gradient(45deg, #f093fb, #f5576c);
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250"><rect width="300" height="250" fill="%23000" opacity="0.2"/><rect x="75" y="75" width="150" height="100" rx="15" fill="%23fff" opacity="0.1"/></svg>');
+}
+
+/* Related Event Themes */
+.event-image.christmas-theme {
+    background: linear-gradient(45deg, #ff9a56, #ff6b35);
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250"><rect width="400" height="250" fill="%23000" opacity="0.3"/><circle cx="200" cy="125" r="80" fill="%23fff" opacity="0.1"/><path d="M150 75 L250 75 L200 175 Z" fill="%23fff" opacity="0.2"/></svg>');
+}
+
+/* Age Guide Styles */
+.age-guide {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.age-guide h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.age-recommendations {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.age-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #ff6b35;
+}
+
+.age-group .age {
+    font-weight: 600;
+    color: #ff6b35;
+    font-size: 14px;
+}
+
+.age-group .description {
+    font-size: 13px;
+    color: #666;
+    text-align: right;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .event-details {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .event-details {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .detail-item {
+        padding: 12px 15px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .artists-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .info-content h2 {
+        font-size: 2rem;
+    }
+
+    .info-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .age-group {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+
+    .age-group .description {
+        text-align: center;
+    }
+
+    .share-buttons {
+        gap: 10px;
+    }
+
+    .share-btn {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .event-category {
+        font-size: 10px;
+        padding: 6px 15px;
+    }
+
+    .cta-button {
+        padding: 15px 30px;
+        font-size: 14px;
+    }
+
+    .info-sidebar > div {
+        padding: 20px;
+    }
+
+    .artists-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .event-category {
+        font-size: 10px;
+        padding: 6px 15px;
+    }
+
+    .cta-button {
+        padding: 15px 30px;
+        font-size: 14px;
+    }
+
+    .info-sidebar > div {
+        padding: 20px;
+    }
+
+    .artists-grid {
+        grid-template-columns: 1fr;
+    }
