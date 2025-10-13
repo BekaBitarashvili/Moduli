@@ -7,144 +7,117 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span class="logo-text">Moduli</span>
-                <span class="logo-subtitle">Corporation</span>
-            </div>
-            <div class="nav-menu">
-                <ul class="nav-list">
-                    <li><a href="#home" data-en="Home" data-ka="მთავარი" data-ru="Главная">Home</a></li>
-<!--                    <li><a href="#partners" data-en="Partners" data-ka="პარტნიორები" data-ru="Партнеры">Partners</a></li>-->
-                    <li><a href="#projects" data-en="Projects" data-ka="პროექტები" data-ru="Проекты">Projects</a></li>
-                    <li><a href="#contact" data-en="Contact" data-ka="კონტაქტი" data-ru="Контакт">Contact</a></li>
-                </ul>
-            </div>
-            <div class="language-switcher">
-                <button class="lang-btn active" data-lang="en">EN</button>
-                <button class="lang-btn" data-lang="ka">KA</button>
-                <button class="lang-btn" data-lang="ru">RU</button>
-            </div>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <span class="logo-text">Moduli</span>
+            <span class="logo-subtitle">Corporation</span>
         </div>
-    </nav>
+        <div class="nav-menu">
+            <ul class="nav-list">
+                <li><a href="index.html" data-en="Home" data-ka="მთავარი" data-ru="Главная">Home</a></li>
+                <li><a href="product.html" data-en="Product" data-ka="პროდუქტი" data-ru="Продукт">Product</a></li>
+                <li><a href="projects.html" data-en="Projects" data-ka="პროექტები" data-ru="Проекты">Projects</a></li>
+                <li><a href="about.html" data-en="About Us" data-ka="ჩვენს შესახებ" data-ru="О нас">About Us</a></li>
+                <li><a href="index.html" data-en="Contact" data-ka="კონტაქტი" data-ru="Контакт">Contact</a></li>
+            </ul>
+        </div>
+        <div class="language-switcher">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="ka">KA</button>
+            <button class="lang-btn" data-lang="ru">RU</button>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-overlay"><img src="images/constr2.jpg"></div>
-        <div class="hero-content">
-            <h1 class="hero-title"
-                data-en="The Moduli Corporation 2025"
-                data-ka="მოდული კორპორაცია 2025"
-                data-ru="Корпорация Модули 2025">
-                The Moduli Corporation 2025
-            </h1>
-            <p class="hero-subtitle"
-               data-en="October 20-30, 2025"
-               data-ka="20-30 ოქტომბერი, 2025"
-               data-ru="20-30 октября, 2025">
-                October 20-30, 2025
-            </p>
-            <p class="hero-description"
-               data-en="Our project will be launched very soon, so stay tuned for updates."
-               data-ka="ჩვენი პროექტი ძალიან მალე გაეშვება, ასე რომ დაელოდეთ სიახლეებს"
-               data-ru="Наш проект будет запущен совсем скоро, поэтому следите за обновлениями.">
-                Our project will be launched very soon, so stay tuned for updates.
-            </p>
-<!--            <div class="countdown-timer">-->
-<!--                <div class="time-unit">-->
-<!--                    <span class="time-value" id="days">01</span>-->
-<!--                    <span class="time-label" data-en="Day" data-ka="დღე" data-ru="День">Day</span>-->
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="hero-overlay">
+        <img src="images/constr2.jpg" alt="background">
+    </div>
+
+    <div class="hero-content">
+        <h1 class="moduli-title">MODULI</h1>
+        <p class="hero-subtitle">A Progressive Tech Platform</p>
+    </div>
+</section>
+<div class="scroll-indicator">
+    <div class="scroll-arrow"></div>
+</div>
+
+
+<!-- Projects Section -->
+<!--    <section id="projects" class="projects">-->
+<!--        <div class="container">-->
+<!--            <h2 class="section-title"-->
+<!--                data-en="PARTNERS"-->
+<!--                data-ka="პარტნიორები"-->
+<!--                data-ru="Партнеры">-->
+<!--                PARTNERS-->
+<!--            </h2>-->
+<!--            <p class="section-description"-->
+<!--               data-en="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."-->
+<!--               data-ka="ლორემ იპსუმ დოლორ სით ამეტ, კონსექტეტურ ადიპისცინგ ელით, სედ დიამ ნონუმი ნიბჰ ეუისმოდ ტინციდუნტ უტ ლაორეტ დოლორე მაგნა ალიკუამ ერატ ვოლუტპატ."-->
+<!--               data-ru="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.">-->
+<!--                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.-->
+<!--            </p>-->
+<!--            <div class="projects-grid">-->
+<!--                <div class="project-card" onclick="window.open('projects.html', '_blank')">-->
+<!--                    <div class="project-image">-->
+<!--                        <div class="project-overlay"><img src="images/third.jpg"></div>-->
+<!--                        <div class="music-tag">test</div>-->
+<!--                    </div>-->
+<!--                    <div class="project-content">-->
+<!--                        <h3 data-en="Partner One: See More"-->
+<!--                            data-ka="პარტნიორი ერთი: ნახე მეტი"-->
+<!--                            data-ru="Партнер Один: Смотреть больше">-->
+<!--                            Partner One: See More-->
+<!--                        </h3>-->
+<!--                    </div>-->
 <!--                </div>-->
-<!--                <div class="time-unit">-->
-<!--                    <span class="time-value" id="hours">11</span>-->
-<!--                    <span class="time-label" data-en="hr" data-ka="სთ" data-ru="ч">hr</span>-->
+<!--                <div class="project-card" onclick="window.open('about.html', '_blank')">-->
+<!--                    <div class="project-image">-->
+<!--                        <div class="project-overlay"><img src="images/first.jpg"></div>-->
+<!--                        <div class="music-tag active">test</div>-->
+<!--                    </div>-->
+<!--                    <div class="project-content">-->
+<!--                        <h3 data-en="Partner Two: See More"-->
+<!--                            data-ka="პარტნიორი ორი: ნახე მეტი"-->
+<!--                            data-ru="Партнер Два: Смотреть больше">-->
+<!--                            Partner Two: See More-->
+<!--                        </h3>-->
+<!--                    </div>-->
 <!--                </div>-->
-<!--                <div class="time-unit">-->
-<!--                    <span class="time-value" id="minutes">58</span>-->
-<!--                    <span class="time-label" data-en="min" data-ka="წთ" data-ru="мин">min</span>-->
-<!--                </div>-->
-<!--                <div class="time-unit">-->
-<!--                    <span class="time-value" id="seconds">25</span>-->
-<!--                    <span class="time-label" data-en="sec" data-ka="წმ" data-ru="сек">sec</span>-->
+<!--                <div class="project-card" onclick="window.open('product.html', '_blank')">-->
+<!--                    <div class="project-image">-->
+<!--                        <div class="project-overlay"><img src="images/third.jpg"></div>-->
+<!--                        <div class="music-tag">test</div>-->
+<!--                    </div>-->
+<!--                    <div class="project-content">-->
+<!--                        <h3 data-en="Partner Three: See More"-->
+<!--                            data-ka="პარტნიორი სამი: ნახე მეტი"-->
+<!--                            data-ru="Партнер Три: Смотреть больше">-->
+<!--                            Partner Three: See More-->
+<!--                        </h3>-->
+<!--                    </div>-->
 <!--                </div>-->
 <!--            </div>-->
-        </div>
-        <div class="scroll-indicator">
-            <div class="scroll-arrow"></div>
-        </div>
-    </section>
+<!--        </div>-->
+<!--    </section>-->
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title"
-                data-en="PARTNERS"
-                data-ka="პარტნიორები"
-                data-ru="Партнеры">
-                PARTNERS
-            </h2>
-            <p class="section-description"
-               data-en="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."
-               data-ka="ლორემ იპსუმ დოლორ სით ამეტ, კონსექტეტურ ადიპისცინგ ელით, სედ დიამ ნონუმი ნიბჰ ეუისმოდ ტინციდუნტ უტ ლაორეტ დოლორე მაგნა ალიკუამ ერატ ვოლუტპატ."
-               data-ru="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-            </p>
-            <div class="projects-grid">
-                <div class="project-card" onclick="window.open('partner_one.html', '_blank')">
-                    <div class="project-image">
-                        <div class="project-overlay"><img src="images/third.jpg"></div>
-                        <div class="music-tag">test</div>
-                    </div>
-                    <div class="project-content">
-                        <h3 data-en="Partner One: See More"
-                            data-ka="პარტნიორი ერთი: ნახე მეტი"
-                            data-ru="Партнер Один: Смотреть больше">
-                            Partner One: See More
-                        </h3>
-                    </div>
-                </div>
-                <div class="project-card" onclick="window.open('partner_two.html', '_blank')">
-                    <div class="project-image">
-                        <div class="project-overlay"><img src="images/first.jpg"></div>
-                        <div class="music-tag active">test</div>
-                    </div>
-                    <div class="project-content">
-                        <h3 data-en="Partner Two: See More"
-                            data-ka="პარტნიორი ორი: ნახე მეტი"
-                            data-ru="Партнер Два: Смотреть больше">
-                            Partner Two: See More
-                        </h3>
-                    </div>
-                </div>
-                <div class="project-card" onclick="window.open('partner_three.html', '_blank')">
-                    <div class="project-image">
-                        <div class="project-overlay"><img src="images/third.jpg"></div>
-                        <div class="music-tag">test</div>
-                    </div>
-                    <div class="project-content">
-                        <h3 data-en="Partner Three: See More"
-                            data-ka="პარტნიორი სამი: ნახე მეტი"
-                            data-ru="Партнер Три: Смотреть больше">
-                            Partner Three: See More
-                        </h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Registration Section -->
+<!-- Registration Section -->
 <!--    <section class="registration">-->
 <!--        <div class="registration-overlay"></div>-->
 <!--        <div class="container">-->
@@ -171,7 +144,7 @@
 <!--        </div>-->
 <!--    </section>-->
 
-    <!-- Partners Section -->
+<!-- Partners Section -->
 <!--    <section id="partners" class="sponsors">-->
 <!--        <div class="container">-->
 <!--            <h2 class="section-title"-->
@@ -223,67 +196,78 @@
 <!--        </div>-->
 <!--    </section>-->
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="contact-overlay"></div>
-        <div class="container">
-            <h2 class="section-title"
-                data-en="GET IN TOUCH WITH US"
-                data-ka="დაგვიკავშირდი ახლავე"
-                data-ru="СВЯЗАТЬСЯ С НАМИ">
-                GET IN TOUCH WITH US
-            </h2>
-            <p class="section-description"
-               data-en="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."
-               data-ka="ლორემ იპსუმ დოლორ სით ამეტ, კონსექტეტურ ადიპისცინგ ელით, სედ დიამ ნონუმი ნიბჰ ეუისმოდ ტინციდუნტ უტ ლაორეტ დოლორე მაგნა ალიკუამ ერატ ვოლუტპატ."
-               data-ru="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-            </p>
-            <form class="contact-form">
-                <div class="form-row">
-                    <input type="text" placeholder="Full Name*" data-en-placeholder="Full Name*" data-ka-placeholder="სრული სახელი*" data-ru-placeholder="Полное имя*" required>
-                    <input type="email" placeholder="Email*" data-en-placeholder="Email*" data-ka-placeholder="ელ-ფოსტა*" data-ru-placeholder="Email*" required>
-                </div>
-                <div class="form-row">
-                    <input type="tel" placeholder="Phone*" data-en-placeholder="Phone*" data-ka-placeholder="ტელეფონი*" data-ru-placeholder="Телефон*" required>
-                    <input type="text" placeholder="Subject*" data-en-placeholder="Subject*" data-ka-placeholder="თემა*" data-ru-placeholder="Тема*" required>
-                </div>
-                <textarea placeholder="Message*" data-en-placeholder="Message*" data-ka-placeholder="შეტყობინება*" data-ru-placeholder="Сообщение*" required></textarea>
-                <button type="submit" data-en="Send Now" data-ka="გაგზავნა ახლა" data-ru="Отправить">Send Now</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <span class="logo-text">Moduli</span>
-                    <span class="logo-subtitle">Corporation</span>
-                </div>
-                <nav class="footer-nav">
-                    <ul>
-                        <li><a href="#home" data-en="Home" data-ka="მთავარი" data-ru="Главная">Home</a></li>
-                        <li><a href="#" data-en="FAQ" data-ka="FAQ" data-ru="FAQ">FAQ</a></li>
-                        <li><a href="#projects" data-en="Projects" data-ka="პროექტები" data-ru="Проекты">Projects</a></li>
-                        <li><a href="#contact" data-en="Contact" data-ka="კონტაქტი" data-ru="Контакт">Contact</a></li>
-                    </ul>
-                </nav>
-                <div class="social-links">
-                    <a href="#" class="social-link facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-link twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-link linkedin"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="social-link youtube"><i class="fab fa-youtube"></i></a>
-                    <a href="#" class="social-link instagram"><i class="fab fa-instagram"></i></a>
-                </div>
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="contact-overlay"></div>
+    <div class="container">
+        <h2 class="section-title"
+            data-en="GET IN TOUCH WITH US"
+            data-ka="დაგვიკავშირდი ახლავე"
+            data-ru="СВЯЗАТЬСЯ С НАМИ">
+            GET IN TOUCH WITH US
+        </h2>
+        <p class="section-description"
+           data-en="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."
+           data-ka="ლორემ იპსუმ დოლორ სით ამეტ, კონსექტეტურ ადიპისცინგ ელით, სედ დიამ ნონუმი ნიბჰ ეუისმოდ ტინციდუნტ უტ ლაორეტ დოლორე მაგნა ალიკუამ ერატ ვოლუტპატ."
+           data-ru="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+            dolore magna aliquam erat volutpat.
+        </p>
+        <form class="contact-form">
+            <div class="form-row">
+                <input type="text" placeholder="Full Name*" data-en-placeholder="Full Name*"
+                       data-ka-placeholder="სრული სახელი*" data-ru-placeholder="Полное имя*" required>
+                <input type="email" placeholder="Email*" data-en-placeholder="Email*" data-ka-placeholder="ელ-ფოსტა*"
+                       data-ru-placeholder="Email*" required>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 <span data-en="All Rights Reserved" data-ka="ყველა უფლება დაცულია" data-ru="Все права защищены">All Rights Reserved</span> © <span data-en="Designed By" data-ka="დიზაინი" data-ru="Разработано">Designed By</span> <a href="#">Moduli</a></p>
+            <div class="form-row">
+                <input type="tel" placeholder="Phone*" data-en-placeholder="Phone*" data-ka-placeholder="ტელეფონი*"
+                       data-ru-placeholder="Телефон*" required>
+                <input type="text" placeholder="Subject*" data-en-placeholder="Subject*" data-ka-placeholder="თემა*"
+                       data-ru-placeholder="Тема*" required>
+            </div>
+            <textarea placeholder="Message*" data-en-placeholder="Message*" data-ka-placeholder="შეტყობინება*"
+                      data-ru-placeholder="Сообщение*" required></textarea>
+            <button type="submit" data-en="Send Now" data-ka="გაგზავნა ახლა" data-ru="Отправить">Send Now</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="logo-text">Moduli</span>
+                <span class="logo-subtitle">Corporation</span>
+            </div>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="#home" data-en="Home" data-ka="მთავარი" data-ru="Главная">Home</a></li>
+                    <li><a href="product.html" data-en="Product" data-ka="პროდუქტი" data-ru="Продукт">Product</a></li>
+                    <li><a href="projects.html" data-en="Projects" data-ka="პროექტები" data-ru="Проекты">Projects</a></li>
+                    <li><a href="about.html" data-en="About Us" data-ka="ჩვენს შესახებ" data-ru="О нас">About Us</a></li>
+                    <li><a href="index.html" data-en="Contact" data-ka="კონტაქტი" data-ru="Контакт">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="social-links">
+                <a href="#" class="social-link facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link linkedin"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-link youtube"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="social-link instagram"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
-    </footer>
+        <div class="footer-bottom">
+            <p>&copy; 2025 <span data-en="All Rights Reserved" data-ka="ყველა უფლება დაცულია"
+                                 data-ru="Все права защищены">All Rights Reserved</span> © <span data-en="Designed By"
+                                                                                                 data-ka="დიზაინი"
+                                                                                                 data-ru="Разработано">Designed By</span>
+                <a href="#">Moduli</a></p>
+        </div>
+    </div>
+</footer>
 
-    <script src="scripts/main.js"></script>
+<script src="scripts/main.js"></script>
 </body>
 </html>

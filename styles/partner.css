@@ -14,16 +14,40 @@
 .partner-hero.christmas-theme {
     background: linear-gradient(135deg, #ff9a56 0%, #ff6b35 100%);
     background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><pattern id="music-pattern" patternUnits="userSpaceOnUse" width="100" height="100"><rect width="100" height="100" fill="%23000" opacity="0.2"/><circle cx="25" cy="25" r="15" fill="%23fff" opacity="0.1"/><circle cx="75" cy="75" r="10" fill="%23fff" opacity="0.15"/><path d="M40 40 Q60 30 80 40 Q60 50 40 40" fill="%23fff" opacity="0.1"/></pattern></defs><rect width="1200" height="800" fill="url(%23music-pattern)"/></svg>');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .partner-hero.dj-theme {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><pattern id="dj-pattern" patternUnits="userSpaceOnUse" width="150" height="150"><rect width="150" height="150" fill="%23000" opacity="0.3"/><circle cx="75" cy="75" r="40" fill="%23fff" opacity="0.1"/><circle cx="75" cy="75" r="20" fill="%23fff" opacity="0.2"/><rect x="65" y="35" width="20" height="80" fill="%23fff" opacity="0.1"/></pattern></defs><rect width="1200" height="800" fill="url(%23dj-pattern)"/></svg>');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .partner-hero.dance-theme {
     background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
     background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><pattern id="dance-pattern" patternUnits="userSpaceOnUse" width="120" height="120"><rect width="120" height="120" fill="%23000" opacity="0.2"/><path d="M60 20 Q80 40 60 60 Q40 80 60 100" stroke="%23fff" stroke-width="2" fill="none" opacity="0.1"/><circle cx="30" cy="30" r="8" fill="%23fff" opacity="0.15"/><circle cx="90" cy="90" r="6" fill="%23fff" opacity="0.1"/></pattern></defs><rect width="1200" height="800" fill="url(%23dance-pattern)"/></svg>');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero-overlay {
@@ -767,6 +791,92 @@
     font-size: 13px;
     color: #666;
     text-align: right;
+}
+.hero-section {
+  background-color: #0d0d0d;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 90%;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+  animation: fadeIn 1s ease forwards;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  color: #b3b3b3;
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 500px;
+}
+
+.hero-image {
+  flex: 1;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Typing animation */
+.typing-text {
+  border-right: 3px solid #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 4s steps(40, end) forwards, blink 0.7s infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-image {
+    order: -1;
+  }
+  .hero-text h1 {
+    font-size: 1.4rem;
+  }
 }
 
 /* Responsive Design */
