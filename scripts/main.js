@@ -51,7 +51,19 @@ const translations = {
         "2:00 PM - 5:00 PM": "2:00 PM - 5:00 PM",
         "Lincoln Center, NYC": "Lincoln Center, NYC",
         "$25 - $80": "$25 - $80",
-        "Get Family Tickets": "Get Family Tickets"
+        "Get Family Tickets": "Get Family Tickets",
+        "Services": "Services",
+        "Our Core Services": "Our Core Services",
+        "We offer a comprehensive suite of services to drive your business forward.": "We offer a comprehensive suite of services to drive your business forward.",
+        "Software Development": "Software Development",
+        "Custom software solutions tailored to your unique business needs, ensuring efficiency and scalability.": "Custom software solutions tailored to your unique business needs, ensuring efficiency and scalability.",
+        "Digital Strategy & Marketing": "Digital Strategy & Marketing",
+        "Driving growth through data-backed digital strategies, SEO, content, and social media management.": "Driving growth through data-backed digital strategies, SEO, content, and social media management.",
+        "UI/UX Design & Branding": "UI/UX Design & Branding",
+        "Creating intuitive and engaging user experiences and developing strong, memorable brand identities.": "Creating intuitive and engaging user experiences and developing strong, memorable brand identities.",
+        "Cloud & Infrastructure": "Cloud & Infrastructure",
+        "Modernizing your IT infrastructure with secure, scalable cloud solutions and robust managed services.": "Modernizing your IT infrastructure with secure, scalable cloud solutions and robust managed services.",
+        "Learn More": "Learn More"
     },
     ka: {
         "Home": "მთავარი",
@@ -104,7 +116,19 @@ const translations = {
         "2:00 PM - 5:00 PM": "14:00 - 17:00",
         "Lincoln Center, NYC": "ლინკოლნ ცენტრი, ნიუ-იორკი",
         "$25 - $80": "$25 - $80",
-        "Get Family Tickets": "ოჯახური ბილეთების მიღება"
+        "Get Family Tickets": "ოჯახური ბილეთების მიღება",
+        "Services": "სერვისები",
+        "Our Core Services": "ჩვენი ძირითადი სერვისები",
+        "We offer a comprehensive suite of services to drive your business forward.": "ჩვენ გთავაზობთ სერვისების სრულ სპექტრს თქვენი ბიზნესის წინსვლისთვის.",
+        "Software Development": "პროგრამული უზრუნველყოფის შექმნა",
+        "Custom software solutions tailored to your unique business needs, ensuring efficiency and scalability.": "მორგებული პროგრამული უზრუნველყოფის გადაწყვეტილებები თქვენი უნიკალური ბიზნეს საჭიროებებისთვის, ეფექტურობისა და მასშტაბურობის უზრუნველყოფით.",
+        "Digital Strategy & Marketing": "ციფრული სტრატეგია და მარკეტინგი",
+        "Driving growth through data-backed digital strategies, SEO, content, and social media management.": "ზრდის ხელშეწყობა მონაცემებზე დაფუძნებული ციფრული სტრატეგიებით, SEO-თი, კონტენტითა და სოციალური მედიის მართვით.",
+        "UI/UX Design & Branding": "UI/UX დიზაინი და ბრენდინგი",
+        "Creating intuitive and engaging user experiences and developing strong, memorable brand identities.": "ინტუიციური და მიმზიდველი მომხმარებლის გამოცდილების შექმნა და ძლიერი, დასამახსოვრებელი ბრენდის იდენტობების განვითარება.",
+        "Cloud & Infrastructure": "ღრუბლოვანი და ინფრასტრუქტურული სერვისები",
+        "Modernizing your IT infrastructure with secure, scalable cloud solutions and robust managed services.": "თქვენი IT ინფრასტრუქტურის მოდერნიზაცია უსაფრთხო, მასშტაბირებადი ღრუბლოვანი გადაწყვეტილებებით და მართული სერვისებით.",
+        "Learn More": "გაიგე მეტი"
     },
     ru: {
         "Home": "Главная",
@@ -157,7 +181,19 @@ const translations = {
         "2:00 PM - 5:00 PM": "14:00 - 17:00",
         "Lincoln Center, NYC": "Линкольн-центр, Нью-Йорк",
         "$25 - $80": "$25 - $80",
-        "Get Family Tickets": "Получить семейные билеты"
+        "Get Family Tickets": "Получить семейные билеты",
+        "Services": "Услуги",
+        "Our Core Services": "Наши Основные Услуги",
+        "We offer a comprehensive suite of services to drive your business forward.": "Мы предлагаем полный набор услуг для продвижения вашего бизнеса.",
+        "Software Development": "Разработка ПО",
+        "Custom software solutions tailored to your unique business needs, ensuring efficiency and scalability.": "Индивидуальные программные решения, адаптированные к вашим уникальным потребностям, обеспечивающие эффективность и масштабируемость.",
+        "Digital Strategy & Marketing": "Цифровая Стратегия и Маркетинг",
+        "Driving growth through data-backed digital strategies, SEO, content, and social media management.": "Содействие росту с помощью цифровых стратегий, основанных на данных, SEO, контента и управления социальными сетями.",
+        "UI/UX Design & Branding": "UI/UX Дизайн и Брендинг",
+        "Creating intuitive and engaging user experiences and developing strong, memorable brand identities.": "Создание интуитивно понятного и привлекательного пользовательского опыта и разработка сильных, запоминающихся брендовых идентичностей.",
+        "Cloud & Infrastructure": "Облачные и Инфраструктурные Услуги",
+        "Modernizing your IT infrastructure with secure, scalable cloud solutions and robust managed services.": "Модернизация вашей ИТ-инфраструктуры с помощью безопасных, масштабируемых облачных решений и надежных управляемых сервисов.",
+        "Learn More": "Подробнее"
     }
 };
 
