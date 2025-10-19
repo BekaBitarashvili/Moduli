@@ -5,195 +5,649 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services - Moduli Corporation</title>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/services.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .services-container {
+            display: flex;
+            min-height: 100vh;
+            padding-top: 80px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+
+        .services-sidebar {
+            width: 350px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px 0;
+            position: sticky;
+            top: 80px;
+            height: calc(100vh - 80px);
+            overflow-y: auto;
+        }
+
+        .services-sidebar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .services-sidebar::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .services-sidebar::-webkit-scrollbar-thumb {
+            background: #ff6b35;
+            border-radius: 3px;
+        }
+
+        .service-menu-item {
+            padding: 25px 40px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+            position: relative;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .service-menu-item:hover {
+            background: rgba(255, 107, 53, 0.1);
+            color: #fff;
+            border-left-color: #ff6b35;
+            padding-left: 50px;
+        }
+
+        .service-menu-item.active {
+            background: rgba(255, 107, 53, 0.15);
+            color: #ff6b35;
+            border-left-color: #ff6b35;
+            font-weight: 600;
+        }
+
+        .service-menu-item i {
+            margin-right: 15px;
+            font-size: 20px;
+        }
+
+        .service-menu-item::after {
+            content: '›';
+            position: absolute;
+            right: 30px;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .service-menu-item:hover::after,
+        .service-menu-item.active::after {
+            opacity: 1;
+            right: 20px;
+        }
+
+        .services-content {
+            flex: 1;
+            padding: 60px 80px;
+            overflow-y: auto;
+        }
+
+        .service-detail {
+            display: none;
+            animation: fadeInUp 0.6s ease;
+        }
+
+        .service-detail.active {
+            display: block;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .service-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .service-image {
+            width: 100%;
+            max-width: 600px;
+            height: 350px;
+            margin: 0 auto 30px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .service-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .service-image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
+        }
+
+        .service-title {
+            font-size: 42px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .service-subtitle {
+            font-size: 18px;
+            color: #ff6b35;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .service-description {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .service-description h3 {
+            font-size: 28px;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .service-description p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 25px;
+        }
+
+        .service-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .feature-item {
+            background: rgba(255, 107, 53, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 4px solid #ff6b35;
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            background: rgba(255, 107, 53, 0.2);
+            transform: translateX(10px);
+        }
+
+        .feature-item i {
+            font-size: 32px;
+            color: #ff6b35;
+            margin-bottom: 15px;
+        }
+
+        .feature-item h4 {
+            font-size: 18px;
+            color: #fff;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .feature-item p {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+            margin: 0;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 968px) {
+            .services-container {
+                flex-direction: column;
+                padding-top: 70px;
+            }
+
+            .services-sidebar {
+                width: 100%;
+                position: relative;
+                top: 0;
+                height: auto;
+                border-right: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                padding: 20px 0;
+            }
+
+            .service-menu-item {
+                padding: 20px 30px;
+            }
+
+            .services-content {
+                padding: 40px 20px;
+            }
+
+            .service-title {
+                font-size: 32px;
+            }
+
+            .service-description {
+                padding: 30px 20px;
+            }
+
+            .service-features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-<!-- Navigation -->
-<nav class="navbar">
-    <div class="nav-container">
-        <div class="nav-logo">
-            <span class="logo-text">Moduli</span>
-            <span class="logo-subtitle">Corporation</span>
-        </div>
-        <div class="nav-menu">
-            <ul class="nav-list">
-                <li><a href="index.html" data-en="Home" data-ka="მთავარი" data-ru="Главная">Home</a></li>
-                <li><a href="services.html" data-en="Services" data-ka="სერვისები" data-ru="Услуги">Services</a></li>
-                <li><a href="product.html" data-en="Product" data-ka="პროდუქტი" data-ru="Продукт">Product</a></li>
-                <li><a href="projects.html" data-en="Projects" data-ka="პროექტები" data-ru="Проекты">Projects</a></li>
-                <li><a href="about.html" data-en="About Us" data-ka="ჩვენს შესახებ" data-ru="О нас">About Us</a></li>
-                <li><a href="index.html#contact" data-en="Contact" data-ka="კონტაქტი" data-ru="Контакт">Contact</a></li>
-            </ul>
-        </div>
-        <div class="language-switcher">
-            <button class="lang-btn active" data-lang="en">EN</button>
-            <button class="lang-btn" data-lang="ka">KA</button>
-            <button class="lang-btn" data-lang="ru">RU</button>
-        </div>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
-</nav>
-
-<!-- Services Section -->
-<section class="services-page">
-    <div class="services-overlay"></div>
-
-    <div class="container">
-        <div class="services-header">
-            <h1 class="services-title"
-                data-en="OUR SERVICES"
-                data-ka="ჩვენი სერვისები"
-                data-ru="НАШИ УСЛУГИ">
-                OUR SERVICES
-            </h1>
-            <p class="services-description"
-               data-en="Explore our array of services, from web development to e-commerce solutions, designed to elevate your digital presence and drive tangible results for the digital revolution."
-               data-ka="გამოიკვლიეთ ჩვენი სერვისების მასივი, ვებ დეველოპმენტიდან ელექტრონული კომერციის გადაწყვეტილებებამდე, რომლებიც შექმნილია თქვენი ციფრული არსებობის გასაძლიერებლად."
-               data-ru="Изучите наш спектр услуг, от веб-разработки до решений электронной коммерции, разработанных для повышения вашего цифрового присутствия.">
-                Explore our array of services, from web development to e-commerce solutions, designed to elevate your digital presence and drive tangible results for the digital revolution.
-            </p>
-            <button class="contact-btn"
-                    data-en="Contact us"
-                    data-ka="დაგვიკავშირდით"
-                    data-ru="Свяжитесь с нами">
-                <span>Contact us</span>
-                <i class="fas fa-arrow-right"></i>
-            </button>
-        </div>
-
-        <div class="services-grid">
-            <!-- Service Card 1 -->
-            <div class="service-card">
-                <div class="service-icon web-dev">
-                    <i class="fas fa-code"></i>
-                </div>
-                <h3 class="service-title"
-                    data-en="WEB DEVELOPMENT"
-                    data-ka="ვებ დეველოპმენტი"
-                    data-ru="ВЕБ-РАЗРАБОТКА">
-                    WEB DEVELOPMENT
-                </h3>
-                <p class="service-text"
-                   data-en="Our expert team crafts innovative websites tailored to your brands needs, ensuring stunning design to captivate your audience."
-                   data-ka="ჩვენი ექსპერტი გუნდი ქმნის ინოვაციურ ვებსაიტებს, რომლებიც მორგებულია თქვენი ბრენდის საჭიროებებზე."
-                   data-ru="Наша команда экспертов создает инновационные веб-сайты, адаптированные к потребностям вашего бренда.">
-                    Our expert team crafts innovative websites tailored to your brands needs, ensuring stunning design to captivate your audience.
-                </p>
-                <div class="service-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                </div>
-            </div>
-
-            <!-- Service Card 2 -->
-            <div class="service-card">
-                <div class="service-icon marketing">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <h3 class="service-title"
-                    data-en="DIGITAL MARKETING STRATEGIES"
-                    data-ka="ციფრული მარკეტინგის სტრატეგიები"
-                    data-ru="СТРАТЕГИИ ЦИФРОВОГО МАРКЕТИНГА">
-                    DIGITAL MARKETING STRATEGIES
-                </h3>
-                <p class="service-text"
-                   data-en="Enhance the power of targeted digital campaigns to maximize your online presence and drive tangible results every time."
-                   data-ka="გააძლიერეთ მიზანმიმართული ციფრული კამპანიების ძალა თქვენი ონლაინ არსებობის მაქსიმალურად გასაზრდელად."
-                   data-ru="Усильте мощь целевых цифровых кампаний для максимального увеличения вашего онлайн-присутствия.">
-                    Enhance the power of targeted digital campaigns to maximize your online presence and drive tangible results every time.
-                </p>
-                <div class="service-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                </div>
-            </div>
-
-            <!-- Service Card 3 -->
-            <div class="service-card">
-                <div class="service-icon design">
-                    <i class="fas fa-palette"></i>
-                </div>
-                <h3 class="service-title"
-                    data-en="CREATIVE DESIGN SERVICE"
-                    data-ka="კრეატიული დიზაინის სერვისი"
-                    data-ru="КРЕАТИВНЫЙ ДИЗАЙН-СЕРВИС">
-                    CREATIVE DESIGN SERVICE
-                </h3>
-                <p class="service-text"
-                   data-en="From eye-catching visuals to cohesive web experiences, our design team creates on-brand designs that resonate with your audience."
-                   data-ka="თვალის მომჭრელი ვიზუალიდან კოჰერენტულ ვებ გამოცდილებამდე, ჩვენი დიზაინის გუნდი ქმნის ბრენდულ დიზაინს."
-                   data-ru="От привлекающих внимание визуальных эффектов до целостного веб-опыта, наша команда дизайнеров создает дизайн бренда.">
-                    From eye-catching visuals to cohesive web experiences, our design team creates on-brand designs that resonate with your audience.
-                </p>
-                <div class="service-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                </div>
-            </div>
-
-            <!-- Service Card 4 -->
-            <div class="service-card">
-                <div class="service-icon ecommerce">
-                    <i class="fas fa-shopping-cart"></i>
-                </div>
-                <h3 class="service-title"
-                    data-en="E-COMMERCE"
-                    data-ka="ელექტრონული კომერცია"
-                    data-ru="ЭЛЕКТРОННАЯ КОММЕРЦИЯ">
-                    E-COMMERCE
-                </h3>
-                <p class="service-text"
-                   data-en="Elevate your online retail experience with seamless e-commerce solutions. From user-friendly interfaces to secure payment gateways, we power businesses to thrive in the digital marketplace."
-                   data-ka="გაზარდეთ თქვენი ონლაინ საცალო გამოცდილება შეუფერხებელი ელექტრონული კომერციის გადაწყვეტილებებით."
-                   data-ru="Улучшите свой опыт онлайн-розничной торговли с помощью беспроблемных решений электронной коммерции.">
-                    Elevate your online retail experience with seamless e-commerce solutions. From user-friendly interfaces to secure payment gateways, we power businesses to thrive in the digital marketplace.
-                </p>
-                <div class="service-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-logo">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
                 <span class="logo-text">Moduli</span>
                 <span class="logo-subtitle">Corporation</span>
             </div>
-            <nav class="footer-nav">
-                <ul>
+            <div class="nav-menu">
+                <ul class="nav-list">
                     <li><a href="index.html" data-en="Home" data-ka="მთავარი" data-ru="Главная">Home</a></li>
-                    <li><a href="services.html" data-en="Services" data-ka="სერვისები" data-ru="Услуги">Services</a></li>
+                    <li><a href="services.html" data-en="Services" data-ka="სერვისები" data-ru="Услуги" class="active">Services</a></li>
                     <li><a href="product.html" data-en="Product" data-ka="პროდუქტი" data-ru="Продукт">Product</a></li>
                     <li><a href="projects.html" data-en="Projects" data-ka="პროექტები" data-ru="Проекты">Projects</a></li>
                     <li><a href="about.html" data-en="About Us" data-ka="ჩვენს შესახებ" data-ru="О нас">About Us</a></li>
                     <li><a href="index.html#contact" data-en="Contact" data-ka="კონტაქტი" data-ru="Контакт">Contact</a></li>
                 </ul>
-            </nav>
-            <div class="social-links">
-                <a href="#" class="social-link facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-link twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-link linkedin"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="social-link youtube"><i class="fab fa-youtube"></i></a>
-                <a href="#" class="social-link instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="ka">KA</button>
+                <button class="lang-btn" data-lang="ru">RU</button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 <span data-en="All Rights Reserved" data-ka="ყველა უფლება დაცულია" data-ru="Все права защищены">All Rights Reserved</span> © <span data-en="Designed By" data-ka="დიზაინი" data-ru="Разработано">Designed By</span> <a href="#">Moduli</a></p>
+    </nav>
+
+    <!-- Services Container -->
+    <div class="services-container">
+        <!-- Sidebar -->
+        <div class="services-sidebar">
+            <div class="service-menu-item active" data-service="construction" data-en="Construction Services" data-ka="სამშენებლო სერვისები" data-ru="Строительные услуги">
+                <i class="fas fa-hard-hat"></i>
+                <span>Construction Services</span>
+            </div>
+            <div class="service-menu-item" data-service="engineering" data-en="Engineering Solutions" data-ka="საინჟინრო გადაწყვეტები" data-ru="Инженерные решения">
+                <i class="fas fa-drafting-compass"></i>
+                <span>Engineering Solutions</span>
+            </div>
+            <div class="service-menu-item" data-service="consulting" data-en="Project Consulting" data-ka="პროექტის კონსულტაცია" data-ru="Консалтинг проектов">
+                <i class="fas fa-users-cog"></i>
+                <span>Project Consulting</span>
+            </div>
+            <div class="service-menu-item" data-service="renovation" data-en="Renovation & Remodeling" data-ka="რემონტი და რეკონსტრუქცია" data-ru="Ремонт и реконструкция">
+                <i class="fas fa-tools"></i>
+                <span>Renovation & Remodeling</span>
+            </div>
+            <div class="service-menu-item" data-service="maintenance" data-en="Facility Maintenance" data-ka="ობიექტის მომსახურება" data-ru="Обслуживание объектов">
+                <i class="fas fa-wrench"></i>
+                <span>Facility Maintenance</span>
+            </div>
+            <div class="service-menu-item" data-service="management" data-en="Project Management" data-ka="პროექტის მენეჯმენტი" data-ru="Управление проектами">
+                <i class="fas fa-tasks"></i>
+                <span>Project Management</span>
+            </div>
+        </div>
+
+        <!-- Content Area -->
+        <div class="services-content">
+            <!-- Service 1: Construction Services -->
+            <div class="service-detail active" data-service="construction">
+                <div class="service-header">
+                    <div class="service-image">
+                        <img src="images/constr2.jpg" alt="Construction Services">
+                        <div class="service-image-overlay"></div>
+                    </div>
+                    <p class="service-subtitle" data-en="Professional Construction" data-ka="პროფესიონალური მშენებლობა" data-ru="Профессиональное строительство">Professional Construction</p>
+                    <h1 class="service-title" data-en="Construction Services" data-ka="სამშენებლო სერვისები" data-ru="Строительные услуги">Construction Services</h1>
+                </div>
+                <div class="service-description">
+                    <h3 data-en="About This Service" data-ka="სერვისის შესახებ" data-ru="О данной услуге">About This Service</h3>
+                    <p data-en="We provide comprehensive construction services for residential, commercial, and industrial projects. Our experienced team ensures high-quality workmanship, timely delivery, and adherence to all safety standards. From groundwork to finishing touches, we handle every aspect of your construction needs." data-ka="ჩვენ ვთავაზობთ ყოვლისმომცველ სამშენებლო მომსახურებას საცხოვრებელი, კომერციული და ინდუსტრიული პროექტებისთვის. ჩვენი გამოცდილი გუნდი უზრუნველყოფს მაღალი ხარისხის სამუშაოს, დროულ მიწოდებას და ყველა უსაფრთხოების სტანდარტის დაცვას." data-ru="Мы предоставляем комплексные строительные услуги для жилых, коммерческих и промышленных проектов. Наша опытная команда обеспечивает высокое качество работы, своевременную доставку и соблюдение всех стандартов безопасности.">
+                        We provide comprehensive construction services for residential, commercial, and industrial projects. Our experienced team ensures high-quality workmanship, timely delivery, and adherence to all safety standards. From groundwork to finishing touches, we handle every aspect of your construction needs.
+                    </p>
+                    <p data-en="Our construction services include site preparation, foundation work, structural framing, and complete building construction. We utilize modern construction techniques and premium materials to deliver projects that exceed expectations." data-ka="ჩვენი სამშენებლო სერვისები მოიცავს ტერიტორიის მომზადებას, საძირკვლის მუშაობას, კონსტრუქციულ ჩარჩოს და სრულ შენობის მშენებლობას. ჩვენ ვიყენებთ თანამედროვე სამშენებლო ტექნიკას და პრემიუმ მასალებს." data-ru="Наши строительные услуги включают подготовку площадки, фундаментные работы, конструктивный каркас и полное строительство зданий. Мы используем современные строительные технологии и премиальные материалы.">
+                        Our construction services include site preparation, foundation work, structural framing, and complete building construction. We utilize modern construction techniques and premium materials to deliver projects that exceed expectations.
+                    </p>
+
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <i class="fas fa-building"></i>
+                            <h4 data-en="Residential Construction" data-ka="საცხოვრებელი მშენებლობა" data-ru="Жилищное строительство">Residential Construction</h4>
+                            <p data-en="Custom homes and residential complexes" data-ka="ინდივიდუალური სახლები და საცხოვრებელი კომპლექსები" data-ru="Индивидуальные дома и жилые комплексы">Custom homes and residential complexes</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-city"></i>
+                            <h4 data-en="Commercial Projects" data-ka="კომერციული პროექტები" data-ru="Коммерческие проекты">Commercial Projects</h4>
+                            <p data-en="Office buildings and retail spaces" data-ka="ოფისის შენობები და საცალო სივრცეები" data-ru="Офисные здания и торговые помещения">Office buildings and retail spaces</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-industry"></i>
+                            <h4 data-en="Industrial Facilities" data-ka="ინდუსტრიული ობიექტები" data-ru="Промышленные объекты">Industrial Facilities</h4>
+                            <p data-en="Warehouses and manufacturing plants" data-ka="საწყობები და წარმოების ქარხნები" data-ru="Склады и производственные предприятия">Warehouses and manufacturing plants</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-certificate"></i>
+                            <h4 data-en="Quality Assurance" data-ka="ხარისხის უზრუნველყოფა" data-ru="Обеспечение качества">Quality Assurance</h4>
+                            <p data-en="ISO certified construction standards" data-ka="ISO სერტიფიცირებული სამშენებლო სტანდარტები" data-ru="Строительные стандарты, сертифицированные ISO">ISO certified construction standards</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 2: Engineering Solutions -->
+            <div class="service-detail" data-service="engineering">
+                <div class="service-header">
+                    <div class="service-image">
+                        <img src="images/constr2.jpg" alt="Engineering Solutions">
+                        <div class="service-image-overlay"></div>
+                    </div>
+                    <p class="service-subtitle" data-en="Innovative Engineering" data-ka="ინოვაციური საინჟინრო" data-ru="Инновационная инженерия">Innovative Engineering</p>
+                    <h1 class="service-title" data-en="Engineering Solutions" data-ka="საინჟინრო გადაწყვეტები" data-ru="Инженерные решения">Engineering Solutions</h1>
+                </div>
+                <div class="service-description">
+                    <h3 data-en="About This Service" data-ka="სერვისის შესახებ" data-ru="О данной услуге">About This Service</h3>
+                    <p data-en="Our engineering team provides innovative solutions for complex technical challenges. We specialize in structural engineering, mechanical systems, and electrical infrastructure design to ensure optimal performance and efficiency." data-ka="ჩვენი საინჟინრო გუნდი უზრუნველყოფს ინოვაციურ გადაწყვეტებს რთული ტექნიკური გამოწვევებისთვის. ჩვენ სპეციალიზირებული ვართ კონსტრუქციულ საინჟინროში, მექანიკურ სისტემებსა და ელექტრო ინფრასტრუქტურის დიზაინში." data-ru="Наша инженерная команда предоставляет инновационные решения для сложных технических задач. Мы специализируемся на структурной инженерии, механических системах и проектировании электрической инфраструктуры.">
+                        Our engineering team provides innovative solutions for complex technical challenges. We specialize in structural engineering, mechanical systems, and electrical infrastructure design to ensure optimal performance and efficiency.
+                    </p>
+
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <i class="fas fa-blueprint"></i>
+                            <h4 data-en="Structural Design" data-ka="კონსტრუქციული დიზაინი" data-ru="Конструктивный дизайн">Structural Design</h4>
+                            <p data-en="Advanced structural analysis and design" data-ka="გაუმჯობესებული კონსტრუქციული ანალიზი და დიზაინი" data-ru="Расширенный структурный анализ и проектирование">Advanced structural analysis and design</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-cogs"></i>
+                            <h4 data-en="MEP Engineering" data-ka="MEP საინჟინრო" data-ru="MEP инжиниринг">MEP Engineering</h4>
+                            <p data-en="Mechanical, electrical, and plumbing systems" data-ka="მექანიკური, ელექტრო და სანტექნიკური სისტემები" data-ru="Механические, электрические и сантехнические системы">Mechanical, electrical, and plumbing systems</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-chart-line"></i>
+                            <h4 data-en="Performance Analysis" data-ka="შესრულების ანალიზი" data-ru="Анализ производительности">Performance Analysis</h4>
+                            <p data-en="Energy efficiency and optimization studies" data-ka="ენერგო ეფექტურობა და ოპტიმიზაციის კვლევები" data-ru="Энергоэффективность и оптимизационные исследования">Energy efficiency and optimization studies</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4 data-en="Safety Engineering" data-ka="უსაფრთხოების საინჟინრო" data-ru="Инженерия безопасности">Safety Engineering</h4>
+                            <p data-en="Risk assessment and safety protocols" data-ka="რისკების შეფასება და უსაფრთხოების პროტოკოლები" data-ru="Оценка рисков и протоколы безопасности">Risk assessment and safety protocols</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 3: Project Consulting -->
+            <div class="service-detail" data-service="consulting">
+                <div class="service-header">
+                    <div class="service-image">
+                        <img src="images/constr2.jpg" alt="Project Consulting">
+                        <div class="service-image-overlay"></div>
+                    </div>
+                    <p class="service-subtitle" data-en="Expert Guidance" data-ka="ექსპერტის მითითება" data-ru="Экспертное руководство">Expert Guidance</p>
+                    <h1 class="service-title" data-en="Project Consulting" data-ka="პროექტის კონსულტაცია" data-ru="Консалтинг проектов">Project Consulting</h1>
+                </div>
+                <div class="service-description">
+                    <h3 data-en="About This Service" data-ka="სერვისის შესახებ" data-ru="О данной услуге">About This Service</h3>
+                    <p data-en="Our consulting services help clients make informed decisions throughout the project lifecycle. We provide strategic planning, feasibility studies, and expert recommendations to ensure project success." data-ka="ჩვენი საკონსულტაციო სერვისები ეხმარება კლიენტებს მიიღონ ინფორმირებული გადაწყვეტილებები პროექტის მთელი ციკლის განმავლობაში. ჩვენ ვთავაზობთ სტრატეგიულ დაგეგმვას, შესაძლებლობის კვლევებსა და ექსპერტულ რეკომენდაციებს." data-ru="Наши консалтинговые услуги помогают клиентам принимать обоснованные решения на протяжении всего жизненного цикла проекта. Мы предоставляем стратегическое планирование, исследования осуществимости и экспертные рекомендации.">
+                        Our consulting services help clients make informed decisions throughout the project lifecycle. We provide strategic planning, feasibility studies, and expert recommendations to ensure project success.
+                    </p>
+
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <h4 data-en="Strategic Planning" data-ka="სტრატეგიული დაგეგმვა" data-ru="Стратегическое планирование">Strategic Planning</h4>
+                            <p data-en="Long-term project strategy development" data-ka="გრძელვადიანი პროექტის სტრატეგიის შემუშავება" data-ru="Разработка долгосрочной стратегии проекта">Long-term project strategy development</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-calculator"></i>
+                            <h4 data-en="Cost Analysis" data-ka="ხარჯების ანალიზი" data-ru="Анализ затрат">Cost Analysis</h4>
+                            <p data-en="Budget optimization and cost control" data-ka="ბიუჯეტის ოპტიმიზაცია და ხარჯების კონტროლი" data-ru="Оптимизация бюджета и контроль затрат">Budget optimization and cost control</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-search-dollar"></i>
+                            <h4 data-en="Feasibility Studies" data-ka="შესაძლებლობის კვლევები" data-ru="Исследования осуществимости">Feasibility Studies</h4>
+                            <p data-en="Comprehensive project viability assessment" data-ka="ყოვლისმომცველი პროექტის სიცოცხლისუნარიანობის შეფასება" data-ru="Комплексная оценка жизнеспособности проекта">Comprehensive project viability assessment</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-handshake"></i>
+                            <h4 data-en="Stakeholder Management" data-ka="დაინტერესებული მხარეების მართვა" data-ru="Управление заинтересованными сторонами">Stakeholder Management</h4>
+                            <p data-en="Effective communication and coordination" data-ka="ეფექტური კომუნიკაცია და კოორდინაცია" data-ru="Эффективная коммуникация и координация">Effective communication and coordination</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 4: Renovation & Remodeling -->
+            <div class="service-detail" data-service="renovation">
+                <div class="service-header">
+                    <div class="service-image">
+                        <img src="images/constr2.jpg" alt="Renovation & Remodeling">
+                        <div class="service-image-overlay"></div>
+                    </div>
+                    <p class="service-subtitle" data-en="Transform Your Space" data-ka="გარდაქმენით თქვენი სივრცე" data-ru="Преобразуйте свое пространство">Transform Your Space</p>
+                    <h1 class="service-title" data-en="Renovation & Remodeling" data-ka="რემონტი და რეკონსტრუქცია" data-ru="Ремонт и реконструкция">Renovation & Remodeling</h1>
+                </div>
+                <div class="service-description">
+                    <h3 data-en="About This Service" data-ka="სერვისის შესახებ" data-ru="О данной услуге">About This Service</h3>
+                    <p data-en="Transform existing spaces with our professional renovation and remodeling services. Whether updating a single room or completely reimagining your property, we bring creativity and craftsmanship to every project." data-ka="გარდაქმენით არსებული სივრცეები ჩვენი პროფესიონალური რემონტისა და რეკონსტრუქციის სერვისებით. იქნება ეს ერთი ოთახის განახლება თუ თქვენი უძრავი ქონების სრული გადახედვა, ჩვენ ვაერთიანებთ შემოქმედებითობასა და ოსტატობას." data-ru="Преобразуйте существующие пространства с нашими профессиональными услугами по ремонту и реконструкции. Будь то обновление одной комнаты или полная реконцептуализация вашей собственности, мы привносим креативность и мастерство в каждый проект.">
+                        Transform existing spaces with our professional renovation and remodeling services. Whether updating a single room or completely reimagining your property, we bring creativity and craftsmanship to every project.
+                    </p>
+
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <i class="fas fa-home"></i>
+                            <h4 data-en="Interior Remodeling" data-ka="ინტერიერის რეკონსტრუქცია" data-ru="Реконструкция интерьера">Interior Remodeling</h4>
+                            <p data-en="Complete interior space transformation" data-ka="შიდა სივრცის სრული ტრანსფორმაცია" data-ru="Полная трансформация внутреннего пространства">Complete interior space transformation</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-paint-roller"></i>
+                            <h4 data-en="Facade Renovation" data-ka="ფასადის რემონტი" data-ru="Ремонт фасада">Facade Renovation</h4>
+                            <p data-en="Exterior modernization and restoration" data-ka="გარე მოდერნიზაცია და აღდგენა" data-ru="Внешняя модернизация и реставрация">Exterior modernization and restoration</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-expand-arrows-alt"></i>
+                            <h4 data-en="Space Optimization" data-ka="სივრცის ოპტიმიზაცია" data-ru="Оптимизация пространства">Space Optimization</h4>
+                            <p data-en="Maximize functionality and aesthetics" data-ka="ფუნქციონალურობისა და ესთეტიკის მაქსიმიზაცია" data-ru="Максимизация функциональности и эстетики">Maximize functionality and aesthetics</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-recycle"></i>
+                            <h4 data-en="Sustainable Updates" data-ka="მდგრადი განახლებები" data-ru="Устойчивые обновления">Sustainable Updates</h4>
+                            <p data-en="Eco-friendly renovation solutions" data-ka="ეკოლოგიურად სუფთა რემონტის გადაწყვეტები" data-ru="Экологически чистые решения для ремонта">Eco-friendly renovation solutions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 5: Facility Maintenance -->
+            <div class="service-detail" data-service="maintenance">
+                <div class="service-header">
+                    <div class="service-image">
+                        <img src="images/constr2.jpg" alt="Facility Maintenance">
+                        <div class="service-image-overlay"></div>
+                    </div>
+                    <p class="service-subtitle" data-en="Reliable Maintenance" data-ka="საიმედო მომსახურება" data-ru="Надежное обслуживание">Reliable Maintenance</p>
+                    <h1 class="service-title" data-en="Facility Maintenance" data-ka="ობიექტის მომსახურება" data-ru="Обслуживание объектов">Facility Maintenance</h1>
+                </div>
+                <div class="service-description">
+                    <h3 data-en="About This Service" data-ka="სერვისის შესახებ" data-ru="О данной услуге">About This Service</h3>
+                    <p data-en="Keep your facilities running smoothly with our comprehensive maintenance services. From preventive maintenance to emergency repairs, we ensure your buildings and systems operate at peak efficiency year-round." data-ka="შეინარჩუნეთ თქვენი ობიექტების გლუვი ფუნქციონირება ჩვენი ყოვლისმომცველი მომსახურების სერვისებით. პრევენციული მომსახურებიდან გადაუდებელ შეკეთებამდე, ჩვენ ვუზრუნველყოფთ თქვენი შენობებისა და სისტემების მაქსიმალურ ეფექტურობას." data-ru="Поддерживайте бесперебойную работу ваших объектов с нашими комплексными услугами по обслуживанию. От профилактического обслуживания до аварийного ремонта, мы обеспечиваем максимальную эффективность ваших зданий и систем круглый год.">
+                        Keep your facilities running smoothly with our comprehensive maintenance services. From preventive maintenance to emergency repairs, we ensure your buildings and systems operate at peak efficiency year-round.
+                    </p>
+
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <i class="fas fa-calendar-check"></i>
+                            <h4 data-en="Preventive Maintenance" data-ka="პრევენციული მომსახურება" data-ru="Профилактическое обслуживание">Preventive Maintenance</h4>
+                            <p data-en="Scheduled inspections and maintenance" data-ka="დაგეგმილი ინსპექტირებები და მომსახურება" data-ru="Плановые проверки и обслуживание">Scheduled inspections and maintenance</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-ambulance"></i>
+                            <h4 data-en="Emergency Services" data-ka="გადაუდებელი სერვისები" data-ru="Аварийные услуги">Emergency Services</h4>
+                            <p data-en="24/7 emergency response team" data-ka="24/7 გადაუდებელი რეაგირების გუნდი" data-ru="Круглосуточная аварийная служба">24/7 emergency response team</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-clipboard-list"></i>
+                            <h4 data-en="Asset Management" data-ka="აქტივების მართვა" data-ru="Управление активами">Asset Management</h4>
+                            <p data-en="Comprehensive facility asset tracking" data-ka="ობიექტის აქტივების ყოვლისმომცველი თვალთვალი" data-ru="Комплексное отслеживание активов объекта">Comprehensive facility asset tracking</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-bolt"></i>
+                            <h4 data-en="Systems Optimization" data-ka="სისტემების ოპტიმიზაცია" data-ru="Оптимизация систем">Systems Optimization</h4>
+                            <p data-en="Performance tuning and upgrades" data-ka="შესრულების გამართვა და განახლებები" data-ru="Настройка производительности и обновления">Performance tuning and upgrades</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 6: Project Management -->
+            <div class="service-detail" data-service="management">
+                <div class="service-header">
+                    <div class="service-image">
+                        <img src="images/constr2.jpg" alt="Project Management">
+                        <div class="service-image-overlay"></div>
+                    </div>
+                    <p class="service-subtitle" data-en="Professional Management" data-ka="პროფესიონალური მენეჯმენტი" data-ru="Профессиональное управление">Professional Management</p>
+                    <h1 class="service-title" data-en="Project Management" data-ka="პროექტის მენეჯმენტი" data-ru="Управление проектами">Project Management</h1>
+                </div>
+                <div class="service-description">
+                    <h3 data-en="About This Service" data-ka="სერვისის შესახებ" data-ru="О данной услуге">About This Service</h3>
+                    <p data-en="Our project management services ensure seamless execution from conception to completion. We coordinate all aspects of your project, managing timelines, budgets, resources, and stakeholders to deliver exceptional results on schedule." data-ka="ჩვენი პროექტის მენეჯმენტის სერვისები უზრუნველყოფს უწყვეტ შესრულებას კონცეფციიდან დასრულებამდე. ჩვენ ვაკოორდინირებთ თქვენი პროექტის ყველა ასპექტს, ვმართავთ ვადებს, ბიუჯეტებს, რესურსებსა და დაინტერესებულ მხარეებს." data-ru="Наши услуги по управлению проектами обеспечивают безупречное выполнение от концепции до завершения. Мы координируем все аспекты вашего проекта, управляя сроками, бюджетами, ресурсами и заинтересованными сторонами.">
+                        Our project management services ensure seamless execution from conception to completion. We coordinate all aspects of your project, managing timelines, budgets, resources, and stakeholders to deliver exceptional results on schedule.
+                    </p>
+
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <i class="fas fa-project-diagram"></i>
+                            <h4 data-en="Planning & Scheduling" data-ka="დაგეგმვა და განრიგი" data-ru="Планирование и составление графика">Planning & Scheduling</h4>
+                            <p data-en="Detailed project timeline development" data-ka="დეტალური პროექტის ვადების შემუშავება" data-ru="Разработка детального графика проекта">Detailed project timeline development</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-money-check-alt"></i>
+                            <h4 data-en="Budget Control" data-ka="ბიუჯეტის კონტროლი" data-ru="Контроль бюджета">Budget Control</h4>
+                            <p data-en="Financial oversight and cost management" data-ka="ფინანსური ზედამხედველობა და ხარჯების მართვა" data-ru="Финансовый надзор и управление затратами">Financial oversight and cost management</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-user-friends"></i>
+                            <h4 data-en="Team Coordination" data-ka="გუნდის კოორდინაცია" data-ru="Координация команды">Team Coordination</h4>
+                            <p data-en="Efficient resource allocation and management" data-ka="რესურსების ეფექტური განაწილება და მართვა" data-ru="Эффективное распределение и управление ресурсами">Efficient resource allocation and management</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-chart-bar"></i>
+                            <h4 data-en="Progress Monitoring" data-ka="პროგრესის მონიტორინგი" data-ru="Мониторинг прогресса">Progress Monitoring</h4>
+                            <p data-en="Real-time tracking and reporting" data-ka="რეალურ დროში თვალთვალი და ანგარიშგება" data-ru="Отслеживание и отчетность в реальном времени">Real-time tracking and reporting</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</footer>
 
-<script src="scripts/main.js"></script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">Moduli</span>
+                    <span class="logo-subtitle">Corporation</span>
+                </div>
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="index.html" data-en="Home" data-ka="მთავარი" data-ru="Главная">Home</a></li>
+                        <li><a href="services.html" data-en="Services" data-ka="სერვისები" data-ru="Услуги">Services</a></li>
+                        <li><a href="product.html" data-en="Product" data-ka="პროდუქტი" data-ru="Продукт">Product</a></li>
+                        <li><a href="projects.html" data-en="Projects" data-ka="პროექტები" data-ru="Проекты">Projects</a></li>
+                        <li><a href="about.html" data-en="About Us" data-ka="ჩვენს შესახებ" data-ru="О нас">About Us</a></li>
+                        <li><a href="index.html#contact" data-en="Contact" data-ka="კონტაქტი" data-ru="Контакт">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="social-links">
+                    <a href="#" class="social-link facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link youtube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 <span data-en="All Rights Reserved" data-ka="ყველა უფლება დაცულია" data-ru="Все права защищены">All Rights Reserved</span> © <span data-en="Designed By" data-ka="დიზაინი" data-ru="Разработано">Designed By</span> <a href="#">Moduli</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script>
+        // Service switching functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuItems = document.querySelectorAll('.service-menu-item');
+            const serviceDetails = document.querySelectorAll('.service-detail');
+
+            menuItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const targetService = this.getAttribute('data-service');
+
+                    // Remove active class from all menu items
+                    menuItems.forEach(mi => mi.classList.remove('active'));
+
+                    // Add active class to clicked item
+                    this.classList.add('active');
+
+                    // Hide all service details
+                    serviceDetails.forEach(sd => sd.classList.remove('active'));
+
+                    // Show selected service detail
+                    const targetDetail = document.querySelector(`.service-detail[data-service="${targetService}"]`);
+                    if (targetDetail) {
+                        targetDetail.classList.add('active');
+
+                        // Smooth scroll to top of content area on mobile
+                        if (window.innerWidth <= 968) {
+                            targetDetail.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+
+            // Trigger click on first service to show it by default
+            if (menuItems.length > 0) {
+                menuItems[0].click();
+            }
+        });
+    </script>
 </body>
 </html>
