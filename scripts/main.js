@@ -657,3 +657,13 @@ if (window.innerWidth < 768) {
         card.style.transition = 'transform 0.2s ease';
     });
 }
+
+document.querySelectorAll('.showcase-card').forEach(card => {
+  card.addEventListener('mouseenter', () => {
+    card.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+    card.style.transform = 'translateY(-12px) scale(1.05)';
+  });
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = 'translateY(0) scale(1)';
+  });
+});
