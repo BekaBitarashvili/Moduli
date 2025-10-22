@@ -1129,7 +1129,7 @@ body {
 .showcase-bg {
   position: absolute;
   inset: 0;
-  /*background: url('images/constr2.jpg') center/cover no-repeat;*/
+  background: url('images/your-image.jpg') center/cover no-repeat;
   z-index: 0;
   transition: transform 0.8s ease;
 }
@@ -1161,7 +1161,7 @@ body {
   opacity: 0.9;
 }
 
-/* Grid section */
+/* Grid Layout */
 .showcase-grid {
   position: relative;
   display: grid;
@@ -1171,11 +1171,12 @@ body {
   z-index: 2;
 }
 
+/* Individual Cards */
 .showcase-card {
   position: relative;
   border-radius: 15px;
   overflow: hidden;
-  height: 180px;
+  height: 200px;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(6px);
@@ -1183,25 +1184,48 @@ body {
   cursor: pointer;
 }
 
-/* ეს არის მთავარი ნაწილი — სურათის ლამაზი ჩაჯდომა */
 .showcase-card img {
   width: 100%;
   height: 100%;
-  object-fit: cover;     /* სურათი ზუსტად ჩაჯდება დივში */
-  transition: transform 0.5s ease;
+  object-fit: cover;
+  transition: transform 0.6s ease, filter 0.6s ease;
 }
 
-/* Hover effect */
 .showcase-card:hover img {
   transform: scale(1.1);
+  filter: brightness(0.7);
 }
 
+/* Text Titles */
+.showcase-card h3 {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 2;
+  opacity: 0.85;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
+  transition: all 0.4s ease;
+}
+
+.showcase-card:hover h3 {
+  transform: translateY(-5px);
+  opacity: 1;
+  color: #ff6b35;
+}
+
+/* Hover effect for whole card */
 .showcase-card:hover {
   transform: translateY(-10px) scale(1.03);
   border-color: #ff6b35;
   box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
 }
 
+/* Responsive */
 @media (max-width: 768px) {
   .showcase-content h2 {
     font-size: 2rem;
@@ -1209,4 +1233,11 @@ body {
   .showcase-content p {
     font-size: 0.95rem;
   }
+  .showcase-card {
+    height: 160px;
+  }
+  .showcase-card h3 {
+    font-size: 1rem;
+  }
 }
+
