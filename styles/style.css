@@ -1242,17 +1242,19 @@ body {
 }
 
 
-/* Service Preview */
+/* Services Preview Section */
 .services-preview {
-    padding: 0;
+    padding: 60px 40px;
     margin: 0;
-    background: #0f0f0f;
+    background: linear-gradient(135deg, #000000 0%, #000000 100%);
 }
 
 .services-preview-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 0;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .service-preview-card {
@@ -1265,6 +1267,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
 .service-preview-card::before {
@@ -1283,8 +1287,13 @@ body {
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
 }
 
+.service-preview-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
 .blue-card {
-    background: linear-gradient(135deg, #00a8e8 0%, #0077b6 100%);
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
 }
 
 .gray-card {
