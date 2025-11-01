@@ -166,7 +166,7 @@
             position: relative;
             border-radius: 20px;
             overflow: hidden;
-            height: 350px;
+            height: 250px; /* 350-ზე მქონდა*/
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
             transition: all 0.4s ease;
         }
@@ -317,12 +317,14 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <span class="logo-text">Moduli</span>
+                <a href="index.html" style="text-decoration: none; color: white">
+                    <span class="logo-text">Moduli</span>
+                </a>
                 <span class="logo-subtitle">Corporation</span>
             </div>
             <div class="nav-menu">
                 <ul class="nav-list">
-                    <li><a href="index.html" data-en="Home" data-ka="მთავარი" data-ru="Главная">Home</a></li>
+                    <li><a href="prepared.html" data-en="Prepared Projects" data-ka="მზა პროექტი" data-ru="Подготовленные проекты">Prepared Projects</a></li>
                     <li><a href="services.html" data-en="Services" data-ka="სერვისები" data-ru="Услуги">Services</a></li>
                     <li><a href="product.html" data-en="Product" data-ka="პროდუქტი" data-ru="Продукт" class="active">Product</a></li>
                     <li><a href="projects.html" data-en="Projects" data-ka="პროექტები" data-ru="Проекты">Projects</a></li>
@@ -346,42 +348,42 @@
     <!-- Product Container -->
     <div class="product-container">
         <div class="product-header">
-            <h1 data-en="Our Products" data-ka="ჩვენი პროდუქტები" data-ru="Наши продукты">Our Products</h1>
-            <p data-en="Discover our innovative range of construction materials and solutions designed to meet the highest industry standards" data-ka="აღმოაჩინეთ ჩვენი ინოვაციური სამშენებლო მასალებისა და გადაწყვეტების ასორტიმენტი, შექმნილი ინდუსტრიის უმაღლესი სტანდარტების დასაკმაყოფილებლად" data-ru="Откройте для себя наш инновационный ассортимент строительных материалов и решений, разработанных в соответствии с самыми высокими отраслевыми стандартами">
-                Discover our innovative range of construction materials and solutions designed to meet the highest industry standards
+            <h1 data-en="" data-ka="" data-ru=""></h1>
+            <p data-en="" data-ka="" data-ru="">
+
             </p>
         </div>
 
         <!-- Horizontal Product Tabs -->
         <div class="product-tabs">
-            <div class="product-tab active" data-product="concrete" data-en="Concrete Solutions" data-ka="ბეტონის გადაწყვეტები" data-ru="Бетонные решения">
+            <div class="product-tab" data-product="concrete" data-en="Metal" data-ka="ლითონი" data-ru="Бетонные решения">
                 <i class="fas fa-cube"></i>
-                <span>Concrete Solutions</span>
+                <span>Metal</span>
             </div>
-            <div class="product-tab" data-product="steel" data-en="Steel Structures" data-ka="ფოლადის კონსტრუქციები" data-ru="Стальные конструкции">
+            <div class="product-tab" data-product="steel" data-en="Sandwich Panel" data-ka="სენდვიჩ პანელი" data-ru="Стальные конструкции">
                 <i class="fas fa-layer-group"></i>
-                <span>Steel Structures</span>
+                <span>Sandwich Panel</span>
             </div>
-            <div class="product-tab" data-product="insulation" data-en="Insulation Materials" data-ka="საიზოლაციო მასალები" data-ru="Изоляционные материалы">
+            <div class="product-tab" data-product="insulation" data-en="Accessories" data-ka="აქსესუარები" data-ru="Изоляционные материалы">
                 <i class="fas fa-shield-alt"></i>
-                <span>Insulation Materials</span>
+                <span>Accessories</span>
             </div>
-            <div class="product-tab" data-product="finishing" data-en="Finishing Materials" data-ka="სამაგისო მასალები" data-ru="Отделочные материалы">
+            <div class="product-tab" data-product="finishing" data-en="X" data-ka="სამაგისო მასალები" data-ru="Отделочные материалы">
                 <i class="fas fa-paint-roller"></i>
-                <span>Finishing Materials</span>
+                <span>X</span>
             </div>
-            <div class="product-tab" data-product="smart" data-en="Smart Systems" data-ka="ჭკვიანი სისტემები" data-ru="Умные системы">
+            <div class="product-tab" data-product="smart" data-en="X" data-ka="ჭკვიანი სისტემები" data-ru="Умные системы">
                 <i class="fas fa-microchip"></i>
-                <span>Smart Systems</span>
+                <span>X</span>
             </div>
         </div>
 
         <!-- Product Content -->
         <div class="product-content-wrapper">
-            <!-- Product 1: Concrete Solutions -->
-            <div class="product-content active" data-product="concrete">
+            <!-- Product 1: ლითონი -->
+            <div class="product-content" data-product="concrete">
                 <div class="product-showcase">
-                    <h2 class="product-title" data-en="Concrete Solutions" data-ka="ბეტონის გადაწყვეტები" data-ru="Бетонные решения">Concrete Solutions</h2>
+                    <h2 class="product-title" data-en="Metal" data-ka="ლითონი" data-ru="asdasd">Metal</h2>
                     <p class="product-subtitle" data-en="High-Performance Concrete for Modern Construction" data-ka="მაღალი ხარისხის ბეტონი თანამედროვე მშენებლობისთვის" data-ru="Высокопроизводительный бетон для современного строительства">High-Performance Concrete for Modern Construction</p>
 
                     <div class="product-images-grid">
@@ -397,6 +399,27 @@
                             <div class="product-image-overlay">
                                 <h4 data-en="Precast Elements" data-ka="წინასწარ შექმნილი ელემენტები" data-ru="Сборные элементы">Precast Elements</h4>
                                 <p data-en="Precision-manufactured concrete components" data-ka="პრეციზიულად წარმოებული ბეტონის კომპონენტები" data-ru="Точно изготовленные бетонные компоненты">Precision-manufactured concrete components</p>
+                            </div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="images/constr2.jpg" alt="Decorative Concrete">
+                            <div class="product-image-overlay">
+                                <h4 data-en="Decorative Concrete" data-ka="დეკორატიული ბეტონი" data-ru="Декоративный бетон">Decorative Concrete</h4>
+                                <p data-en="Aesthetic concrete solutions for modern design" data-ka="ესთეტიკური ბეტონის გადაწყვეტები თანამედროვე დიზაინისთვის" data-ru="Эстетичные бетонные решения для современного дизайна">Aesthetic concrete solutions for modern design</p>
+                            </div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="images/constr2.jpg" alt="Decorative Concrete">
+                            <div class="product-image-overlay">
+                                <h4 data-en="Decorative Concrete" data-ka="დეკორატიული ბეტონი" data-ru="Декоративный бетон">Decorative Concrete</h4>
+                                <p data-en="Aesthetic concrete solutions for modern design" data-ka="ესთეტიკური ბეტონის გადაწყვეტები თანამედროვე დიზაინისთვის" data-ru="Эстетичные бетонные решения для современного дизайна">Aesthetic concrete solutions for modern design</p>
+                            </div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="images/constr2.jpg" alt="Decorative Concrete">
+                            <div class="product-image-overlay">
+                                <h4 data-en="Decorative Concrete" data-ka="დეკორატიული ბეტონი" data-ru="Декоративный бетон">Decorative Concrete</h4>
+                                <p data-en="Aesthetic concrete solutions for modern design" data-ka="ესთეტიკური ბეტონის გადაწყვეტები თანამედროვე დიზაინისთვის" data-ru="Эстетичные бетонные решения для современного дизайна">Aesthetic concrete solutions for modern design</p>
                             </div>
                         </div>
                         <div class="product-image-item">
@@ -444,12 +467,58 @@
                 </div>
             </div>
 
-            <!-- Product 2: Steel Structures -->
+            <!-- Product 2: სენდვიჩ პანელი -->
             <div class="product-content" data-product="steel">
                 <div class="product-showcase">
-                    <h2 class="product-title" data-en="Steel Structures" data-ka="ფოლადის კონსტრუქციები" data-ru="Стальные конструкции">Steel Structures</h2>
+                    <h2 class="product-title" data-en="Sandwich Panel" data-ka="სენდვიჩ პანელი" data-ru="Стальные конструкции">Sandwich Panel</h2>
                     <p class="product-subtitle" data-en="Premium Steel Solutions for Maximum Strength" data-ka="პრემიუმ ფოლადის გადაწყვეტები მაქსიმალური სიმტკიცისთვის" data-ru="Премиальные стальные решения для максимальной прочности">Premium Steel Solutions for Maximum Strength</p>
 
+                    <div class="product-images-grid">
+                        <div class="product-image-item">
+                            <img src="images/constr2.jpg" alt="Structural Steel">
+                            <div class="product-image-overlay">
+                                <h4 data-en="Structural Steel Beams" data-ka="კონსტრუქციული ფოლადის ძელები" data-ru="Стальные конструкционные балки">Structural Steel Beams</h4>
+                                <p data-en="Heavy-duty beams for large-scale projects" data-ka="მძიმე საიმედო ძელები მასშტაბური პროექტებისთვის" data-ru="Сверхпрочные балки для крупных проектов">Heavy-duty beams for large-scale projects</p>
+                            </div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="images/constr2.jpg" alt="Steel Columns">
+                            <div class="product-image-overlay">
+                                <h4 data-en="Steel Columns" data-ka="ფოლადის სვეტები" data-ru="Стальные колонны">Steel Columns</h4>
+                                <p data-en="Load-bearing columns for robust construction" data-ka="დატვირთვის მატარებელი სვეტები მტკიცე მშენებლობისთვის" data-ru="Несущие колонны для прочного строительства">Load-bearing columns for robust construction</p>
+                            </div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="images/constr2.jpg" alt="Metal Frameworks">
+                            <div class="product-image-overlay">
+                                <h4 data-en="Metal Frameworks" data-ka="მეტალის ჩარჩოები" data-ru="Металлические каркасы">Metal Frameworks</h4>
+                                <p data-en="Custom-designed steel frameworks" data-ka="ინდივიდუალურად დიზაინირებული ფოლადის ჩარჩოები" data-ru="Индивидуально разработанные стальные каркасы">Custom-designed steel frameworks</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-images-grid">
+                        <div class="product-image-item">
+                            <img src="images/constr2.jpg" alt="Structural Steel">
+                            <div class="product-image-overlay">
+                                <h4 data-en="Structural Steel Beams" data-ka="კონსტრუქციული ფოლადის ძელები" data-ru="Стальные конструкционные балки">Structural Steel Beams</h4>
+                                <p data-en="Heavy-duty beams for large-scale projects" data-ka="მძიმე საიმედო ძელები მასშტაბური პროექტებისთვის" data-ru="Сверхпрочные балки для крупных проектов">Heavy-duty beams for large-scale projects</p>
+                            </div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="images/constr2.jpg" alt="Steel Columns">
+                            <div class="product-image-overlay">
+                                <h4 data-en="Steel Columns" data-ka="ფოლადის სვეტები" data-ru="Стальные колонны">Steel Columns</h4>
+                                <p data-en="Load-bearing columns for robust construction" data-ka="დატვირთვის მატარებელი სვეტები მტკიცე მშენებლობისთვის" data-ru="Несущие колонны для прочного строительства">Load-bearing columns for robust construction</p>
+                            </div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="images/constr2.jpg" alt="Metal Frameworks">
+                            <div class="product-image-overlay">
+                                <h4 data-en="Metal Frameworks" data-ka="მეტალის ჩარჩოები" data-ru="Металлические каркасы">Metal Frameworks</h4>
+                                <p data-en="Custom-designed steel frameworks" data-ka="ინდივიდუალურად დიზაინირებული ფოლადის ჩარჩოები" data-ru="Индивидуально разработанные стальные каркасы">Custom-designed steel frameworks</p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="product-images-grid">
                         <div class="product-image-item">
                             <img src="images/constr2.jpg" alt="Structural Steel">
@@ -510,12 +579,81 @@
                 </div>
             </div>
 
-            <!-- Product 3: Insulation Materials -->
+            <!-- Product 3: აქსესუარები -->
             <div class="product-content" data-product="insulation">
                 <div class="product-showcase">
-                    <h2 class="product-title" data-en="Insulation Materials" data-ka="საიზოლაციო მასალები" data-ru="Изоляционные материалы">Insulation Materials</h2>
+                    <h2 class="product-title" data-en="Accessories" data-ka="აქსესუარები" data-ru="Изоляционные материалы">Accessories</h2>
                     <p class="product-subtitle" data-en="Energy-Efficient Thermal and Acoustic Insulation" data-ka="ენერგო ეფექტური თერმული და აკუსტიკური იზოლაცია" data-ru="Энергоэффективная тепловая и акустическая изоляция">Energy-Efficient Thermal and Acoustic Insulation</p>
 
+                    <div class="product-images-grid">
+                        <div class="product-image-item">
+                            <img src="images/constr2.jpg" alt="Thermal Insulation">
+                            <div class="product-image-overlay">
+                                <h4 data-en="Thermal Insulation" data-ka="თერმული იზოლაცია" data-ru="Теплоизоляция">Thermal Insulation</h4>
+                                <p data-en="Advanced thermal barrier solutions" data-ka="გაუმჯობესებული თერმული ბარიერის გადაწყვეტები" data-ru="Передовые решения теплового барьера">Advanced thermal barrier solutions</p>
+                            </div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="images/constr2.jpg" alt="Acoustic Panels">
+                            <div class="product-image-overlay">
+                                <h4 data-en="Acoustic Panels" data-ka="აკუსტიკური პანელები" data-ru="Акустические панели">Acoustic Panels</h4>
+                                <p data-en="Sound-absorbing wall and ceiling panels" data-ka="ხმის შთამნთქმელი კედლისა და ჭერის პანელები" data-ru="Звукопоглощающие стеновые и потолочные панели">Sound-absorbing wall and ceiling panels</p>
+                            </div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="images/constr2.jpg" alt="Waterproofing">
+                            <div class="product-image-overlay">
+                                <h4 data-en="Waterproofing Systems" data-ka="წყალგაუმტარი სისტემები" data-ru="Гидроизоляционные системы">Waterproofing Systems</h4>
+                                <p data-en="Complete moisture protection solutions" data-ka="სრული ტენისგან დაცვის გადაწყვეტები" data-ru="Полные решения защиты от влаги">Complete moisture protection solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-images-grid">
+                        <div class="product-image-item">
+                            <img src="images/constr2.jpg" alt="Thermal Insulation">
+                            <div class="product-image-overlay">
+                                <h4 data-en="Thermal Insulation" data-ka="თერმული იზოლაცია" data-ru="Теплоизоляция">Thermal Insulation</h4>
+                                <p data-en="Advanced thermal barrier solutions" data-ka="გაუმჯობესებული თერმული ბარიერის გადაწყვეტები" data-ru="Передовые решения теплового барьера">Advanced thermal barrier solutions</p>
+                            </div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="images/constr2.jpg" alt="Acoustic Panels">
+                            <div class="product-image-overlay">
+                                <h4 data-en="Acoustic Panels" data-ka="აკუსტიკური პანელები" data-ru="Акустические панели">Acoustic Panels</h4>
+                                <p data-en="Sound-absorbing wall and ceiling panels" data-ka="ხმის შთამნთქმელი კედლისა და ჭერის პანელები" data-ru="Звукопоглощающие стеновые и потолочные панели">Sound-absorbing wall and ceiling panels</p>
+                            </div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="images/constr2.jpg" alt="Waterproofing">
+                            <div class="product-image-overlay">
+                                <h4 data-en="Waterproofing Systems" data-ka="წყალგაუმტარი სისტემები" data-ru="Гидроизоляционные системы">Waterproofing Systems</h4>
+                                <p data-en="Complete moisture protection solutions" data-ka="სრული ტენისგან დაცვის გადაწყვეტები" data-ru="Полные решения защиты от влаги">Complete moisture protection solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-images-grid">
+                        <div class="product-image-item">
+                            <img src="images/constr2.jpg" alt="Thermal Insulation">
+                            <div class="product-image-overlay">
+                                <h4 data-en="Thermal Insulation" data-ka="თერმული იზოლაცია" data-ru="Теплоизоляция">Thermal Insulation</h4>
+                                <p data-en="Advanced thermal barrier solutions" data-ka="გაუმჯობესებული თერმული ბარიერის გადაწყვეტები" data-ru="Передовые решения теплового барьера">Advanced thermal barrier solutions</p>
+                            </div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="images/constr2.jpg" alt="Acoustic Panels">
+                            <div class="product-image-overlay">
+                                <h4 data-en="Acoustic Panels" data-ka="აკუსტიკური პანელები" data-ru="Акустические панели">Acoustic Panels</h4>
+                                <p data-en="Sound-absorbing wall and ceiling panels" data-ka="ხმის შთამნთქმელი კედლისა და ჭერის პანელები" data-ru="Звукопоглощающие стеновые и потолочные панели">Sound-absorbing wall and ceiling panels</p>
+                            </div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="images/constr2.jpg" alt="Waterproofing">
+                            <div class="product-image-overlay">
+                                <h4 data-en="Waterproofing Systems" data-ka="წყალგაუმტარი სისტემები" data-ru="Гидроизоляционные системы">Waterproofing Systems</h4>
+                                <p data-en="Complete moisture protection solutions" data-ka="სრული ტენისგან დაცვის გადაწყვეტები" data-ru="Полные решения защиты от влаги">Complete moisture protection solutions</p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="product-images-grid">
                         <div class="product-image-item">
                             <img src="images/constr2.jpg" alt="Thermal Insulation">
@@ -576,12 +714,81 @@
                 </div>
             </div>
 
-            <!-- Product 4: Finishing Materials -->
+            <!-- Product 4: X -->
             <div class="product-content" data-product="finishing">
                 <div class="product-showcase">
                     <h2 class="product-title" data-en="Finishing Materials" data-ka="სამაგისო მასალები" data-ru="Отделочные материалы">Finishing Materials</h2>
                     <p class="product-subtitle" data-en="Premium Finishes for Aesthetic Excellence" data-ka="პრემიუმ დასრულება ესთეტიკური შესანიშნაობისთვის" data-ru="Премиальная отделка для эстетического совершенства">Premium Finishes for Aesthetic Excellence</p>
 
+                    <div class="product-images-grid">
+                        <div class="product-image-item">
+                            <img src="images/constr2.jpg" alt="Wall Finishes">
+                            <div class="product-image-overlay">
+                                <h4 data-en="Wall Finishes" data-ka="კედლის დასრულება" data-ru="Отделка стен">Wall Finishes</h4>
+                                <p data-en="Premium paints and decorative coatings" data-ka="პრემიუმ საღებავები და დეკორატიული საფარები" data-ru="Премиальные краски и декоративные покрытия">Premium paints and decorative coatings</p>
+                            </div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="images/constr2.jpg" alt="Flooring Solutions">
+                            <div class="product-image-overlay">
+                                <h4 data-en="Flooring Solutions" data-ka="იატაკის გადაწყვეტები" data-ru="Решения для пола">Flooring Solutions</h4>
+                                <p data-en="Durable and elegant floor materials" data-ka="გამძლე და ელეგანტური იატაკის მასალები" data-ru="Прочные и элегантные напольные материалы">Durable and elegant floor materials</p>
+                            </div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="images/constr2.jpg" alt="Ceiling Systems">
+                            <div class="product-image-overlay">
+                                <h4 data-en="Ceiling Systems" data-ka="ჭერის სისტემები" data-ru="Потолочные системы">Ceiling Systems</h4>
+                                <p data-en="Modern suspended and decorative ceilings" data-ka="თანამედროვე საკიდი და დეკორატიული ჭერები" data-ru="Современные подвесные и декоративные потолки">Modern suspended and decorative ceilings</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-images-grid">
+                        <div class="product-image-item">
+                            <img src="images/constr2.jpg" alt="Wall Finishes">
+                            <div class="product-image-overlay">
+                                <h4 data-en="Wall Finishes" data-ka="კედლის დასრულება" data-ru="Отделка стен">Wall Finishes</h4>
+                                <p data-en="Premium paints and decorative coatings" data-ka="პრემიუმ საღებავები და დეკორატიული საფარები" data-ru="Премиальные краски и декоративные покрытия">Premium paints and decorative coatings</p>
+                            </div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="images/constr2.jpg" alt="Flooring Solutions">
+                            <div class="product-image-overlay">
+                                <h4 data-en="Flooring Solutions" data-ka="იატაკის გადაწყვეტები" data-ru="Решения для пола">Flooring Solutions</h4>
+                                <p data-en="Durable and elegant floor materials" data-ka="გამძლე და ელეგანტური იატაკის მასალები" data-ru="Прочные и элегантные напольные материалы">Durable and elegant floor materials</p>
+                            </div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="images/constr2.jpg" alt="Ceiling Systems">
+                            <div class="product-image-overlay">
+                                <h4 data-en="Ceiling Systems" data-ka="ჭერის სისტემები" data-ru="Потолочные системы">Ceiling Systems</h4>
+                                <p data-en="Modern suspended and decorative ceilings" data-ka="თანამედროვე საკიდი და დეკორატიული ჭერები" data-ru="Современные подвесные и декоративные потолки">Modern suspended and decorative ceilings</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-images-grid">
+                        <div class="product-image-item">
+                            <img src="images/constr2.jpg" alt="Wall Finishes">
+                            <div class="product-image-overlay">
+                                <h4 data-en="Wall Finishes" data-ka="კედლის დასრულება" data-ru="Отделка стен">Wall Finishes</h4>
+                                <p data-en="Premium paints and decorative coatings" data-ka="პრემიუმ საღებავები და დეკორატიული საფარები" data-ru="Премиальные краски и декоративные покрытия">Premium paints and decorative coatings</p>
+                            </div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="images/constr2.jpg" alt="Flooring Solutions">
+                            <div class="product-image-overlay">
+                                <h4 data-en="Flooring Solutions" data-ka="იატაკის გადაწყვეტები" data-ru="Решения для пола">Flooring Solutions</h4>
+                                <p data-en="Durable and elegant floor materials" data-ka="გამძლე და ელეგანტური იატაკის მასალები" data-ru="Прочные и элегантные напольные материалы">Durable and elegant floor materials</p>
+                            </div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="images/constr2.jpg" alt="Ceiling Systems">
+                            <div class="product-image-overlay">
+                                <h4 data-en="Ceiling Systems" data-ka="ჭერის სისტემები" data-ru="Потолочные системы">Ceiling Systems</h4>
+                                <p data-en="Modern suspended and decorative ceilings" data-ka="თანამედროვე საკიდი და დეკორატიული ჭერები" data-ru="Современные подвесные и декоративные потолки">Modern suspended and decorative ceilings</p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="product-images-grid">
                         <div class="product-image-item">
                             <img src="images/constr2.jpg" alt="Wall Finishes">
@@ -642,12 +849,81 @@
                 </div>
             </div>
 
-            <!-- Product 5: Smart Systems -->
+            <!-- Product 5: X -->
             <div class="product-content" data-product="smart">
                 <div class="product-showcase">
                     <h2 class="product-title" data-en="Smart Systems" data-ka="ჭკვიანი სისტემები" data-ru="Умные системы">Smart Systems</h2>
                     <p class="product-subtitle" data-en="Intelligent Building Automation Solutions" data-ka="ინტელექტუალური შენობის ავტომატიზაციის გადაწყვეტები" data-ru="Интеллектуальные решения автоматизации зданий">Intelligent Building Automation Solutions</p>
 
+                    <div class="product-images-grid">
+                        <div class="product-image-item">
+                            <img src="images/constr2.jpg" alt="Smart Lighting">
+                            <div class="product-image-overlay">
+                                <h4 data-en="Smart Lighting Systems" data-ka="ჭკვიანი განათების სისტემები" data-ru="Умные системы освещения">Smart Lighting Systems</h4>
+                                <p data-en="Automated lighting control and management" data-ka="ავტომატიზირებული განათების კონტროლი და მართვა" data-ru="Автоматизированное управление освещением">Automated lighting control and management</p>
+                            </div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="images/constr2.jpg" alt="Climate Control">
+                            <div class="product-image-overlay">
+                                <h4 data-en="Climate Control" data-ka="კლიმატის კონტროლი" data-ru="Климат-контроль">Climate Control</h4>
+                                <p data-en="Intelligent HVAC automation systems" data-ka="ინტელექტუალური HVAC ავტომატიზაციის სისტემები" data-ru="Интеллектуальные системы автоматизации HVAC">Intelligent HVAC automation systems</p>
+                            </div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="images/constr2.jpg" alt="Security Systems">
+                            <div class="product-image-overlay">
+                                <h4 data-en="Security & Access Control" data-ka="უსაფრთხოება და წვდომის კონტროლი" data-ru="Безопасность и контроль доступа">Security & Access Control</h4>
+                                <p data-en="Advanced security and monitoring solutions" data-ka="გაუმჯობესებული უსაფრთხოების და მონიტორინგის გადაწყვეტები" data-ru="Передовые решения безопасности и мониторинга">Advanced security and monitoring solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-images-grid">
+                        <div class="product-image-item">
+                            <img src="images/constr2.jpg" alt="Smart Lighting">
+                            <div class="product-image-overlay">
+                                <h4 data-en="Smart Lighting Systems" data-ka="ჭკვიანი განათების სისტემები" data-ru="Умные системы освещения">Smart Lighting Systems</h4>
+                                <p data-en="Automated lighting control and management" data-ka="ავტომატიზირებული განათების კონტროლი და მართვა" data-ru="Автоматизированное управление освещением">Automated lighting control and management</p>
+                            </div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="images/constr2.jpg" alt="Climate Control">
+                            <div class="product-image-overlay">
+                                <h4 data-en="Climate Control" data-ka="კლიმატის კონტროლი" data-ru="Климат-контроль">Climate Control</h4>
+                                <p data-en="Intelligent HVAC automation systems" data-ka="ინტელექტუალური HVAC ავტომატიზაციის სისტემები" data-ru="Интеллектуальные системы автоматизации HVAC">Intelligent HVAC automation systems</p>
+                            </div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="images/constr2.jpg" alt="Security Systems">
+                            <div class="product-image-overlay">
+                                <h4 data-en="Security & Access Control" data-ka="უსაფრთხოება და წვდომის კონტროლი" data-ru="Безопасность и контроль доступа">Security & Access Control</h4>
+                                <p data-en="Advanced security and monitoring solutions" data-ka="გაუმჯობესებული უსაფრთხოების და მონიტორინგის გადაწყვეტები" data-ru="Передовые решения безопасности и мониторинга">Advanced security and monitoring solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-images-grid">
+                        <div class="product-image-item">
+                            <img src="images/constr2.jpg" alt="Smart Lighting">
+                            <div class="product-image-overlay">
+                                <h4 data-en="Smart Lighting Systems" data-ka="ჭკვიანი განათების სისტემები" data-ru="Умные системы освещения">Smart Lighting Systems</h4>
+                                <p data-en="Automated lighting control and management" data-ka="ავტომატიზირებული განათების კონტროლი და მართვა" data-ru="Автоматизированное управление освещением">Automated lighting control and management</p>
+                            </div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="images/constr2.jpg" alt="Climate Control">
+                            <div class="product-image-overlay">
+                                <h4 data-en="Climate Control" data-ka="კლიმატის კონტროლი" data-ru="Климат-контроль">Climate Control</h4>
+                                <p data-en="Intelligent HVAC automation systems" data-ka="ინტელექტუალური HVAC ავტომატიზაციის სისტემები" data-ru="Интеллектуальные системы автоматизации HVAC">Intelligent HVAC automation systems</p>
+                            </div>
+                        </div>
+                        <div class="product-image-item">
+                            <img src="images/constr2.jpg" alt="Security Systems">
+                            <div class="product-image-overlay">
+                                <h4 data-en="Security & Access Control" data-ka="უსაფრთხოება და წვდომის კონტროლი" data-ru="Безопасность и контроль доступа">Security & Access Control</h4>
+                                <p data-en="Advanced security and monitoring solutions" data-ka="გაუმჯობესებული უსაფრთხოების და მონიტორინგის გადაწყვეტები" data-ru="Передовые решения безопасности и мониторинга">Advanced security and monitoring solutions</p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="product-images-grid">
                         <div class="product-image-item">
                             <img src="images/constr2.jpg" alt="Smart Lighting">
@@ -720,7 +996,7 @@
                 </div>
                 <nav class="footer-nav">
                     <ul>
-                        <li><a href="index.html" data-en="Home" data-ka="მთავარი" data-ru="Главная">Home</a></li>
+                        <li><a href="prepared.html" data-en="Prepared Projects" data-ka="მზა პროექტი" data-ru="Подготовленные проекты">Prepared Projects</a></li>
                         <li><a href="services.html" data-en="Services" data-ka="სერვისები" data-ru="Услуги">Services</a></li>
                         <li><a href="product.html" data-en="Product" data-ka="პროდუქტი" data-ru="Продукт">Product</a></li>
                         <li><a href="projects.html" data-en="Projects" data-ka="პროექტები" data-ru="Проекты">Projects</a></li>
@@ -744,40 +1020,32 @@
 
     <script src="scripts/main.js"></script>
     <script>
-        // Product switching functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const productTabs = document.querySelectorAll('.product-tab');
-            const productContents = document.querySelectorAll('.product-content');
+    document.addEventListener('DOMContentLoaded', function() {
+        const productTabs = document.querySelectorAll('.product-tab');
+        const productContents = document.querySelectorAll('.product-content');
 
-            productTabs.forEach(tab => {
-                tab.addEventListener('click', function() {
-                    const targetProduct = this.getAttribute('data-product');
+        productTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                const targetProduct = this.getAttribute('data-product');
 
-                    // Remove active class from all tabs
-                    productTabs.forEach(t => t.classList.remove('active'));
+                productTabs.forEach(t => t.classList.remove('active'));
 
-                    // Add active class to clicked tab
-                    this.classList.add('active');
+                this.classList.add('active');
 
-                    // Hide all product contents
-                    productContents.forEach(pc => pc.classList.remove('active'));
+                productContents.forEach(pc => pc.classList.remove('active'));
 
-                    // Show selected product content
-                    const targetContent = document.querySelector(`.product-content[data-product="${targetProduct}"]`);
-                    if (targetContent) {
-                        targetContent.classList.add('active');
-
-                        // Smooth scroll to content
-                        targetContent.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                    }
-                });
+                const targetContent = document.querySelector(`.product-content[data-product="${targetProduct}"]`);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
             });
-
-            // Trigger click on first product to show it by default
-            if (productTabs.length > 0) {
-                productTabs[0].click();
-            }
         });
-    </script>
+
+
+        if (productTabs.length > 0) {
+            productTabs[0].click();
+        }
+    });
+</script>
 </body>
 </html>

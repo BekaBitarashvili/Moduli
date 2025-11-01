@@ -349,6 +349,107 @@ body {
     0 4px 8px rgba(0, 0, 0, 0.6),
     inset 2px 2px 6px rgba(255, 255, 255, 0.2);
 }
+.moduli-title:hover {
+  color: #ff6b35;
+  text-shadow:
+    0 0 10px rgba(255, 107, 53, 0.8),
+    0 0 20px rgba(255, 107, 53, 0.6),
+    0 0 30px rgba(255, 107, 53, 0.4),
+    0 0 40px rgba(255, 107, 53, 0.3),
+    2px 2px 4px rgba(255, 107, 53, 0.2);
+  transform: scale(1.05);
+  letter-spacing: 0.25em;
+}
+
+/* Glow animation on hover */
+@keyframes titleGlow {
+  0%, 100% {
+    text-shadow:
+      0 0 10px rgba(255, 107, 53, 0.8),
+      0 0 20px rgba(255, 107, 53, 0.6),
+      0 0 30px rgba(255, 107, 53, 0.4);
+  }
+  50% {
+    text-shadow:
+      0 0 20px rgba(255, 107, 53, 1),
+      0 0 30px rgba(255, 107, 53, 0.8),
+      0 0 40px rgba(255, 107, 53, 0.6),
+      0 0 50px rgba(255, 107, 53, 0.4);
+  }
+}
+
+/*.moduli-title:hover {*/
+/*  animation: titleGlow 2s ease-in-out infinite;*/
+/*}*/
+
+/* Individual letter animation */
+/*.moduli-title::before {*/
+/*  content: 'MODULI';*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  color: #ff6b35;*/
+/*  opacity: 0;*/
+/*  transition: all 0.5s ease;*/
+/*  filter: blur(8px);*/
+/*}*/
+
+/*.moduli-title:hover::before {*/
+/*  opacity: 0.3;*/
+/*  filter: blur(12px);*/
+/*}*/
+
+/* Underline effect */
+/*.moduli-title::after {*/
+/*  content: '';*/
+/*  position: absolute;*/
+/*  bottom: -10px;*/
+/*  left: 50%;*/
+/*  width: 0;*/
+/*  height: 4px;*/
+/*  background: linear-gradient(90deg, transparent, #ff6b35, transparent);*/
+/*  transform: translateX(-50%);*/
+/*  transition: width 0.5s ease;*/
+/*  box-shadow: 0 0 10px rgba(255, 107, 53, 0.8);*/
+/*}*/
+
+.moduli-title:hover::after {
+  width: 100%;
+}
+
+/* Particle effect (optional enhancement) */
+@keyframes particles {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-50px) scale(0);
+    opacity: 0;
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .moduli-title {
+    font-size: 14vw;
+    letter-spacing: 0.05em;
+  }
+
+  .moduli-title:hover {
+    letter-spacing: 0.1em;
+    transform: scale(1.03);
+  }
+
+  .moduli-title::after {
+    bottom: -5px;
+    height: 3px;
+  }
+}
+
+
+
+
 
 /* ქვედა ტექსტი */
 .hero-subtitle {
@@ -1123,7 +1224,7 @@ body {
   color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .showcase-bg {
@@ -1176,7 +1277,7 @@ body {
   position: relative;
   border-radius: 15px;
   overflow: hidden;
-  height: 200px;
+  height: 150px; /* 200 მქონდა მითითებული */
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(6px);
@@ -1259,7 +1360,7 @@ body {
 
 .service-preview-card {
     position: relative;
-    min-height: 600px;
+    min-height: 450px; /* 600 მქონდა */
     padding: 60px 50px;
     cursor: pointer;
     transition: all 0.5s ease;
@@ -1288,8 +1389,11 @@ body {
 }
 
 .service-preview-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    transform: translateY(-15px);
+    /*box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);*/
+    border-color: #ff6b35;
+    box-shadow: 0 20px 60px rgba(255, 107, 53, 0.3);
+    background: rgba(255, 255, 255, 0.08);
 }
 
 .blue-card {
@@ -1534,4 +1638,233 @@ body {
     .feature-content p {
         font-size: 0.85rem;
     }
+}
+
+
+/* ოდომეტრი */
+.stats-section {
+    padding: 80px 0;
+    /*background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);      ეს არის ძველი*/
+    background: linear-gradient(135deg, #000000 0%, #000000 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.stats-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 107, 53, 0.05), transparent 70%);
+    pointer-events: none;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 107, 53, 0.3);
+    border-radius: 20px;
+    padding: 50px 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 107, 53, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+
+.stat-card:hover::before {
+    opacity: 1;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.stat-card:hover {
+    transform: translateY(-15px);
+    border-color: #ff6b35;
+    box-shadow: 0 20px 60px rgba(255, 107, 53, 0.4);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.stat-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    background: linear-gradient(135deg, #ff6b35, #ff9a56);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    color: #fff;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+}
+
+.stat-card:hover .stat-icon {
+    transform: rotateY(360deg) scale(1.1);
+    box-shadow: 0 15px 40px rgba(255, 107, 53, 0.5);
+}
+
+.stat-number {
+    font-size: 64px;
+    font-weight: 700;
+    color: #ff6b35;
+    line-height: 1;
+    margin-bottom: 15px;
+    font-family: 'Orbitron', 'Poppins', sans-serif;
+    text-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
+    position: relative;
+    z-index: 2;
+}
+
+.stat-number::after {
+    content: '+';
+    font-size: 48px;
+    margin-left: 5px;
+    opacity: 0.7;
+}
+
+.stat-label {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Glow effect animation */
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(255, 107, 53, 0.6);
+    }
+}
+
+.stat-card.counting {
+    animation: glow 1.5s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0 20px;
+    }
+
+    .stat-card {
+        padding: 40px 25px;
+    }
+
+    .stat-number {
+        font-size: 52px;
+    }
+
+    .stat-label {
+        font-size: 16px;
+    }
+
+    .stat-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-section {
+        padding: 60px 0;
+    }
+
+    .stat-number {
+        font-size: 48px;
+    }
+
+    .stat-label {
+        font-size: 14px;
+    }
+
+    .stat-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 26px;
+    }
+}
+
+
+/* ახალი საკონტაქტო */
+
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.contact-info-card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    transition: 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.contact-info-card:hover {
+    transform: translateY(-5px);
+    border-color: white;
+}
+
+.contact-info-card i {
+    font-size: 35px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.contact-info-card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.contact-info-card p {
+    font-size: 15px;
+    color: #dcdcdc;
+    line-height: 1.5;
 }

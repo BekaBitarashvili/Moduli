@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prepared Projects - Moduli Corporation</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .prepared-container {
+            padding-top: 100px;
+            padding-bottom: 80px;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+
+        .prepared-header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 0 20px;
+        }
+
+        .prepared-header h1 {
+            font-size: 48px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .prepared-header p {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* ცვლილება აქ */
+            gap: 25px; /* ოდნავ შევამციროთ გაფართოება */
+            max-width: 1400px; /* ოდნავ გავზარდოთ მაქსიმალური სიგანე */
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            transition: all 0.4s ease;
+            position: relative;
+            min-height: 450px; /* დავამატოთ მინიმალური სიმაღლე თანმიმდევრულობისთვის */
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px rgba(255, 107, 53, 0.2);
+            border-color: rgba(255, 107, 53, 0.3);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
+        }
+
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+        }
+
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+
+        .project-overlay-content {
+            transform: translateY(20px);
+            transition: transform 0.4s ease;
+        }
+
+        .project-card:hover .project-overlay-content {
+            transform: translateY(0);
+        }
+
+        .project-overlay-content h4 {
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .project-overlay-content p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 12px;
+        }
+
+        .project-description {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .project-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .project-date {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .project-link {
+            color: #ff6b35;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .project-link:hover {
+            color: #ff8c5a;
+        }
+
+        .project-link i {
+            margin-left: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .project-link:hover i {
+            transform: translateX(3px);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 1200px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 ბარათი ხაზზე საშუალო ეკრანებზე */
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .prepared-container {
+                padding-top: 80px;
+            }
+
+            .prepared-header h1 {
+                font-size: 32px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr; /* 1 ბარათი ხაზზე მობილურზე */
+                gap: 20px;
+                padding: 0 15px;
+            }
+
+            .project-content {
+                padding: 15px;
+            }
+
+            .project-image {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" style="text-decoration: none; color: white">
+                    <span class="logo-text">Moduli</span>
+                </a>
+                <span class="logo-subtitle">Corporation</span>
+            </div>
+            <div class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="prepared.html" data-en="Prepared Projects" data-ka="მზა პროექტი" data-ru="Подготовленные проекты" class="active">Prepared Projects</a></li>
+                    <li><a href="services.html" data-en="Services" data-ka="სერვისები" data-ru="Услуги">Services</a></li>
+                    <li><a href="product.html" data-en="Product" data-ka="პროდუქტი" data-ru="Продукт">Product</a></li>
+                    <li><a href="projects.html" data-en="Projects" data-ka="პროექტები" data-ru="Проекты">Projects</a></li>
+                    <li><a href="about.html" data-en="About Us" data-ka="ჩვენს შესახებ" data-ru="О нас">About Us</a></li>
+                    <li><a href="index.html#contact" data-en="Contact" data-ka="კონტაქტი" data-ru="Контакт">Contact</a></li>
+                </ul>
+            </div>
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="ka">KA</button>
+                <button class="lang-btn" data-lang="ru">RU</button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Prepared Projects Container -->
+    <div class="prepared-container">
+        <div class="prepared-header">
+            <h1 data-en="Prepared Projects" data-ka="მზა პროექტები" data-ru="Подготовленные проекты">Prepared Projects</h1>
+            <p data-en="Explore our portfolio of completed projects showcasing our expertise and commitment to excellence in every detail." data-ka="გაეცანით ჩვენს დასრულებულ პროექტებს, რომლებიც ასახავს ჩვენს ექსპერტიზას და ზედმიწევნითობას ყველა დეტალში." data-ru="Изучите наше портфолио завершенных проектов, демонстрирующих наш опыт и стремление к совершенству в каждой детали.">
+                Explore our portfolio of completed projects showcasing our expertise and commitment to excellence in every detail.
+            </p>
+        </div>
+
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/constr2.jpg" alt="Modern Office Complex">
+                    <div class="project-overlay">
+                        <div class="project-overlay-content">
+                            <h4 data-en="Modern Office Complex" data-ka="თანამედროვე ოფისის კომპლექსი" data-ru="Современный офисный комплекс">Modern Office Complex</h4>
+                            <p data-en="Completed in 2023" data-ka="დასრულდა 2023 წელს" data-ru="Завершен в 2023 году">Completed in 2023</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title" data-en="Modern Office Complex" data-ka="თანამედროვე ოფისის კომპლექსი" data-ru="Современный офисный комплекс">Modern Office Complex</h3>
+                    <p class="project-description" data-en="A state-of-the-art office building featuring sustainable design, smart technology integration, and premium amenities for modern businesses." data-ka="თანამედროვე ოფისის შენობა, რომელიც მოიცავს მდგრად დიზაინს, ჭკვიანი ტექნოლოგიების ინტეგრაციას და პრემიუმ ამენიტებს თანამედროვე ბიზნესებისთვის." data-ru="Современное офисное здание с устойчивым дизайном, интеграцией интеллектуальных технологий и премиальными удобствами для современного бизнеса.">
+                        A state-of-the-art office building featuring sustainable design, smart technology integration, and premium amenities for modern businesses.
+                    </p>
+                    <div class="project-meta">
+                        <span class="project-date" data-en="Completed: 2023" data-ka="დასრულდა: 2023" data-ru="Завершен: 2023">Completed: 2023</span>
+                        <a href="#" class="project-link" data-en="" data-ka="" data-ru="">
+                             <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/constr2.jpg" alt="Luxury Residential Tower">
+                    <div class="project-overlay">
+                        <div class="project-overlay-content">
+                            <h4 data-en="Luxury Residential Tower" data-ka="ლუქს კლასის საცხოვრებელი კოშკი" data-ru="Жилой комплекс класса люкс">Luxury Residential Tower</h4>
+                            <p data-en="Completed in 2022" data-ka="დასრულდა 2022 წელს" data-ru="Завершен в 2022 году">Completed in 2022</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title" data-en="Luxury Residential Tower" data-ka="ლუქს კლასის საცხოვრებელი კოშკი" data-ru="Жилой комплекс класса люкс">Luxury Residential Tower</h3>
+                    <p class="project-description" data-en="A premium residential development offering luxurious living spaces with panoramic city views and world-class amenities." data-ka="პრემიუმ საცხოვრებელი კომპლექსი, რომელიც გთავაზობთ ლუქსურს საცხოვრებელ სივრცეებს პანორამული ქალაქის ხედებითა და მსოფლიო კლასის ამენიტებით." data-ru="Премиальный жилой комплекс, предлагающий роскошные жилые помещения с панорамными видами на город и удобствами мирового класса.">
+                        A premium residential development offering luxurious living spaces with panoramic city views and world-class amenities.
+                    </p>
+                    <div class="project-meta">
+                        <span class="project-date" data-en="Completed: 2022" data-ka="დასრულდა: 2022" data-ru="Завершен: 2022">Completed: 2022</span>
+                        <a href="#" class="project-link" data-en="" data-ka="" data-ru="">
+                             <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/constr2.jpg" alt="Commercial Retail Center">
+                    <div class="project-overlay">
+                        <div class="project-overlay-content">
+                            <h4 data-en="Commercial Retail Center" data-ka="კომერციული საცალო ცენტრი" data-ru="Коммерческий торговый центр">Commercial Retail Center</h4>
+                            <p data-en="Completed in 2021" data-ka="დასრულდა 2021 წელს" data-ru="Завершен в 2021 году">Completed in 2021</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title" data-en="Commercial Retail Center" data-ka="კომერციული საცალო ცენტრი" data-ru="Коммерческий торговый центр">Commercial Retail Center</h3>
+                    <p class="project-description" data-en="A modern shopping destination featuring diverse retail spaces, entertainment facilities, and convenient parking solutions." data-ka="თანამედროვე საცალო დანიშნულების ადგილი, რომელიც მოიცავს მრავალფეროვან საცალო სივრცეებს, გასართობ ობიექტებსა და მოსახერხებელ პარკინგის გადაწყვეტილებებს." data-ru="Современный торговый центр с разнообразными розничными пространствами, развлекательными объектами и удобными парковочными решениями.">
+                        A modern shopping destination featuring diverse retail spaces, entertainment facilities, and convenient parking solutions.
+                    </p>
+                    <div class="project-meta">
+                        <span class="project-date" data-en="Completed: 2021" data-ka="დასრულდა: 2021" data-ru="Завершен: 2021">Completed: 2021</span>
+                        <a href="#" class="project-link" data-en="" data-ka="" data-ru="">
+                             <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/constr2.jpg" alt="Industrial Warehouse Facility">
+                    <div class="project-overlay">
+                        <div class="project-overlay-content">
+                            <h4 data-en="Industrial Warehouse Facility" data-ka="ინდუსტრიული საწყობი ობიექტი" data-ru="Промышленный складской комплекс">Industrial Warehouse Facility</h4>
+                            <p data-en="Completed in 2020" data-ka="დასრულდა 2020 წელს" data-ru="Завершен в 2020 году">Completed in 2020</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title" data-en="Industrial Warehouse Facility" data-ka="ინდუსტრიული საწყობი ობიექტი" data-ru="Промышленный складской комплекс">Industrial Warehouse Facility</h3>
+                    <p class="project-description" data-en="A large-scale logistics center designed for efficient storage, distribution, and supply chain management operations." data-ka="მასშტაბური ლოჯისტიკური ცენტრი, რომელიც შექმნილია ეფექტური შენახვის, დისტრიბუციისა და მიწოდების ჯაჭვის მართვის ოპერაციებისთვის." data-ru="Крупный логистический центр, предназначенный для эффективного хранения, распределения и управления цепочкой поставок.">
+                        A large-scale logistics center designed for efficient storage, distribution, and supply chain management operations.
+                    </p>
+                    <div class="project-meta">
+                        <span class="project-date" data-en="Completed: 2020" data-ka="დასრულდა: 2020" data-ru="Завершен: 2020">Completed: 2020</span>
+                        <a href="#" class="project-link" data-en="" data-ka="" data-ru="">
+                             <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">Moduli</span>
+                    <span class="logo-subtitle">Corporation</span>
+                </div>
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="prepared.html" data-en="Prepared Projects" data-ka="მზა პროექტი" data-ru="Подготовленные проекты">Prepared Projects</a></li>
+                        <li><a href="services.html" data-en="Services" data-ka="სერვისები" data-ru="Услуги">Services</a></li>
+                        <li><a href="product.html" data-en="Product" data-ka="პროდუქტი" data-ru="Продукт">Product</a></li>
+                        <li><a href="projects.html" data-en="Projects" data-ka="პროექტები" data-ru="Проекты">Projects</a></li>
+                        <li><a href="about.html" data-en="About Us" data-ka="ჩვენს შესახებ" data-ru="О нас">About Us</a></li>
+                        <li><a href="index.html#contact" data-en="Contact" data-ka="კონტაქტი" data-ru="Контакт">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="social-links">
+                    <a href="#" class="social-link facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link youtube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 <span data-en="All Rights Reserved" data-ka="ყველა უფლება დაცულია" data-ru="Все права защищены">All Rights Reserved</span> © <span data-en="Designed By" data-ka="დიზაინი" data-ru="Разработано">Designed By</span> <a href="#">Moduli</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

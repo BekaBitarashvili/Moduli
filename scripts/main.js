@@ -667,3 +667,53 @@ document.querySelectorAll('.showcase-card').forEach(card => {
     card.style.transform = 'translateY(0) scale(1)';
   });
 });
+
+
+// Odometer Animation Script
+document.addEventListener('DOMContentLoaded', function() {
+    const statNumbers = document.querySelectorAll('.stat-number');
+    let animated = false;
+
+    // Function to animate counter
+    function animateCounter(element) {
+        const target = parseInt(element.getAttribute('data-target'));
+        const duration = 2500; // 2.5 seconds
+        const increment = target / (duration / 16); // 60 FPS
+        let current = 0;
+
+        element.closest('.stat-card').classList.add('counting');
+
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                element.textContent = target;
+                clearInterval(timer);
+                element.closest('.stat-card').classList.remove('counting');
+            } else {
+                element.textContent = Math.floor(current);
+            }
+        }, 16);
+    }
+
+    // Intersection Observer for triggering animation
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !animated) {
+                animated = true;
+                statNumbers.forEach((number, index) => {
+                    setTimeout(() => {
+                        animateCounter(number);
+                    }, index * 200); // Stagger animation
+                });
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+
+    // Observe the stats section
+    const statsSection = document.querySelector('.stats-section');
+    if (statsSection) {
+        observer.observe(statsSection);
+    }
+});
