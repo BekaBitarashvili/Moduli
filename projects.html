@@ -139,11 +139,209 @@
             color: #ff6b35;
         }
 
+        /* Project Modal Styles */
+        .project-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            overflow-y: auto;
+            padding: 40px 20px;
+        }
+
+        .project-modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-container {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border-radius: 20px;
+            width: 90%;
+            max-width: 1200px;
+            max-height: 90vh;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-title {
+            color: #fff;
+            font-size: 28px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 24px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-close:hover {
+            color: #ff6b35;
+            background: rgba(255, 107, 53, 0.1);
+        }
+
+        .modal-content {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .modal-gallery {
+            flex: 1;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-image-container {
+            flex: 1;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .main-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .thumbnail-gallery {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            padding: 10px 0;
+        }
+
+        .thumbnail {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+            border: 2px solid transparent;
+        }
+
+        .thumbnail:hover, .thumbnail.active {
+            opacity: 1;
+            border-color: #ff6b35;
+            transform: scale(1.05);
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .modal-info {
+            width: 350px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            overflow-y: auto;
+        }
+
+        .info-section {
+            margin-bottom: 30px;
+        }
+
+        .info-section h3 {
+            color: #ff6b35;
+            font-size: 18px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+
+        .info-section h3 i {
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+        .info-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .info-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+        }
+
+        .info-list li:last-child {
+            border-bottom: none;
+        }
+
+        .info-list .label {
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .info-list .value {
+            font-weight: 400;
+            text-align: right;
+        }
+
+        .project-description {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+
         /* Responsive Design */
         @media (max-width: 1200px) {
             .projects-gallery {
                 grid-template-columns: repeat(3, 1fr);
                 gap: 25px;
+            }
+
+            .modal-content {
+                flex-direction: column;
+            }
+
+            .modal-info {
+                width: 100%;
+                max-height: 300px;
             }
         }
 
@@ -167,6 +365,18 @@
 
             .projects-gallery-wrapper {
                 padding: 0 20px;
+            }
+
+            .modal-header {
+                padding: 20px 25px;
+            }
+
+            .modal-title {
+                font-size: 24px;
+            }
+
+            .modal-gallery, .modal-info {
+                padding: 20px;
             }
         }
 
@@ -192,6 +402,27 @@
 
             .project-overlay-icon {
                 font-size: 36px;
+            }
+
+            .modal-container {
+                width: 95%;
+            }
+
+            .modal-header {
+                padding: 15px 20px;
+            }
+
+            .modal-title {
+                font-size: 20px;
+            }
+
+            .modal-gallery, .modal-info {
+                padding: 15px;
+            }
+
+            .thumbnail {
+                width: 60px;
+                height: 60px;
             }
         }
     </style>
@@ -232,7 +463,7 @@
     <!-- Projects Container -->
     <div class="projects-page-container">
         <div class="projects-header">
-            <h1 data-en="Our Projects" data-ka="ჩვენი პროექტები" data-ru="Наши проекты">Our Projects</h1>
+            <h1 data-en="Gallery" data-ka="გალერეა" data-ru="Галерея">Gallery</h1>
             <p data-en="Explore our portfolio of successfully completed construction and engineering projects. Each project represents our commitment to excellence, innovation, and quality craftsmanship." data-ka="გაეცანით ჩვენი წარმატებით დასრულებული სამშენებლო და საინჟინრო პროექტების პორტფოლიოს. თითოეული პროექტი წარმოადგენს ჩვენს ერთგულებას სრულყოფილების, ინოვაციისა და ხარისხიანი ხელოსნობის მიმართ." data-ru="Ознакомьтесь с нашим портфолио успешно завершенных строительных и инженерных проектов. Каждый проект представляет нашу приверженность совершенству, инновациям и качественному мастерству.">
                 Explore our portfolio of successfully completed construction and engineering projects. Each project represents our commitment to excellence, innovation, and quality craftsmanship.
             </p>
@@ -240,183 +471,219 @@
 
         <div class="projects-gallery-wrapper">
             <div class="projects-gallery">
-                <div class="project-item">
+                <!-- Project 1 -->
+                <div class="project-item" data-project="1">
                     <span class="project-number">01</span>
                     <img src="images/call.jpg" alt="Project 1">
                     <div class="project-overlay">
-<!--                        <i class="fas fa-search-plus project-overlay-icon"></i>-->
-                        <h2 style="color: white;">Test Sentence</h2>
+                        <h2 style="color: white;">Project Name</h2>
                     </div>
                 </div>
 
-                <div class="project-item">
+                <!-- Project 2 -->
+                <div class="project-item" data-project="2">
                     <span class="project-number">02</span>
                     <img src="images/call.jpg" alt="Project 2">
                     <div class="project-overlay">
-<!--                        <i class="fas fa-search-plus project-overlay-icon"></i>-->
-                        <h2 style="color: white;">Test Sentence</h2>
+                        <h2 style="color: white;">Project Name</h2>
                     </div>
                 </div>
 
-                <div class="project-item">
+                <!-- Project 3 -->
+                <div class="project-item" data-project="3">
                     <span class="project-number">03</span>
                     <img src="images/call.jpg" alt="Project 3">
                     <div class="project-overlay">
-<!--                        <i class="fas fa-search-plus project-overlay-icon"></i>-->
-                        <h2 style="color: white;">Test Sentence</h2>
+                        <h2 style="color: white;">Project Name</h2>
                     </div>
                 </div>
 
-                <div class="project-item">
+                <!-- Project 4 -->
+                <div class="project-item" data-project="4">
                     <span class="project-number">04</span>
                     <img src="images/call.jpg" alt="Project 4">
                     <div class="project-overlay">
-<!--                        <i class="fas fa-search-plus project-overlay-icon"></i>-->
-                        <h2 style="color: white;">Test Sentence</h2>
+                        <h2 style="color: white;">Project Name</h2>
                     </div>
                 </div>
 
-                <div class="project-item">
+                <!-- Project 5 -->
+                <div class="project-item" data-project="5">
                     <span class="project-number">05</span>
                     <img src="images/call.jpg" alt="Project 5">
                     <div class="project-overlay">
-<!--                        <i class="fas fa-search-plus project-overlay-icon"></i>-->
-                        <h2 style="color: white;">Test Sentence</h2>
+                        <h2 style="color: white;">Project Name</h2>
                     </div>
                 </div>
 
-                <div class="project-item">
+                <!-- Project 6 -->
+                <div class="project-item" data-project="6">
                     <span class="project-number">06</span>
                     <img src="images/call.jpg" alt="Project 6">
                     <div class="project-overlay">
-<!--                        <i class="fas fa-search-plus project-overlay-icon"></i>-->
-                        <h2 style="color: white;">Test Sentence</h2>
+                        <h2 style="color: white;">Project Name</h2>
                     </div>
                 </div>
 
-                <div class="project-item">
+                <!-- Project 7 -->
+                <div class="project-item" data-project="7">
                     <span class="project-number">07</span>
                     <img src="images/call.jpg" alt="Project 7">
                     <div class="project-overlay">
-<!--                        <i class="fas fa-search-plus project-overlay-icon"></i>-->
-                        <h2 style="color: white;">Test Sentence</h2>
+                        <h2 style="color: white;">Project Name</h2>
                     </div>
                 </div>
 
-                <div class="project-item">
+                <!-- Project 8 -->
+                <div class="project-item" data-project="8">
                     <span class="project-number">08</span>
                     <img src="images/call.jpg" alt="Project 8">
                     <div class="project-overlay">
-<!--                        <i class="fas fa-search-plus project-overlay-icon"></i>-->
-                        <h2 style="color: white;">Test Sentence</h2>
+                        <h2 style="color: white;">Project Name</h2>
                     </div>
                 </div>
 
-                <div class="project-item">
+                <!-- Project 9 -->
+                <div class="project-item" data-project="9">
                     <span class="project-number">09</span>
                     <img src="images/call.jpg" alt="Project 9">
                     <div class="project-overlay">
-<!--                        <i class="fas fa-search-plus project-overlay-icon"></i>-->
-                        <h2 style="color: white;">Test Sentence</h2>
+                        <h2 style="color: white;">Project Name</h2>
                     </div>
                 </div>
 
-                <div class="project-item">
+                <!-- Project 10 -->
+                <div class="project-item" data-project="10">
                     <span class="project-number">10</span>
                     <img src="images/call.jpg" alt="Project 10">
                     <div class="project-overlay">
-<!--                        <i class="fas fa-search-plus project-overlay-icon"></i>-->
-                        <h2 style="color: white;">Test Sentence</h2>
+                        <h2 style="color: white;">Project Name</h2>
                     </div>
                 </div>
 
-                <div class="project-item">
+                <!-- Project 11 -->
+                <div class="project-item" data-project="11">
                     <span class="project-number">11</span>
                     <img src="images/call.jpg" alt="Project 11">
                     <div class="project-overlay">
-<!--                        <i class="fas fa-search-plus project-overlay-icon"></i>-->
-                        <h2 style="color: white;">Test Sentence</h2>
+                        <h2 style="color: white;">Project Name</h2>
                     </div>
                 </div>
 
-                <div class="project-item">
+                <!-- Project 12 -->
+                <div class="project-item" data-project="12">
                     <span class="project-number">12</span>
                     <img src="images/call.jpg" alt="Project 12">
                     <div class="project-overlay">
-<!--                        <i class="fas fa-search-plus project-overlay-icon"></i>-->
-                        <h2 style="color: white;">Test Sentence</h2>
+                        <h2 style="color: white;">Project Name</h2>
                     </div>
                 </div>
 
-                <div class="project-item">
+                <!-- Project 13 -->
+                <div class="project-item" data-project="13">
                     <span class="project-number">13</span>
                     <img src="images/call.jpg" alt="Project 13">
                     <div class="project-overlay">
-<!--                        <i class="fas fa-search-plus project-overlay-icon"></i>-->
-                        <h2 style="color: white;">Test Sentence</h2>
+                        <h2 style="color: white;">Project Name</h2>
                     </div>
                 </div>
 
-                <div class="project-item">
+                <!-- Project 14 -->
+                <div class="project-item" data-project="14">
                     <span class="project-number">14</span>
                     <img src="images/call.jpg" alt="Project 14">
                     <div class="project-overlay">
-<!--                        <i class="fas fa-search-plus project-overlay-icon"></i>-->
-                        <h2 style="color: white;">Test Sentence</h2>
+                        <h2 style="color: white;">Project Name</h2>
                     </div>
                 </div>
 
-                <div class="project-item">
+                <!-- Project 15 -->
+                <div class="project-item" data-project="15">
                     <span class="project-number">15</span>
                     <img src="images/call.jpg" alt="Project 15">
                     <div class="project-overlay">
-<!--                        <i class="fas fa-search-plus project-overlay-icon"></i>-->
-                        <h2 style="color: white;">Test Sentence</h2>
+                        <h2 style="color: white;">Project Name</h2>
                     </div>
                 </div>
 
-                <div class="project-item">
+                <!-- Project 16 -->
+                <div class="project-item" data-project="16">
                     <span class="project-number">16</span>
                     <img src="images/call.jpg" alt="Project 16">
                     <div class="project-overlay">
-<!--                        <i class="fas fa-search-plus project-overlay-icon"></i>-->
-                        <h2 style="color: white;">Test Sentence</h2>
+                        <h2 style="color: white;">Project Name</h2>
                     </div>
                 </div>
 
-                <div class="project-item">
+                <!-- Project 17 -->
+                <div class="project-item" data-project="17">
                     <span class="project-number">17</span>
                     <img src="images/call.jpg" alt="Project 17">
                     <div class="project-overlay">
-<!--                        <i class="fas fa-search-plus project-overlay-icon"></i>-->
-                        <h2 style="color: white;">Test Sentence</h2>
+                        <h2 style="color: white;">Project Name</h2>
                     </div>
                 </div>
 
-                <div class="project-item">
+                <!-- Project 18 -->
+                <div class="project-item" data-project="18">
                     <span class="project-number">18</span>
                     <img src="images/call.jpg" alt="Project 18">
                     <div class="project-overlay">
-<!--                        <i class="fas fa-search-plus project-overlay-icon"></i>-->
-                        <h2 style="color: white;">Test Sentence</h2>
+                        <h2 style="color: white;">Project Name</h2>
                     </div>
                 </div>
 
-                <div class="project-item">
+                <!-- Project 19 -->
+                <div class="project-item" data-project="19">
                     <span class="project-number">19</span>
                     <img src="images/call.jpg" alt="Project 19">
                     <div class="project-overlay">
-<!--                        <i class="fas fa-search-plus project-overlay-icon"></i>-->
-                        <h2 style="color: white;">Test Sentence</h2>
+                        <h2 style="color: white;">Project Name</h2>
                     </div>
                 </div>
 
-                <div class="project-item">
+                <!-- Project 20 -->
+                <div class="project-item" data-project="20">
                     <span class="project-number">20</span>
                     <img src="images/call.jpg" alt="Project 20">
                     <div class="project-overlay">
-<!--                        <i class="fas fa-search-plus project-overlay-icon"></i>-->
-                        <h2 style="color: white;">Test Sentence</h2>
+                        <h2 style="color: white;">Project Name</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Modal -->
+    <div class="project-modal" id="projectModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle">Project Name</h2>
+                <button class="modal-close" id="modalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content">
+                <div class="modal-gallery">
+                    <div class="main-image-container">
+                        <img id="mainImage" src="images/call.jpg" alt="Project Image">
+                    </div>
+                    <div class="thumbnail-gallery" id="thumbnailGallery">
+                        <!-- Thumbnails will be added dynamically -->
+                    </div>
+                </div>
+                <div class="modal-info">
+                    <div class="info-section">
+                        <h3><i class="fas fa-info-circle"></i> <span data-en="Project Details" data-ka="პროექტის დეტალები" data-ru="Детали проекта">Project Details</span></h3>
+                        <ul class="info-list" id="projectDetails">
+                            <!-- Project details will be added dynamically -->
+                        </ul>
+                    </div>
+                    <div class="info-section">
+                        <h3><i class="fas fa-file-alt"></i> <span data-en="Description" data-ka="აღწერა" data-ru="Описание">Description</span></h3>
+                        <p class="project-description" id="projectDescription">
+                            <!-- Project description will be added dynamically -->
+                        </p>
                     </div>
                 </div>
             </div>
@@ -455,5 +722,147 @@
     </footer>
 
     <script src="scripts/main.js"></script>
+    <script>
+        // Project data - in a real scenario, this would come from a database or API
+        const projectsData = {
+            1: {
+                title: "Luxury Residential Complex",
+                images: ["images/call.jpg", "images/call.jpg", "images/call.jpg", "images/call.jpg", "images/call.jpg"],
+                details: [
+                    { label: "Project ID", value: "GC021-20221" },
+                    { label: "Location", value: "Tbilisi, Georgia" },
+                    { label: "Area", value: "450 m²" },
+                    { label: "Completion Date", value: "June 2023" },
+                    { label: "Budget", value: "5.2M €" },
+                    { label: "Status", value: "Completed" }
+                ],
+                description: "A modern luxury residential complex featuring state-of-the-art amenities, sustainable design principles, and premium finishes throughout. This project showcases our commitment to excellence in residential construction."
+            },
+            2: {
+                title: "Commercial Office Tower",
+                images: ["images/call.jpg", "images/call.jpg", "images/call.jpg", "images/call.jpg", "images/call.jpg", "images/constr2.jpg"],
+                details: [
+                    { label: "Project ID", value: "GC022-20222" },
+                    { label: "Location", value: "Batumi, Georgia" },
+                    { label: "Area", value: "1200 m²" },
+                    { label: "Completion Date", value: "March 2024" },
+                    { label: "Budget", value: "8.7M €" },
+                    { label: "Status", value: "In Progress" }
+                ],
+                description: "A 15-story commercial office tower designed to accommodate modern business needs with flexible office spaces, conference facilities, and premium amenities."
+            },
+            // Add more projects as needed
+        };
+
+        // Initialize with default data for all projects
+        for (let i = 3; i <= 20; i++) {
+            projectsData[i] = {
+                title: `Project ${i}`,
+                images: ["images/call.jpg", "images/call.jpg", "images/call.jpg", "images/call.jpg", "images/call.jpg"],
+                details: [
+                    { label: "Project ID", value: `GC0${i}-2022${i}` },
+                    { label: "Location", value: "Georgia" },
+                    { label: "Area", value: `${300 + i*20} m²` },
+                    { label: "Completion Date", value: "2023" },
+                    { label: "Budget", value: `${3 + i*0.2}M €` },
+                    { label: "Status", value: "Completed" }
+                ],
+                description: `This is a detailed description of project ${i}. It showcases our expertise in construction and engineering, delivering high-quality results that exceed client expectations.`
+            };
+        }
+
+        // Modal functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const projectItems = document.querySelectorAll('.project-item');
+            const modal = document.getElementById('projectModal');
+            const modalClose = document.getElementById('modalClose');
+            const modalTitle = document.getElementById('modalTitle');
+            const mainImage = document.getElementById('mainImage');
+            const thumbnailGallery = document.getElementById('thumbnailGallery');
+            const projectDetails = document.getElementById('projectDetails');
+            const projectDescription = document.getElementById('projectDescription');
+
+            // Open modal when project is clicked
+            projectItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const projectId = this.getAttribute('data-project');
+                    openModal(projectId);
+                });
+            });
+
+            // Close modal when close button is clicked
+            modalClose.addEventListener('click', function() {
+                closeModal();
+            });
+
+            // Close modal when clicking outside the modal content
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal.classList.contains('active')) {
+                    closeModal();
+                }
+            });
+
+            function openModal(projectId) {
+                const project = projectsData[projectId];
+
+                if (!project) return;
+
+                // Set modal title
+                modalTitle.textContent = project.title;
+
+                // Set main image
+                mainImage.src = project.images[0];
+                mainImage.alt = project.title;
+
+                // Create thumbnails
+                thumbnailGallery.innerHTML = '';
+                project.images.forEach((image, index) => {
+                    const thumbnail = document.createElement('div');
+                    thumbnail.className = 'thumbnail' + (index === 0 ? ' active' : '');
+                    thumbnail.innerHTML = `<img src="${image}" alt="${project.title} - Image ${index + 1}">`;
+
+                    thumbnail.addEventListener('click', function() {
+                        // Update main image
+                        mainImage.src = image;
+
+                        // Update active thumbnail
+                        document.querySelectorAll('.thumbnail').forEach(thumb => {
+                            thumb.classList.remove('active');
+                        });
+                        this.classList.add('active');
+                    });
+
+                    thumbnailGallery.appendChild(thumbnail);
+                });
+
+                // Set project details
+                projectDetails.innerHTML = '';
+                project.details.forEach(detail => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `<span class="label">${detail.label}</span><span class="value">${detail.value}</span>`;
+                    projectDetails.appendChild(li);
+                });
+
+                // Set project description
+                projectDescription.textContent = project.description;
+
+                // Show modal
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeModal() {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
 </body>
 </html>
