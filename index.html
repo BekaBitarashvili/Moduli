@@ -16,6 +16,28 @@
     body {
         background-color: black;
     }
+    .copy-btn {
+        background: none;
+        border: none;
+        color: #ff6b35;
+        cursor: pointer;
+        font-size: 18px;
+        margin-left: 8px;
+        transition: 0.2s;
+    }
+
+    .copy-btn:hover {
+        color: white;
+        transform: scale(1.1);
+    }
+
+    .copy-email {
+        color: white;
+        font-weight: 500;
+    }
+    .copy-btn i {
+        font-size: 16px !important;
+    }
 </style>
 <body>
 <!-- Navigation -->
@@ -30,10 +52,10 @@
         </div>
         <div class="nav-menu">
             <ul class="nav-list">
-                <li><a href="prepared.html" data-en="Prepared Projects" data-ka="მზა პროექტი" data-ru="Подготовленные проекты">Prepared Projects</a></li>
-                <li><a href="services.html" data-en="Services" data-ka="სერვისები" data-ru="Услуги">Services</a></li>
+                <li><a href="prepared.html" data-en="Prepared Projects" data-ka="მზა პროექტები" data-ru="Подготовленные проекты">Prepared Projects</a></li>
                 <li><a href="product.html" data-en="Product" data-ka="პროდუქტი" data-ru="Продукт">Product</a></li>
-                <li><a href="projects.html" data-en="Projects" data-ka="პროექტები" data-ru="Проекты">Projects</a></li>
+                <li><a href="services.html" data-en="Services" data-ka="სერვისები" data-ru="Услуги">Services</a></li>
+                <li><a href="projects.html" data-en="Gallery" data-ka="გალერეა" data-ru="Галерея">Gallery</a></li>
                 <li><a href="about.html" data-en="About Us" data-ka="ჩვენს შესახებ" data-ru="О нас">About Us</a></li>
                 <li><a href="#contact" data-en="Contact" data-ka="კონტაქტი" data-ru="Контакт">Contact</a></li>
             </ul>
@@ -75,34 +97,34 @@
     </div>
 
     <div class="showcase-grid">
-        <div class="showcase-card">
+        <a href="services.html"><div class="showcase-card">
             <img src="images/constr2.jpg">
-            <h3 style="font-size: medium">Project Selection</h3>
-        </div>
-        <div class="showcase-card">
+            <h3 style="font-size: medium">Project Management</h3>
+        </div></a>
+        <a href="services.html"><div class="showcase-card">
             <img src="images/call.jpg">
-            <h3 style="font-size: medium">Design Agreement</h3>
-        </div>
-        <div class="showcase-card">
+            <h3 style="font-size: medium">Metal Construction</h3>
+        </div></a>
+        <a href="services.html"><div class="showcase-card">
             <img src="images/proj.jpeg">
-            <h3 style="font-size: medium">Construction</h3>
-        </div>
-        <div class="showcase-card">
+            <h3 style="font-size: medium">Sandwich Panel</h3>
+        </div></a>
+        <a href="services.html"><div class="showcase-card">
             <img src="images/third.jpg">
-            <h3 style="font-size: medium">Commissioning</h3>
-        </div>
+            <h3 style="font-size: medium">Accessories</h3>
+        </div></a>
     </div>
 </section>
 
 <!-- Two Column Section - Add this after the showcase section and before contact -->
 <section class="services-preview">
     <div class="services-preview-grid">
-        <div class="service-preview-card blue-card" onclick="window.location.href='services.html'">
+        <div class="service-preview-card blue-card" onclick="window.location.href='prepared.html'">
             <div class="service-preview-image">
                 <img src="images/call.jpg" alt="Service 1">
             </div>
             <div class="service-preview-content">
-                <h2 class="service-preview-title" data-en="Metal Construction" data-ka="მეტალის კონსტრუქცია" data-ru="Строительные решения">Metal Construction</h2>
+                <h2 class="service-preview-title" data-en="Prepared Projects" data-ka="მზა პროექტები" data-ru="Подготовленные проекты">Prepared Projects</h2>
                 <h3 class="service-preview-subtitle" data-en="Fast - Efficient - Modern" data-ka="სწრაფი - ეფექტური - თანამედროვე" data-ru="Быстро - Эффективно - Современно">Fast - Efficient - Modern</h3>
                 <p class="service-preview-description" data-en="Premium construction solutions offering quick and cost-effective implementation. Our buildings provide high availability and can be delivered and installed rapidly - for purchase or rental." data-ka="პრემიუმ სამშენებლო გადაწყვეტები, რომლებიც გთავაზობენ სწრაფ და ხარჯთეფექტურ განხორციელებას. ჩვენი შენობები უზრუნველყოფენ მაღალ ხელმისაწვდომობას და შეიძლება სწრაფად მიეწოდოს და დამონტაჟდეს." data-ru="Премиальные строительные решения, предлагающие быструю и экономически эффективную реализацию. Наши здания обеспечивают высокую доступность и могут быть быстро доставлены и установлены.">
                     Premium construction solutions offering quick and cost-effective implementation. Our buildings provide high availability and can be delivered and installed rapidly - for purchase or rental.
@@ -115,7 +137,7 @@
                 <img src="images/call.jpg" alt="Service 2">
             </div>
             <div class="service-preview-content">
-                <h2 class="service-preview-title" data-en="Sandwich Panel" data-ka="სენდვიჩ პანელი" data-ru="Индивидуальная инженерия">Sandwich Panel</h2>
+                <h2 class="service-preview-title" data-en="Individual Projects" data-ka="ინდივიდუალური პროექტები" data-ru="Индивидуальные проекты">Individual Projects</h2>
                 <h3 class="service-preview-subtitle" data-en="Individual - Professional - Durable" data-ka="ინდივიდუალური - პროფესიონალური - გამძლე" data-ru="Индивидуально - Профессионально - Долговечно">Individual - Professional - Durable</h3>
                 <p class="service-preview-description" data-en="Modular custom engineering solutions provide sustainable space solutions. Customer-specific planning and production as well as numerous configuration options enable individuality and personal design." data-ka="მოდულური ინდივიდუალური საინჟინრო გადაწყვეტები უზრუნველყოფენ მდგრად სივრცის გადაწყვეტებს. კლიენტზე ორიენტირებული დაგეგმვა და წარმოება, ასევე კონფიგურაციის უამრავი ვარიანტი." data-ru="Модульные индивидуальные инженерные решения обеспечивают устойчивые пространственные решения. Планирование и производство с учетом требований заказчика, а также многочисленные варианты конфигурации.">
                     Modular custom engineering solutions provide sustainable space solutions. Customer-specific planning and production as well as numerous configuration options enable individuality and personal design.
@@ -157,13 +179,13 @@
     </div>
     </section>
     <div class="container">
-        <h2 class="section-title" data-en="Our Services" data-ka="ჩვენი სერვისები" data-ru="Наши услуги">Our Services</h2>
+        <h2 class="section-title" data-en="Gallery" data-ka="გალერეა" data-ru="Галерея">Gallery</h2>
         <p class="section-description" data-en="Comprehensive solutions for all your construction and engineering needs" data-ka="ყოვლისმომცველი გადაწყვეტები თქვენი ყველა სამშენებლო და საინჟინრო საჭიროებისთვის" data-ru="Комплексные решения для всех ваших строительных и инженерных потребностей">
             Comprehensive solutions for all your construction and engineering needs
         </p>
 
         <div class="features-grid">
-            <div class="feature-card" onclick="window.location.href='services.html'">
+            <div class="feature-card" onclick="window.location.href='projects.html'">
                 <div class="feature-image">
                     <img src="images/call.jpg" alt="Service 1">
                     <div class="feature-overlay"></div>
@@ -176,7 +198,7 @@
                 </div>
             </div>
 
-            <div class="feature-card" onclick="window.location.href='services.html'">
+            <div class="feature-card" onclick="window.location.href='projects.html'">
                 <div class="feature-image">
                     <img src="images/call.jpg" alt="Service 2">
                     <div class="feature-overlay"></div>
@@ -189,7 +211,7 @@
                 </div>
             </div>
 
-            <div class="feature-card" onclick="window.location.href='services.html'">
+            <div class="feature-card" onclick="window.location.href='projects.html'">
                 <div class="feature-image">
                     <img src="images/call.jpg" alt="Service 3">
                     <div class="feature-overlay"></div>
@@ -202,7 +224,7 @@
                 </div>
             </div>
 
-            <div class="feature-card" onclick="window.location.href='services.html'">
+            <div class="feature-card" onclick="window.location.href='projects.html'">
                 <div class="feature-image">
                     <img src="images/call.jpg" alt="Service 4">
                     <div class="feature-overlay"></div>
@@ -215,7 +237,7 @@
                 </div>
             </div>
 
-            <div class="feature-card" onclick="window.location.href='services.html'">
+            <div class="feature-card" onclick="window.location.href='projects.html'">
                 <div class="feature-image">
                     <img src="images/call.jpg" alt="Service 5">
                     <div class="feature-overlay"></div>
@@ -228,7 +250,7 @@
                 </div>
             </div>
 
-            <div class="feature-card" onclick="window.location.href='services.html'">
+            <div class="feature-card" onclick="window.location.href='projects.html'">
                 <div class="feature-image">
                     <img src="images/call.jpg" alt="Service 6">
                     <div class="feature-overlay"></div>
@@ -268,7 +290,7 @@
             <div class="contact-info-card">
                 <i class="fas fa-map-marker-alt"></i>
                 <h3 data-en="Address" data-ka="მისამართი" data-ru="Адрес">Address</h3>
-                <p>Tbilisi, Georgia<br>Rustaveli Avenue 24</p>
+                <a href="https://www.google.com/maps/place/%22Rustaveli%22/@41.7041493,44.7869683,811m/data=!3m2!1e3!4b1!4m6!3m5!1s0x40440cdb00b97a89:0x31137c1f7bbbd2ff!8m2!3d41.7041453!4d44.7895432!16s%2Fg%2F1hc6hqbcq?entry=ttu&g_ep=EgoyMDI1MTExNi4wIKXMDSoASAFQAw%3D%3D" style="text-decoration: none"><p>Tbilisi, Georgia<br>Rustaveli Avenue 24</p></a>
             </div>
 
             <div class="contact-info-card">
@@ -278,57 +300,30 @@
             </div>
 
             <div class="contact-info-card">
-                <i class="fas fa-fax"></i>
-                <h3 data-en="Fax" data-ka="ფაქსი" data-ru="Факс">Fax</h3>
-                <p>+995 322 987 654</p>
+                <i class="fas fa-map-pin"></i>
+                <h3 data-en="Google Map" data-ka="გუგლის რუკა" data-ru="Карта Google">Fax</h3>
+                <a href="https://www.google.com/maps/place/%22Rustaveli%22/@41.7041493,44.7869683,811m/data=!3m2!1e3!4b1!4m6!3m5!1s0x40440cdb00b97a89:0x31137c1f7bbbd2ff!8m2!3d41.7041453!4d44.7895432!16s%2Fg%2F1hc6hqbcq?entry=ttu&g_ep=EgoyMDI1MTExNi4wIKXMDSoASAFQAw%3D%3D" style="text-decoration: none"><p>Click To Get Direction</p></a>
             </div>
 
             <div class="contact-info-card">
                 <i class="fas fa-envelope"></i>
                 <h3 data-en="Email" data-ka="ელ-ფოსტა" data-ru="Эл. почта">Email</h3>
-                <p>info@moduli.ge<br>support@moduli.ge</p>
+                <p>
+                    <span class="copy-email" data-email="info@moduli.ge">info@moduli.ge</span>
+                    <button class="copy-btn" onclick="copyEmail('info@moduli.ge')">
+                        <i class="fa-solid fa-copy"></i>
+                    </button>
+                    <br>
+
+                    <span class="copy-email" data-email="support@moduli.ge">support@moduli.ge</span>
+                    <button class="copy-btn" onclick="copyEmail('support@moduli.ge')">
+                        <i class="fa-solid fa-copy"></i>
+                    </button>
+                </p>
             </div>
         </div>
     </div>
 </section>
-
-
-
-<!--<section id="contact" class="contact">-->
-<!--    <div class="contact-overlay"></div>-->
-<!--    <div class="container">-->
-<!--        <h2 class="section-title"-->
-<!--            data-en="GET IN TOUCH WITH US"-->
-<!--            data-ka="დაგვიკავშირდი ახლავე"-->
-<!--            data-ru="СВЯЗАТЬСЯ С НАМИ">-->
-<!--            GET IN TOUCH WITH US-->
-<!--        </h2>-->
-<!--        <p class="section-description"-->
-<!--           data-en="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."-->
-<!--           data-ka="ლორემ იპსუმ დოლორ სით ამეტ, კონსექტეტურ ადიპისცინგ ელით, სედ დიამ ნონუმი ნიბჰ ეუისმოდ ტინციდუნტ უტ ლაორეტ დოლორე მაგნა ალიკუამ ერატ ვოლუტპატ."-->
-<!--           data-ru="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.">-->
-<!--            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet-->
-<!--            dolore magna aliquam erat volutpat.-->
-<!--        </p>-->
-<!--        <form class="contact-form">-->
-<!--            <div class="form-row">-->
-<!--                <input type="text" placeholder="Full Name*" data-en-placeholder="Full Name*"-->
-<!--                       data-ka-placeholder="სრული სახელი*" data-ru-placeholder="Полное имя*" required>-->
-<!--                <input type="email" placeholder="Email*" data-en-placeholder="Email*" data-ka-placeholder="ელ-ფოსტა*"-->
-<!--                       data-ru-placeholder="Email*" required>-->
-<!--            </div>-->
-<!--            <div class="form-row">-->
-<!--                <input type="tel" placeholder="Phone*" data-en-placeholder="Phone*" data-ka-placeholder="ტელეფონი*"-->
-<!--                       data-ru-placeholder="Телефон*" required>-->
-<!--                <input type="text" placeholder="Subject*" data-en-placeholder="Subject*" data-ka-placeholder="თემა*"-->
-<!--                       data-ru-placeholder="Тема*" required>-->
-<!--            </div>-->
-<!--            <textarea placeholder="Message*" data-en-placeholder="Message*" data-ka-placeholder="შეტყობინება*"-->
-<!--                      data-ru-placeholder="Сообщение*" required></textarea>-->
-<!--            <button type="submit" data-en="Send Now" data-ka="გაგზავნა ახლა" data-ru="Отправить">Send Now</button>-->
-<!--        </form>-->
-<!--    </div>-->
-<!--</section>-->
 
 <!-- Footer -->
 <footer class="footer">
@@ -340,17 +335,16 @@
             </div>
             <nav class="footer-nav">
                 <ul>
-                    <li><a href="prepared.html" data-en="Prepared Projects" data-ka="მზა პროექტი" data-ru="Подготовленные проекты">Prepared Projects</a></li>
-                    <li><a href="services.html" data-en="Services" data-ka="სერვისები" data-ru="Услуги">Services</a></li>
+                    <li><a href="prepared.html" data-en="Prepared Projects" data-ka="მზა პროექტები" data-ru="Подготовленные проекты">Prepared Projects</a></li>
                     <li><a href="product.html" data-en="Product" data-ka="პროდუქტი" data-ru="Продукт">Product</a></li>
-                    <li><a href="projects.html" data-en="Projects" data-ka="პროექტები" data-ru="Проекты">Projects</a></li>
+                    <li><a href="services.html" data-en="Services" data-ka="სერვისები" data-ru="Услуги">Services</a></li>
+                    <li><a href="projects.html" data-en="Gallery" data-ka="გალერეა" data-ru="Галерея">Gallery</a></li>
                     <li><a href="about.html" data-en="About Us" data-ka="ჩვენს შესახებ" data-ru="О нас">About Us</a></li>
-                    <li><a href="index.html" data-en="Contact" data-ka="კონტაქტი" data-ru="Контакт">Contact</a></li>
+                    <li><a href="#contact" data-en="Contact" data-ka="კონტაქტი" data-ru="Контакт">Contact</a></li>
                 </ul>
             </nav>
             <div class="social-links">
                 <a href="#" class="social-link facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-link twitter"><i class="fab fa-twitter"></i></a>
                 <a href="#" class="social-link linkedin"><i class="fab fa-linkedin-in"></i></a>
                 <a href="#" class="social-link youtube"><i class="fab fa-youtube"></i></a>
                 <a href="#" class="social-link instagram"><i class="fab fa-instagram"></i></a>
@@ -361,7 +355,7 @@
                                  data-ru="Все права защищены">All Rights Reserved</span> © <span data-en="Designed By"
                                                                                                  data-ka="დიზაინი"
                                                                                                  data-ru="Разработано">Designed By</span>
-                <a href="#">Moduli</a></p>
+                <a href="index.html">Moduli</a></p>
         </div>
     </div>
 </footer>

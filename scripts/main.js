@@ -717,3 +717,27 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(statsSection);
     }
 });
+
+    const currentPage = window.location.pathname.split("/").pop();
+
+    document.querySelectorAll(".nav-list a").forEach(link => {
+        const linkPage = link.getAttribute("href");
+
+        // ignore hash links (#contact)
+        if (linkPage.startsWith("#")) return;
+
+        if (linkPage === currentPage) {
+            link.classList.add("active");
+        }
+    });
+
+// CopyEmail Script
+function copyEmail(email) {
+        navigator.clipboard.writeText(email)
+            .then(() => {
+                alert("Copied: " + email);
+            })
+            .catch(err => {
+                console.error("Copy failed", err);
+            });
+    }

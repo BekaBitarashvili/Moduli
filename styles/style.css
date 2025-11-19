@@ -1224,7 +1224,7 @@ body {
   color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .showcase-bg {
@@ -1277,7 +1277,7 @@ body {
   position: relative;
   border-radius: 15px;
   overflow: hidden;
-  height: 150px; /* 200 მქონდა მითითებული */
+  height: 450px; /* 200 მქონდა მითითებული */
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(6px);
@@ -1867,4 +1867,12 @@ body {
     font-size: 15px;
     color: #dcdcdc;
     line-height: 1.5;
+}
+
+.nav-list a.active {
+    color: #ff6b35;
+}
+
+.nav-list a.active::after {
+    width: 100%;
 }
