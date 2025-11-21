@@ -1230,7 +1230,7 @@ body {
 .showcase-bg {
   position: absolute;
   inset: 0;
-  background: url('images/your-image.jpg') center/cover no-repeat;
+  background: url('images/orange_back.jpg') center/cover no-repeat;
   z-index: 0;
   transition: transform 0.8s ease;
 }
