@@ -117,14 +117,51 @@
             margin-bottom: 50px;
         }
 
+        .service-title {
+            font-size: 42px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .service-subtitle {
+            font-size: 18px;
+            color: #ff6b35;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        /* Service Sections Styles */
+        .service-sections {
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+        }
+
+        .service-section {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .service-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.2);
+            border-color: rgba(255, 107, 53, 0.3);
+        }
+
         .service-image {
             width: 100%;
-            max-width: 600px;
-            height: 350px;
+            height: 300px;
             margin: 0 auto 30px;
-            border-radius: 20px;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
             position: relative;
         }
 
@@ -145,41 +182,17 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
+            background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.4) 100%);
         }
 
-        .service-title {
-            font-size: 42px;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .service-subtitle {
-            font-size: 18px;
-            color: #ff6b35;
-            font-weight: 500;
-            margin-bottom: 10px;
-        }
-
-        .service-description {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 50px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .service-description h3 {
+        .service-section-content h3 {
             font-size: 28px;
             color: #fff;
             margin-bottom: 20px;
             font-weight: 600;
         }
 
-        .service-description p {
+        .service-section-content p {
             font-size: 16px;
             line-height: 1.8;
             color: rgba(255, 255, 255, 0.8);
@@ -254,7 +267,7 @@
                 font-size: 32px;
             }
 
-            .service-description {
+            .service-section {
                 padding: 30px 20px;
             }
 
@@ -332,42 +345,50 @@
             <!-- Service 1: Construction Services -->
             <div class="service-detail active" data-service="construction">
                 <div class="service-header">
-                    <div class="service-image">
-                        <img src="images/constr2.jpg" alt="Construction Services">
-                        <div class="service-image-overlay"></div>
-                    </div>
                     <p class="service-subtitle" data-en="Professional Construction" data-ka="პროფესიონალური მშენებლობა" data-ru="Профессиональное строительство">Professional Construction</p>
                     <h1 class="service-title" data-en="Projects" data-ka="პროექტირება" data-ru="Проект">Projects</h1>
                 </div>
-                <div class="service-description">
-                    <h3 data-en="About This Service" data-ka="სერვისის შესახებ" data-ru="О данной услуге">About This Service</h3>
-                    <p data-en="We provide comprehensive construction services for residential, commercial, and industrial projects. Our experienced team ensures high-quality workmanship, timely delivery, and adherence to all safety standards. From groundwork to finishing touches, we handle every aspect of your construction needs." data-ka="ჩვენ ვთავაზობთ ყოვლისმომცველ სამშენებლო მომსახურებას საცხოვრებელი, კომერციული და ინდუსტრიული პროექტებისთვის. ჩვენი გამოცდილი გუნდი უზრუნველყოფს მაღალი ხარისხის სამუშაოს, დროულ მიწოდებას და ყველა უსაფრთხოების სტანდარტის დაცვას." data-ru="Мы предоставляем комплексные строительные услуги для жилых, коммерческих и промышленных проектов. Наша опытная команда обеспечивает высокое качество работы, своевременную доставку и соблюдение всех стандартов безопасности.">
-                        We provide comprehensive construction services for residential, commercial, and industrial projects. Our experienced team ensures high-quality workmanship, timely delivery, and adherence to all safety standards. From groundwork to finishing touches, we handle every aspect of your construction needs.
-                    </p>
-                    <p data-en="Our construction services include site preparation, foundation work, structural framing, and complete building construction. We utilize modern construction techniques and premium materials to deliver projects that exceed expectations." data-ka="ჩვენი სამშენებლო სერვისები მოიცავს ტერიტორიის მომზადებას, საძირკვლის მუშაობას, კონსტრუქციულ ჩარჩოს და სრულ შენობის მშენებლობას. ჩვენ ვიყენებთ თანამედროვე სამშენებლო ტექნიკას და პრემიუმ მასალებს." data-ru="Наши строительные услуги включают подготовку площадки, фундаментные работы, конструктивный каркас и полное строительство зданий. Мы используем современные строительные технологии и премиальные материалы.">
-                        Our construction services include site preparation, foundation work, structural framing, and complete building construction. We utilize modern construction techniques and premium materials to deliver projects that exceed expectations.
-                    </p>
 
-                    <div class="service-features">
-                        <div class="feature-item">
-                            <i class="fas fa-building"></i>
-                            <h4 data-en="Residential Construction" data-ka="საცხოვრებელი მშენებლობა" data-ru="Жилищное строительство">Residential Construction</h4>
-                            <p data-en="Custom homes and residential complexes" data-ka="ინდივიდუალური სახლები და საცხოვრებელი კომპლექსები" data-ru="Индивидуальные дома и жилые комплексы">Custom homes and residential complexes</p>
+                <div class="service-sections">
+                    <!-- Section 1 -->
+                    <div class="service-section">
+                        <div class="service-image">
+                            <img src="images/constr2.jpg" alt="Construction Planning">
+                            <div class="service-image-overlay"></div>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-city"></i>
-                            <h4 data-en="Commercial Projects" data-ka="კომერციული პროექტები" data-ru="Коммерческие проекты">Commercial Projects</h4>
-                            <p data-en="Office buildings and retail spaces" data-ka="ოფისის შენობები და საცალო სივრცეები" data-ru="Офисные здания и торговые помещения">Office buildings and retail spaces</p>
+                        <div class="service-section-content">
+                            <h3 data-en="Project Planning & Design" data-ka="პროექტის დაგეგმვა და დიზაინი" data-ru="Планирование и дизайн проекта">Project Planning & Design</h3>
+                            <p data-en="Our comprehensive project planning services ensure every construction project starts with a solid foundation. We analyze site conditions, develop detailed blueprints, and create efficient construction schedules that maximize productivity while minimizing disruptions." data-ka="ჩვენი ყოვლისმომცველი პროექტის დაგეგმვის სერვისები უზრუნველყოფს, რომ ყველა სამშენებლო პროექტი დაიწყოს მყარი საფუძვლით. ჩვენ ვაანალიზებთ საიტის პირობებს, ვქმნით დეტალურ ბლუპრინტებს და ეფექტურ სამშენებლო გრაფიკებს." data-ru="Наши комплексные услуги по планированию проекта гарантируют, что каждый строительный проект начинается с прочного фундамента. Мы анализируем условия площадки, разрабатываем подробные чертежи и создаем эффективные строительные графики.">
+                                Our comprehensive project planning services ensure every construction project starts with a solid foundation. We analyze site conditions, develop detailed blueprints, and create efficient construction schedules that maximize productivity while minimizing disruptions.
+                            </p>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-industry"></i>
-                            <h4 data-en="Industrial Facilities" data-ka="ინდუსტრიული ობიექტები" data-ru="Промышленные объекты">Industrial Facilities</h4>
-                            <p data-en="Warehouses and manufacturing plants" data-ka="საწყობები და წარმოების ქარხნები" data-ru="Склады и производственные предприятия">Warehouses and manufacturing plants</p>
+                    </div>
+
+                    <!-- Section 2 -->
+                    <div class="service-section">
+                        <div class="service-image">
+                            <img src="images/constr2.jpg" alt="Construction Execution">
+                            <div class="service-image-overlay"></div>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-certificate"></i>
-                            <h4 data-en="Quality Assurance" data-ka="ხარისხის უზრუნველყოფა" data-ru="Обеспечение качества">Quality Assurance</h4>
-                            <p data-en="ISO certified construction standards" data-ka="ISO სერტიფიცირებული სამშენებლო სტანდარტები" data-ru="Строительные стандарты, сертифицированные ISO">ISO certified construction standards</p>
+                        <div class="service-section-content">
+                            <h3 data-en="Construction Execution" data-ka="მშენებლობის განხორციელება" data-ru="Выполнение строительства">Construction Execution</h3>
+                            <p data-en="With years of experience in construction management, we oversee every phase of the building process. Our team coordinates subcontractors, manages material procurement, and ensures quality control throughout the construction lifecycle." data-ka="სამშენებლო მენეჯმენტში მრავალწლიანი გამოცდილებით, ჩვენ ვაკონტროლებთ შენობის პროცესის ყველა ეტაპს. ჩვენი გუნდი აკოორდინირებს ქვეკონტრაქტორებს, მართავს მასალების შეძენას და უზრუნველყოფს ხარისხის კონტროლს." data-ru="Имея многолетний опыт в управлении строительством, мы контролируем каждый этап строительного процесса. Наша команда координирует субподрядчиков, управляет закупками материалов и обеспечивает контроль качества на протяжении всего жизненного цикла строительства.">
+                                With years of experience in construction management, we oversee every phase of the building process. Our team coordinates subcontractors, manages material procurement, and ensures quality control throughout the construction lifecycle.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Section 3 -->
+                    <div class="service-section">
+                        <div class="service-image">
+                            <img src="images/constr2.jpg" alt="Quality Assurance">
+                            <div class="service-image-overlay"></div>
+                        </div>
+                        <div class="service-section-content">
+                            <h3 data-en="Quality Assurance & Safety" data-ka="ხარისხის უზრუნველყოფა და უსაფრთხოება" data-ru="Обеспечение качества и безопасность">Quality Assurance & Safety</h3>
+                            <p data-en="Safety and quality are our top priorities. We implement rigorous safety protocols and conduct regular inspections to ensure compliance with all building codes and regulations. Our commitment to excellence guarantees durable, safe, and high-quality construction outcomes." data-ka="უსაფრთხოება და ხარისხი ჩვენი უმაღლესი პრიორიტეტებია. ჩვენ ვიყენებთ მკაცრ უსაფრთხოების პროტოკოლებს და ვატარებთ რეგულარულ ინსპექტირებებს. ჩვენი ვალდებულება გარანტიას იძლევა გამძლე, უსაფრთხო და მაღალი ხარისხის სამშენებლო შედეგების." data-ru="Безопасность и качество - наши главные приоритеты. Мы внедряем строгие протоколы безопасности и проводим регулярные проверки. Наша приверженность совершенству гарантирует долговечные, безопасные и качественные строительные результаты.">
+                                Safety and quality are our top priorities. We implement rigorous safety protocols and conduct regular inspections to ensure compliance with all building codes and regulations. Our commitment to excellence guarantees durable, safe, and high-quality construction outcomes.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -376,39 +397,50 @@
             <!-- Service 2: Engineering Solutions -->
             <div class="service-detail" data-service="engineering">
                 <div class="service-header">
-                    <div class="service-image">
-                        <img src="images/constr2.jpg" alt="Engineering Solutions">
-                        <div class="service-image-overlay"></div>
-                    </div>
                     <p class="service-subtitle" data-en="Innovative Engineering" data-ka="ინოვაციური საინჟინრო" data-ru="Инновационная инженерия">Innovative Engineering</p>
                     <h1 class="service-title" data-en="Map Engineering" data-ka="მეპ ინჟინერია" data-ru="Картографическое проектирование">Map Engineering</h1>
                 </div>
-                <div class="service-description">
-                    <h3 data-en="About This Service" data-ka="სერვისის შესახებ" data-ru="О данной услуге">About This Service</h3>
-                    <p data-en="Our engineering team provides innovative solutions for complex technical challenges. We specialize in structural engineering, mechanical systems, and electrical infrastructure design to ensure optimal performance and efficiency." data-ka="ჩვენი საინჟინრო გუნდი უზრუნველყოფს ინოვაციურ გადაწყვეტებს რთული ტექნიკური გამოწვევებისთვის. ჩვენ სპეციალიზირებული ვართ კონსტრუქციულ საინჟინროში, მექანიკურ სისტემებსა და ელექტრო ინფრასტრუქტურის დიზაინში." data-ru="Наша инженерная команда предоставляет инновационные решения для сложных технических задач. Мы специализируемся на структурной инженерии, механических системах и проектировании электрической инфраструктуры.">
-                        Our engineering team provides innovative solutions for complex technical challenges. We specialize in structural engineering, mechanical systems, and electrical infrastructure design to ensure optimal performance and efficiency.
-                    </p>
 
-                    <div class="service-features">
-                        <div class="feature-item">
-                            <i class="fas fa-blueprint"></i>
-                            <h4 data-en="Structural Design" data-ka="კონსტრუქციული დიზაინი" data-ru="Конструктивный дизайн">Structural Design</h4>
-                            <p data-en="Advanced structural analysis and design" data-ka="გაუმჯობესებული კონსტრუქციული ანალიზი და დიზაინი" data-ru="Расширенный структурный анализ и проектирование">Advanced structural analysis and design</p>
+                <div class="service-sections">
+                    <!-- Section 1 -->
+                    <div class="service-section">
+                        <div class="service-image">
+                            <img src="images/constr2.jpg" alt="Topographic Mapping">
+                            <div class="service-image-overlay"></div>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-cogs"></i>
-                            <h4 data-en="MEP Engineering" data-ka="MEP საინჟინრო" data-ru="MEP инжиниринг">MEP Engineering</h4>
-                            <p data-en="Mechanical, electrical, and plumbing systems" data-ka="მექანიკური, ელექტრო და სანტექნიკური სისტემები" data-ru="Механические, электрические и сантехнические системы">Mechanical, electrical, and plumbing systems</p>
+                        <div class="service-section-content">
+                            <h3 data-en="Topographic Mapping" data-ka="ტოპოგრაფიული რუკების შედგენა" data-ru="Топографическое картографирование">Topographic Mapping</h3>
+                            <p data-en="Our topographic mapping services provide detailed terrain analysis and elevation data essential for construction planning. Using advanced GPS and drone technology, we create accurate 3D models that help identify potential challenges and optimize site development." data-ka="ჩვენი ტოპოგრაფიული რუკების შედგენის სერვისები უზრუნველყოფს დეტალურ ტერიტორიის ანალიზს და სიმაღლის მონაცემებს, რომლებიც აუცილებელია სამშენებლო დაგეგმვისთვის. მოწინავე GPS და დრონის ტექნოლოგიების გამოყენებით, ჩვენ ვქმნით ზუსტ 3D მოდელებს." data-ru="Наши услуги по топографическому картографированию обеспечивают детальный анализ местности и данные о высотах, необходимые для планирования строительства. Используя передовые технологии GPS и дронов, мы создаем точные 3D-модели.">
+                                Our topographic mapping services provide detailed terrain analysis and elevation data essential for construction planning. Using advanced GPS and drone technology, we create accurate 3D models that help identify potential challenges and optimize site development.
+                            </p>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-chart-line"></i>
-                            <h4 data-en="Performance Analysis" data-ka="შესრულების ანალიზი" data-ru="Анализ производительности">Performance Analysis</h4>
-                            <p data-en="Energy efficiency and optimization studies" data-ka="ენერგო ეფექტურობა და ოპტიმიზაციის კვლევები" data-ru="Энергоэффективность и оптимизационные исследования">Energy efficiency and optimization studies</p>
+                    </div>
+
+                    <!-- Section 2 -->
+                    <div class="service-section">
+                        <div class="service-image">
+                            <img src="images/constr2.jpg" alt="GIS Analysis">
+                            <div class="service-image-overlay"></div>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-shield-alt"></i>
-                            <h4 data-en="Safety Engineering" data-ka="უსაფრთხოების საინჟინრო" data-ru="Инженерия безопасности">Safety Engineering</h4>
-                            <p data-en="Risk assessment and safety protocols" data-ka="რისკების შეფასება და უსაფრთხოების პროტოკოლები" data-ru="Оценка рисков и протоколы безопасности">Risk assessment and safety protocols</p>
+                        <div class="service-section-content">
+                            <h3 data-en="GIS Analysis & Planning" data-ka="GIS ანალიზი და დაგეგმვა" data-ru="GIS анализ и планирование">GIS Analysis & Planning</h3>
+                            <p data-en="Geographic Information Systems (GIS) analysis allows us to integrate spatial data with project requirements. We provide comprehensive GIS services including land use analysis, environmental impact assessment, and infrastructure planning to support informed decision-making." data-ka="გეოგრაფიული საინფორმაციო სისტემების (GIS) ანალიზი საშუალებას გვაძლევს გავაერთიანოთ სივრცითი მონაცემები პროექტის მოთხოვნებთან. ჩვენ ვთავაზობთ ყოვლისმომცველ GIS სერვისებს, მათ შორის მიწის გამოყენების ანალიზს, გარემოზე ზემოქმედების შეფასებას და ინფრასტრუქტურის დაგეგმვას." data-ru="Анализ географических информационных систем (ГИС) позволяет нам интегрировать пространственные данные с требованиями проекта. Мы предоставляем комплексные ГИС-услуги, включая анализ землепользования, оценку воздействия на окружающую среду и планирование инфраструктуры.">
+                                Geographic Information Systems (GIS) analysis allows us to integrate spatial data with project requirements. We provide comprehensive GIS services including land use analysis, environmental impact assessment, and infrastructure planning to support informed decision-making.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Section 3 -->
+                    <div class="service-section">
+                        <div class="service-image">
+                            <img src="images/constr2.jpg" alt="Surveying Services">
+                            <div class="service-image-overlay"></div>
+                        </div>
+                        <div class="service-section-content">
+                            <h3 data-en="Land Surveying & Measurement" data-ka="მიწის გეოდეზია და გაზომვები" data-ru="Землеустройство и измерения">Land Surveying & Measurement</h3>
+                            <p data-en="Precision land surveying is crucial for successful project implementation. Our certified surveyors use state-of-the-art equipment to establish property boundaries, create cadastral maps, and provide precise measurements for construction layout and design verification." data-ka="ზუსტი მიწის გეოდეზია გადამწყვეტია პროექტის წარმატებული განხორციელებისთვის. ჩვენი სერტიფიცირებული გეოდეზისტები იყენებენ თანამედროვე აღჭურვილობას ქონების საზღვრების დასადგენად, კადასტრული რუკების შესაქმნელად და ზუსტი გაზომვებისთვის." data-ru="Точное землеустройство имеет решающее значение для успешной реализации проекта. Наши сертифицированные геодезисты используют современное оборудование для установления границ собственности, создания кадастровых карт и предоставления точных измерений.">
+                                Precision land surveying is crucial for successful project implementation. Our certified surveyors use state-of-the-art equipment to establish property boundaries, create cadastral maps, and provide precise measurements for construction layout and design verification.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -417,166 +449,210 @@
             <!-- Service 3: Project Consulting -->
             <div class="service-detail" data-service="consulting">
                 <div class="service-header">
-                    <div class="service-image">
-                        <img src="images/constr2.jpg" alt="Project Consulting">
-                        <div class="service-image-overlay"></div>
-                    </div>
                     <p class="service-subtitle" data-en="Expert Guidance" data-ka="ექსპერტის მითითება" data-ru="Экспертное руководство">Expert Guidance</p>
                     <h1 class="service-title" data-en="Project Management" data-ka="პროექტის მენეჯმენტი" data-ru="Управление проектом">Project Management</h1>
                 </div>
-                <div class="service-description">
-                    <h3 data-en="About This Service" data-ka="სერვისის შესახებ" data-ru="О данной услуге">About This Service</h3>
-                    <p data-en="Our consulting services help clients make informed decisions throughout the project lifecycle. We provide strategic planning, feasibility studies, and expert recommendations to ensure project success." data-ka="ჩვენი საკონსულტაციო სერვისები ეხმარება კლიენტებს მიიღონ ინფორმირებული გადაწყვეტილებები პროექტის მთელი ციკლის განმავლობაში. ჩვენ ვთავაზობთ სტრატეგიულ დაგეგმვას, შესაძლებლობის კვლევებსა და ექსპერტულ რეკომენდაციებს." data-ru="Наши консалтинговые услуги помогают клиентам принимать обоснованные решения на протяжении всего жизненного цикла проекта. Мы предоставляем стратегическое планирование, исследования осуществимости и экспертные рекомендации.">
-                        Our consulting services help clients make informed decisions throughout the project lifecycle. We provide strategic planning, feasibility studies, and expert recommendations to ensure project success.
-                    </p>
 
-                    <div class="service-features">
-                        <div class="feature-item">
-                            <i class="fas fa-lightbulb"></i>
-                            <h4 data-en="Strategic Planning" data-ka="სტრატეგიული დაგეგმვა" data-ru="Стратегическое планирование">Strategic Planning</h4>
-                            <p data-en="Long-term project strategy development" data-ka="გრძელვადიანი პროექტის სტრატეგიის შემუშავება" data-ru="Разработка долгосрочной стратегии проекта">Long-term project strategy development</p>
+                <div class="service-sections">
+                    <!-- Section 1 -->
+                    <div class="service-section">
+                        <div class="service-image">
+                            <img src="images/constr2.jpg" alt="Strategic Planning">
+                            <div class="service-image-overlay"></div>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-calculator"></i>
-                            <h4 data-en="Cost Analysis" data-ka="ხარჯების ანალიზი" data-ru="Анализ затрат">Cost Analysis</h4>
-                            <p data-en="Budget optimization and cost control" data-ka="ბიუჯეტის ოპტიმიზაცია და ხარჯების კონტროლი" data-ru="Оптимизация бюджета и контроль затрат">Budget optimization and cost control</p>
+                        <div class="service-section-content">
+                            <h3 data-en="Strategic Project Planning" data-ka="სტრატეგიული პროექტის დაგეგმვა" data-ru="Стратегическое планирование проекта">Strategic Project Planning</h3>
+                            <p data-en="Our strategic planning services help clients define project objectives, scope, and success criteria. We develop comprehensive project charters, establish key performance indicators, and create risk management strategies to ensure project alignment with business goals." data-ka="ჩვენი სტრატეგიული დაგეგმვის სერვისები ეხმარება კლიენტებს განსაზღვრონ პროექტის მიზნები, ფარგლები და წარმატების კრიტერიუმები. ჩვენ ვქმნით ყოვლისმომცველ პროექტის ქარტიებს, ვადგენთ ძირითად შესრულების ინდიკატორებს და ვქმნით რისკების მართვის სტრატეგიებს." data-ru="Наши услуги по стратегическому планированию помогают клиентам определить цели проекта, объем и критерии успеха. Мы разрабатываем комплексные уставы проектов, устанавливаем ключевые показатели эффективности и создаем стратегии управления рисками.">
+                                Our strategic planning services help clients define project objectives, scope, and success criteria. We develop comprehensive project charters, establish key performance indicators, and create risk management strategies to ensure project alignment with business goals.
+                            </p>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-search-dollar"></i>
-                            <h4 data-en="Feasibility Studies" data-ka="შესაძლებლობის კვლევები" data-ru="Исследования осуществимости">Feasibility Studies</h4>
-                            <p data-en="Comprehensive project viability assessment" data-ka="ყოვლისმომცველი პროექტის სიცოცხლისუნარიანობის შეფასება" data-ru="Комплексная оценка жизнеспособности проекта">Comprehensive project viability assessment</p>
+                    </div>
+
+                    <!-- Section 2 -->
+                    <div class="service-section">
+                        <div class="service-image">
+                            <img src="images/constr2.jpg" alt="Resource Management">
+                            <div class="service-image-overlay"></div>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-handshake"></i>
-                            <h4 data-en="Stakeholder Management" data-ka="დაინტერესებული მხარეების მართვა" data-ru="Управление заинтересованными сторонами">Stakeholder Management</h4>
-                            <p data-en="Effective communication and coordination" data-ka="ეფექტური კომუნიკაცია და კოორდინაცია" data-ru="Эффективная коммуникация и координация">Effective communication and coordination</p>
+                        <div class="service-section-content">
+                            <h3 data-en="Resource & Budget Management" data-ka="რესურსების და ბიუჯეტის მართვა" data-ru="Управление ресурсами и бюджетом">Resource & Budget Management</h3>
+                            <p data-en="Effective resource allocation and budget control are essential for project success. We implement sophisticated project management tools to track expenses, manage human resources, and optimize material procurement while maintaining strict financial discipline throughout the project lifecycle." data-ka="ეფექტური რესურსების განაწილება და ბიუჯეტის კონტროლი აუცილებელია პროექტის წარმატებისთვის. ჩვენ ვიყენებთ დახვეწილ პროექტის მენეჯმენტის ინსტრუმენტებს ხარჯების თვალყურის დევნებისთვის, ადამიანური რესურსების მართვისთვის და მასალების შეძენის ოპტიმიზაციისთვის." data-ru="Эффективное распределение ресурсов и контроль бюджета необходимы для успеха проекта. Мы внедряем сложные инструменты управления проектами для отслеживания расходов, управления человеческими ресурсами и оптимизации закупок материалов.">
+                                Effective resource allocation and budget control are essential for project success. We implement sophisticated project management tools to track expenses, manage human resources, and optimize material procurement while maintaining strict financial discipline throughout the project lifecycle.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Section 3 -->
+                    <div class="service-section">
+                        <div class="service-image">
+                            <img src="images/constr2.jpg" alt="Stakeholder Coordination">
+                            <div class="service-image-overlay"></div>
+                        </div>
+                        <div class="service-section-content">
+                            <h3 data-en="Stakeholder Coordination & Communication" data-ka="დაინტერესებული მხარეების კოორდინაცია და კომუნიკაცია" data-ru="Координация и коммуникация с заинтересованными сторонами">Stakeholder Coordination & Communication</h3>
+                            <p data-en="Successful projects require seamless coordination among all stakeholders. We establish clear communication channels, facilitate regular progress meetings, and provide transparent reporting to keep clients, contractors, and regulatory bodies informed and aligned throughout the project duration." data-ka="წარმატებული პროექტები მოითხოვს უწყვეტ კოორდინაციას ყველა დაინტერესებულ მხარეს შორის. ჩვენ ვქმნით ნათელ კომუნიკაციის არხებს, ვაადვილებთ რეგულარულ შეხვედრებს და ვაწვდით გამჭვირვალე ანგარიშგებებს." data-ru="Успешные проекты требуют бесперебойной координации между всеми заинтересованными сторонами. Мы устанавливаем четкие каналы связи, способствуем регулярным встречам по прогрессу и предоставляем прозрачную отчетность.">
+                                Successful projects require seamless coordination among all stakeholders. We establish clear communication channels, facilitate regular progress meetings, and provide transparent reporting to keep clients, contractors, and regulatory bodies informed and aligned throughout the project duration.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Service 4: Renovation & Remodeling -->
             <div class="service-detail" data-service="renovation">
                 <div class="service-header">
-                    <div class="service-image">
-                        <img src="images/constr2.jpg" alt="Renovation & Remodeling">
-                        <div class="service-image-overlay"></div>
-                    </div>
-                    <p class="service-subtitle" data-en="Transform Your Space" data-ka="გარდაქმენით თქვენი სივრცე" data-ru="Преобразуйте свое пространство">Transform Your Space</p>
-                    <h1 class="service-title" data-en="Construction" data-ka="მშენებლობა" data-ru="Строительство">Construction</h1>
+                    <p class="service-subtitle" data-en="Expert Guidance" data-ka="ექსპერტის მითითება" data-ru="Экспертное руководство">Expert Guidance</p>
+                    <h1 class="service-title" data-en="Constraction" data-ka="პროექტის მენეჯმენტი" data-ru="Управление проектом">Constraction</h1>
                 </div>
-                <div class="service-description">
-                    <h3 data-en="About This Service" data-ka="სერვისის შესახებ" data-ru="О данной услуге">About This Service</h3>
-                    <p data-en="Transform existing spaces with our professional renovation and remodeling services. Whether updating a single room or completely reimagining your property, we bring creativity and craftsmanship to every project." data-ka="გარდაქმენით არსებული სივრცეები ჩვენი პროფესიონალური რემონტისა და რეკონსტრუქციის სერვისებით. იქნება ეს ერთი ოთახის განახლება თუ თქვენი უძრავი ქონების სრული გადახედვა, ჩვენ ვაერთიანებთ შემოქმედებითობასა და ოსტატობას." data-ru="Преобразуйте существующие пространства с нашими профессиональными услугами по ремонту и реконструкции. Будь то обновление одной комнаты или полная реконцептуализация вашей собственности, мы привносим креативность и мастерство в каждый проект.">
-                        Transform existing spaces with our professional renovation and remodeling services. Whether updating a single room or completely reimagining your property, we bring creativity and craftsmanship to every project.
-                    </p>
 
-                    <div class="service-features">
-                        <div class="feature-item">
-                            <i class="fas fa-home"></i>
-                            <h4 data-en="Interior Remodeling" data-ka="ინტერიერის რეკონსტრუქცია" data-ru="Реконструкция интерьера">Interior Remodeling</h4>
-                            <p data-en="Complete interior space transformation" data-ka="შიდა სივრცის სრული ტრანსფორმაცია" data-ru="Полная трансформация внутреннего пространства">Complete interior space transformation</p>
+                <div class="service-sections">
+                    <!-- Section 1 -->
+                    <div class="service-section">
+                        <div class="service-image">
+                            <img src="images/constr2.jpg" alt="Strategic Planning">
+                            <div class="service-image-overlay"></div>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-paint-roller"></i>
-                            <h4 data-en="Facade Renovation" data-ka="ფასადის რემონტი" data-ru="Ремонт фасада">Facade Renovation</h4>
-                            <p data-en="Exterior modernization and restoration" data-ka="გარე მოდერნიზაცია და აღდგენა" data-ru="Внешняя модернизация и реставрация">Exterior modernization and restoration</p>
+                        <div class="service-section-content">
+                            <h3 data-en="Strategic Project Planning" data-ka="სტრატეგიული პროექტის დაგეგმვა" data-ru="Стратегическое планирование проекта">Strategic Project Planning</h3>
+                            <p data-en="Our strategic planning services help clients define project objectives, scope, and success criteria. We develop comprehensive project charters, establish key performance indicators, and create risk management strategies to ensure project alignment with business goals." data-ka="ჩვენი სტრატეგიული დაგეგმვის სერვისები ეხმარება კლიენტებს განსაზღვრონ პროექტის მიზნები, ფარგლები და წარმატების კრიტერიუმები. ჩვენ ვქმნით ყოვლისმომცველ პროექტის ქარტიებს, ვადგენთ ძირითად შესრულების ინდიკატორებს და ვქმნით რისკების მართვის სტრატეგიებს." data-ru="Наши услуги по стратегическому планированию помогают клиентам определить цели проекта, объем и критерии успеха. Мы разрабатываем комплексные уставы проектов, устанавливаем ключевые показатели эффективности и создаем стратегии управления рисками.">
+                                Our strategic planning services help clients define project objectives, scope, and success criteria. We develop comprehensive project charters, establish key performance indicators, and create risk management strategies to ensure project alignment with business goals.
+                            </p>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-expand-arrows-alt"></i>
-                            <h4 data-en="Space Optimization" data-ka="სივრცის ოპტიმიზაცია" data-ru="Оптимизация пространства">Space Optimization</h4>
-                            <p data-en="Maximize functionality and aesthetics" data-ka="ფუნქციონალურობისა და ესთეტიკის მაქსიმიზაცია" data-ru="Максимизация функциональности и эстетики">Maximize functionality and aesthetics</p>
+                    </div>
+
+                    <!-- Section 2 -->
+                    <div class="service-section">
+                        <div class="service-image">
+                            <img src="images/constr2.jpg" alt="Resource Management">
+                            <div class="service-image-overlay"></div>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-recycle"></i>
-                            <h4 data-en="Sustainable Updates" data-ka="მდგრადი განახლებები" data-ru="Устойчивые обновления">Sustainable Updates</h4>
-                            <p data-en="Eco-friendly renovation solutions" data-ka="ეკოლოგიურად სუფთა რემონტის გადაწყვეტები" data-ru="Экологически чистые решения для ремонта">Eco-friendly renovation solutions</p>
+                        <div class="service-section-content">
+                            <h3 data-en="Resource & Budget Management" data-ka="რესურსების და ბიუჯეტის მართვა" data-ru="Управление ресурсами и бюджетом">Resource & Budget Management</h3>
+                            <p data-en="Effective resource allocation and budget control are essential for project success. We implement sophisticated project management tools to track expenses, manage human resources, and optimize material procurement while maintaining strict financial discipline throughout the project lifecycle." data-ka="ეფექტური რესურსების განაწილება და ბიუჯეტის კონტროლი აუცილებელია პროექტის წარმატებისთვის. ჩვენ ვიყენებთ დახვეწილ პროექტის მენეჯმენტის ინსტრუმენტებს ხარჯების თვალყურის დევნებისთვის, ადამიანური რესურსების მართვისთვის და მასალების შეძენის ოპტიმიზაციისთვის." data-ru="Эффективное распределение ресурсов и контроль бюджета необходимы для успеха проекта. Мы внедряем сложные инструменты управления проектами для отслеживания расходов, управления человеческими ресурсами и оптимизации закупок материалов.">
+                                Effective resource allocation and budget control are essential for project success. We implement sophisticated project management tools to track expenses, manage human resources, and optimize material procurement while maintaining strict financial discipline throughout the project lifecycle.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Section 3 -->
+                    <div class="service-section">
+                        <div class="service-image">
+                            <img src="images/constr2.jpg" alt="Stakeholder Coordination">
+                            <div class="service-image-overlay"></div>
+                        </div>
+                        <div class="service-section-content">
+                            <h3 data-en="Stakeholder Coordination & Communication" data-ka="დაინტერესებული მხარეების კოორდინაცია და კომუნიკაცია" data-ru="Координация и коммуникация с заинтересованными сторонами">Stakeholder Coordination & Communication</h3>
+                            <p data-en="Successful projects require seamless coordination among all stakeholders. We establish clear communication channels, facilitate regular progress meetings, and provide transparent reporting to keep clients, contractors, and regulatory bodies informed and aligned throughout the project duration." data-ka="წარმატებული პროექტები მოითხოვს უწყვეტ კოორდინაციას ყველა დაინტერესებულ მხარეს შორის. ჩვენ ვქმნით ნათელ კომუნიკაციის არხებს, ვაადვილებთ რეგულარულ შეხვედრებს და ვაწვდით გამჭვირვალე ანგარიშგებებს." data-ru="Успешные проекты требуют бесперебойной координации между всеми заинтересованными сторонами. Мы устанавливаем четкие каналы связи, способствуем регулярным встречам по прогрессу и предоставляем прозрачную отчетность.">
+                                Successful projects require seamless coordination among all stakeholders. We establish clear communication channels, facilitate regular progress meetings, and provide transparent reporting to keep clients, contractors, and regulatory bodies informed and aligned throughout the project duration.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Service 5: Facility Maintenance -->
             <div class="service-detail" data-service="maintenance">
                 <div class="service-header">
-                    <div class="service-image">
-                        <img src="images/constr2.jpg" alt="Facility Maintenance">
-                        <div class="service-image-overlay"></div>
-                    </div>
-                    <p class="service-subtitle" data-en="Reliable Maintenance" data-ka="საიმედო მომსახურება" data-ru="Надежное обслуживание">Reliable Maintenance</p>
-                    <h1 class="service-title" data-en="Supply of materials" data-ka="მასალების მიწოდება" data-ru="Поставка материалов">Supply of materials</h1>
+                    <p class="service-subtitle" data-en="Expert Guidance" data-ka="ექსპერტის მითითება" data-ru="Экспертное руководство">Expert Guidance</p>
+                    <h1 class="service-title" data-en="Supply of materials" data-ka="პროექტის მენეჯმენტი" data-ru="Управление проектом">Supply of materials</h1>
                 </div>
-                <div class="service-description">
-                    <h3 data-en="About This Service" data-ka="სერვისის შესახებ" data-ru="О данной услуге">About This Service</h3>
-                    <p data-en="Keep your facilities running smoothly with our comprehensive maintenance services. From preventive maintenance to emergency repairs, we ensure your buildings and systems operate at peak efficiency year-round." data-ka="შეინარჩუნეთ თქვენი ობიექტების გლუვი ფუნქციონირება ჩვენი ყოვლისმომცველი მომსახურების სერვისებით. პრევენციული მომსახურებიდან გადაუდებელ შეკეთებამდე, ჩვენ ვუზრუნველყოფთ თქვენი შენობებისა და სისტემების მაქსიმალურ ეფექტურობას." data-ru="Поддерживайте бесперебойную работу ваших объектов с нашими комплексными услугами по обслуживанию. От профилактического обслуживания до аварийного ремонта, мы обеспечиваем максимальную эффективность ваших зданий и систем круглый год.">
-                        Keep your facilities running smoothly with our comprehensive maintenance services. From preventive maintenance to emergency repairs, we ensure your buildings and systems operate at peak efficiency year-round.
-                    </p>
 
-                    <div class="service-features">
-                        <div class="feature-item">
-                            <i class="fas fa-calendar-check"></i>
-                            <h4 data-en="Preventive Maintenance" data-ka="პრევენციული მომსახურება" data-ru="Профилактическое обслуживание">Preventive Maintenance</h4>
-                            <p data-en="Scheduled inspections and maintenance" data-ka="დაგეგმილი ინსპექტირებები და მომსახურება" data-ru="Плановые проверки и обслуживание">Scheduled inspections and maintenance</p>
+                <div class="service-sections">
+                    <!-- Section 1 -->
+                    <div class="service-section">
+                        <div class="service-image">
+                            <img src="images/constr2.jpg" alt="Strategic Planning">
+                            <div class="service-image-overlay"></div>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-ambulance"></i>
-                            <h4 data-en="Emergency Services" data-ka="გადაუდებელი სერვისები" data-ru="Аварийные услуги">Emergency Services</h4>
-                            <p data-en="24/7 emergency response team" data-ka="24/7 გადაუდებელი რეაგირების გუნდი" data-ru="Круглосуточная аварийная служба">24/7 emergency response team</p>
+                        <div class="service-section-content">
+                            <h3 data-en="Strategic Project Planning" data-ka="სტრატეგიული პროექტის დაგეგმვა" data-ru="Стратегическое планирование проекта">Strategic Project Planning</h3>
+                            <p data-en="Our strategic planning services help clients define project objectives, scope, and success criteria. We develop comprehensive project charters, establish key performance indicators, and create risk management strategies to ensure project alignment with business goals." data-ka="ჩვენი სტრატეგიული დაგეგმვის სერვისები ეხმარება კლიენტებს განსაზღვრონ პროექტის მიზნები, ფარგლები და წარმატების კრიტერიუმები. ჩვენ ვქმნით ყოვლისმომცველ პროექტის ქარტიებს, ვადგენთ ძირითად შესრულების ინდიკატორებს და ვქმნით რისკების მართვის სტრატეგიებს." data-ru="Наши услуги по стратегическому планированию помогают клиентам определить цели проекта, объем и критерии успеха. Мы разрабатываем комплексные уставы проектов, устанавливаем ключевые показатели эффективности и создаем стратегии управления рисками.">
+                                Our strategic planning services help clients define project objectives, scope, and success criteria. We develop comprehensive project charters, establish key performance indicators, and create risk management strategies to ensure project alignment with business goals.
+                            </p>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-clipboard-list"></i>
-                            <h4 data-en="Asset Management" data-ka="აქტივების მართვა" data-ru="Управление активами">Asset Management</h4>
-                            <p data-en="Comprehensive facility asset tracking" data-ka="ობიექტის აქტივების ყოვლისმომცველი თვალთვალი" data-ru="Комплексное отслеживание активов объекта">Comprehensive facility asset tracking</p>
+                    </div>
+
+                    <!-- Section 2 -->
+                    <div class="service-section">
+                        <div class="service-image">
+                            <img src="images/constr2.jpg" alt="Resource Management">
+                            <div class="service-image-overlay"></div>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-bolt"></i>
-                            <h4 data-en="Systems Optimization" data-ka="სისტემების ოპტიმიზაცია" data-ru="Оптимизация систем">Systems Optimization</h4>
-                            <p data-en="Performance tuning and upgrades" data-ka="შესრულების გამართვა და განახლებები" data-ru="Настройка производительности и обновления">Performance tuning and upgrades</p>
+                        <div class="service-section-content">
+                            <h3 data-en="Resource & Budget Management" data-ka="რესურსების და ბიუჯეტის მართვა" data-ru="Управление ресурсами и бюджетом">Resource & Budget Management</h3>
+                            <p data-en="Effective resource allocation and budget control are essential for project success. We implement sophisticated project management tools to track expenses, manage human resources, and optimize material procurement while maintaining strict financial discipline throughout the project lifecycle." data-ka="ეფექტური რესურსების განაწილება და ბიუჯეტის კონტროლი აუცილებელია პროექტის წარმატებისთვის. ჩვენ ვიყენებთ დახვეწილ პროექტის მენეჯმენტის ინსტრუმენტებს ხარჯების თვალყურის დევნებისთვის, ადამიანური რესურსების მართვისთვის და მასალების შეძენის ოპტიმიზაციისთვის." data-ru="Эффективное распределение ресурсов и контроль бюджета необходимы для успеха проекта. Мы внедряем сложные инструменты управления проектами для отслеживания расходов, управления человеческими ресурсами и оптимизации закупок материалов.">
+                                Effective resource allocation and budget control are essential for project success. We implement sophisticated project management tools to track expenses, manage human resources, and optimize material procurement while maintaining strict financial discipline throughout the project lifecycle.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Section 3 -->
+                    <div class="service-section">
+                        <div class="service-image">
+                            <img src="images/constr2.jpg" alt="Stakeholder Coordination">
+                            <div class="service-image-overlay"></div>
+                        </div>
+                        <div class="service-section-content">
+                            <h3 data-en="Stakeholder Coordination & Communication" data-ka="დაინტერესებული მხარეების კოორდინაცია და კომუნიკაცია" data-ru="Координация и коммуникация с заинтересованными сторонами">Stakeholder Coordination & Communication</h3>
+                            <p data-en="Successful projects require seamless coordination among all stakeholders. We establish clear communication channels, facilitate regular progress meetings, and provide transparent reporting to keep clients, contractors, and regulatory bodies informed and aligned throughout the project duration." data-ka="წარმატებული პროექტები მოითხოვს უწყვეტ კოორდინაციას ყველა დაინტერესებულ მხარეს შორის. ჩვენ ვქმნით ნათელ კომუნიკაციის არხებს, ვაადვილებთ რეგულარულ შეხვედრებს და ვაწვდით გამჭვირვალე ანგარიშგებებს." data-ru="Успешные проекты требуют бесперебойной координации между всеми заинтересованными сторонами. Мы устанавливаем четкие каналы связи, способствуем регулярным встречам по прогрессу и предоставляем прозрачную отчетность.">
+                                Successful projects require seamless coordination among all stakeholders. We establish clear communication channels, facilitate regular progress meetings, and provide transparent reporting to keep clients, contractors, and regulatory bodies informed and aligned throughout the project duration.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Service 6: Project Management -->
             <div class="service-detail" data-service="management">
                 <div class="service-header">
-                    <div class="service-image">
-                        <img src="images/constr2.jpg" alt="Project Management">
-                        <div class="service-image-overlay"></div>
-                    </div>
-                    <p class="service-subtitle" data-en="Professional Management" data-ka="პროფესიონალური მენეჯმენტი" data-ru="Профессиональное управление">Professional Management</p>
-                    <h1 class="service-title" data-en="Installation works" data-ka="სამონტაჟო სამუშაოები" data-ru="Монтажные работы">Installation works</h1>
+                    <p class="service-subtitle" data-en="Expert Guidance" data-ka="ექსპერტის მითითება" data-ru="Экспертное руководство">Expert Guidance</p>
+                    <h1 class="service-title" data-en="Installation works" data-ka="პროექტის მენეჯმენტი" data-ru="Управление проектом">Installation works</h1>
                 </div>
-                <div class="service-description">
-                    <h3 data-en="About This Service" data-ka="სერვისის შესახებ" data-ru="О данной услуге">About This Service</h3>
-                    <p data-en="Our project management services ensure seamless execution from conception to completion. We coordinate all aspects of your project, managing timelines, budgets, resources, and stakeholders to deliver exceptional results on schedule." data-ka="ჩვენი პროექტის მენეჯმენტის სერვისები უზრუნველყოფს უწყვეტ შესრულებას კონცეფციიდან დასრულებამდე. ჩვენ ვაკოორდინირებთ თქვენი პროექტის ყველა ასპექტს, ვმართავთ ვადებს, ბიუჯეტებს, რესურსებსა და დაინტერესებულ მხარეებს." data-ru="Наши услуги по управлению проектами обеспечивают безупречное выполнение от концепции до завершения. Мы координируем все аспекты вашего проекта, управляя сроками, бюджетами, ресурсами и заинтересованными сторонами.">
-                        Our project management services ensure seamless execution from conception to completion. We coordinate all aspects of your project, managing timelines, budgets, resources, and stakeholders to deliver exceptional results on schedule.
-                    </p>
 
-                    <div class="service-features">
-                        <div class="feature-item">
-                            <i class="fas fa-project-diagram"></i>
-                            <h4 data-en="Planning & Scheduling" data-ka="დაგეგმვა და განრიგი" data-ru="Планирование и составление графика">Planning & Scheduling</h4>
-                            <p data-en="Detailed project timeline development" data-ka="დეტალური პროექტის ვადების შემუშავება" data-ru="Разработка детального графика проекта">Detailed project timeline development</p>
+                <div class="service-sections">
+                    <!-- Section 1 -->
+                    <div class="service-section">
+                        <div class="service-image">
+                            <img src="images/constr2.jpg" alt="Strategic Planning">
+                            <div class="service-image-overlay"></div>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-money-check-alt"></i>
-                            <h4 data-en="Budget Control" data-ka="ბიუჯეტის კონტროლი" data-ru="Контроль бюджета">Budget Control</h4>
-                            <p data-en="Financial oversight and cost management" data-ka="ფინანსური ზედამხედველობა და ხარჯების მართვა" data-ru="Финансовый надзор и управление затратами">Financial oversight and cost management</p>
+                        <div class="service-section-content">
+                            <h3 data-en="Strategic Project Planning" data-ka="სტრატეგიული პროექტის დაგეგმვა" data-ru="Стратегическое планирование проекта">Strategic Project Planning</h3>
+                            <p data-en="Our strategic planning services help clients define project objectives, scope, and success criteria. We develop comprehensive project charters, establish key performance indicators, and create risk management strategies to ensure project alignment with business goals." data-ka="ჩვენი სტრატეგიული დაგეგმვის სერვისები ეხმარება კლიენტებს განსაზღვრონ პროექტის მიზნები, ფარგლები და წარმატების კრიტერიუმები. ჩვენ ვქმნით ყოვლისმომცველ პროექტის ქარტიებს, ვადგენთ ძირითად შესრულების ინდიკატორებს და ვქმნით რისკების მართვის სტრატეგიებს." data-ru="Наши услуги по стратегическому планированию помогают клиентам определить цели проекта, объем и критерии успеха. Мы разрабатываем комплексные уставы проектов, устанавливаем ключевые показатели эффективности и создаем стратегии управления рисками.">
+                                Our strategic planning services help clients define project objectives, scope, and success criteria. We develop comprehensive project charters, establish key performance indicators, and create risk management strategies to ensure project alignment with business goals.
+                            </p>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-user-friends"></i>
-                            <h4 data-en="Team Coordination" data-ka="გუნდის კოორდინაცია" data-ru="Координация команды">Team Coordination</h4>
-                            <p data-en="Efficient resource allocation and management" data-ka="რესურსების ეფექტური განაწილება და მართვა" data-ru="Эффективное распределение и управление ресурсами">Efficient resource allocation and management</p>
+                    </div>
+
+                    <!-- Section 2 -->
+                    <div class="service-section">
+                        <div class="service-image">
+                            <img src="images/constr2.jpg" alt="Resource Management">
+                            <div class="service-image-overlay"></div>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-chart-bar"></i>
-                            <h4 data-en="Progress Monitoring" data-ka="პროგრესის მონიტორინგი" data-ru="Мониторинг прогресса">Progress Monitoring</h4>
-                            <p data-en="Real-time tracking and reporting" data-ka="რეალურ დროში თვალთვალი და ანგარიშგება" data-ru="Отслеживание и отчетность в реальном времени">Real-time tracking and reporting</p>
+                        <div class="service-section-content">
+                            <h3 data-en="Resource & Budget Management" data-ka="რესურსების და ბიუჯეტის მართვა" data-ru="Управление ресурсами и бюджетом">Resource & Budget Management</h3>
+                            <p data-en="Effective resource allocation and budget control are essential for project success. We implement sophisticated project management tools to track expenses, manage human resources, and optimize material procurement while maintaining strict financial discipline throughout the project lifecycle." data-ka="ეფექტური რესურსების განაწილება და ბიუჯეტის კონტროლი აუცილებელია პროექტის წარმატებისთვის. ჩვენ ვიყენებთ დახვეწილ პროექტის მენეჯმენტის ინსტრუმენტებს ხარჯების თვალყურის დევნებისთვის, ადამიანური რესურსების მართვისთვის და მასალების შეძენის ოპტიმიზაციისთვის." data-ru="Эффективное распределение ресурсов и контроль бюджета необходимы для успеха проекта. Мы внедряем сложные инструменты управления проектами для отслеживания расходов, управления человеческими ресурсами и оптимизации закупок материалов.">
+                                Effective resource allocation and budget control are essential for project success. We implement sophisticated project management tools to track expenses, manage human resources, and optimize material procurement while maintaining strict financial discipline throughout the project lifecycle.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Section 3 -->
+                    <div class="service-section">
+                        <div class="service-image">
+                            <img src="images/constr2.jpg" alt="Stakeholder Coordination">
+                            <div class="service-image-overlay"></div>
+                        </div>
+                        <div class="service-section-content">
+                            <h3 data-en="Stakeholder Coordination & Communication" data-ka="დაინტერესებული მხარეების კოორდინაცია და კომუნიკაცია" data-ru="Координация и коммуникация с заинтересованными сторонами">Stakeholder Coordination & Communication</h3>
+                            <p data-en="Successful projects require seamless coordination among all stakeholders. We establish clear communication channels, facilitate regular progress meetings, and provide transparent reporting to keep clients, contractors, and regulatory bodies informed and aligned throughout the project duration." data-ka="წარმატებული პროექტები მოითხოვს უწყვეტ კოორდინაციას ყველა დაინტერესებულ მხარეს შორის. ჩვენ ვქმნით ნათელ კომუნიკაციის არხებს, ვაადვილებთ რეგულარულ შეხვედრებს და ვაწვდით გამჭვირვალე ანგარიშგებებს." data-ru="Успешные проекты требуют бесперебойной координации между всеми заинтересованными сторонами. Мы устанавливаем четкие каналы связи, способствуем регулярным встречам по прогрессу и предоставляем прозрачную отчетность.">
+                                Successful projects require seamless coordination among all stakeholders. We establish clear communication channels, facilitate regular progress meetings, and provide transparent reporting to keep clients, contractors, and regulatory bodies informed and aligned throughout the project duration.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Additional services would follow the same pattern... -->
+
         </div>
     </div>
 

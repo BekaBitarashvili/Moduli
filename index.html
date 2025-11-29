@@ -107,6 +107,114 @@
     .hero {
         position: relative;
     }
+
+    /* Prepared Projects Section Styles */
+    .prepared-projects-section {
+        padding: 80px 0;
+        background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .prepared-projects-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #ff6b35, transparent);
+    }
+
+    .prepared-projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 50px;
+    }
+
+    .prepared-project-card {
+        background: rgba(30, 30, 30, 0.8);
+        border-radius: 8px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        border: 1px solid rgba(255, 107, 53, 0.1);
+    }
+
+    .prepared-project-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(255, 107, 53, 0.2);
+        border-color: rgba(255, 107, 53, 0.3);
+    }
+
+    .prepared-project-image {
+        height: 200px;
+        overflow: hidden;
+    }
+
+    .prepared-project-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    .prepared-project-card:hover .prepared-project-image img {
+        transform: scale(1.1);
+    }
+
+    .prepared-project-content {
+        padding: 20px;
+    }
+
+    .prepared-project-content h3 {
+        color: white;
+        font-size: 18px;
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+
+    .prepared-project-content p {
+        color: #aaa;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    /* Beautiful Divider Styles */
+    .section-divider {
+        position: relative;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 40px 0;
+    }
+
+    .divider-line {
+        height: 2px;
+        width: 80%;
+        background: linear-gradient(90deg, transparent, #ff6b35, transparent);
+        position: relative;
+    }
+
+    .divider-icon {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 2px solid #ff6b35;
+    }
+
+    .divider-icon i {
+        color: #ff6b35;
+        font-size: 24px;
+    }
 </style>
 <body>
 <!-- Navigation -->
@@ -147,9 +255,9 @@
     <div class="hero-overlay">
         <img src="images/orange_back.jpg" alt="background">
     </div>
-    <div class="metal-style-btn-container">
-        <a href="#" class="metal-style-btn">Metal Style</a>
-    </div>
+<!--    <div class="metal-style-btn-container">-->
+<!--        <a href="#" class="metal-style-btn">Metal Style</a>-->
+<!--    </div>-->
 
     <div class="hero-content">
         <h1 class="moduli-title">MODULI</h1>
@@ -250,6 +358,99 @@
         </div>
     </div>
     </section>
+
+    <!-- Prepared Projects Section -->
+    <section class="prepared-projects-section">
+        <div class="container">
+            <h2 class="section-title" data-en="Prepared Projects" data-ka="მზა პროექტები" data-ru="Подготовленные проекты">Prepared Projects</h2>
+            <p class="section-description" data-en="Explore our ready-to-implement construction solutions designed for efficiency and modern aesthetics" data-ka="გაეცანით ჩვენს მზა სამშენებლო გადაწყვეტებს, რომლებიც შექმნილია ეფექტურობისა და თანამედროვე ესთეტიკისთვის" data-ru="Ознакомьтесь с нашими готовыми строительными решениями, разработанными для эффективности и современной эстетики">
+                Explore our ready-to-implement construction solutions designed for efficiency and modern aesthetics
+            </p>
+
+            <div class="prepared-projects-grid">
+                <div class="prepared-project-card" onclick="window.location.href='prepared.html'">
+                    <div class="prepared-project-image">
+                        <img src="images/call.jpg" alt="Modern Office Building">
+                    </div>
+                    <div class="prepared-project-content">
+                        <h3 data-en="Modern Office Building" data-ka="თანამედროვე საოფისე შენობა" data-ru="Современное офисное здание">Modern Office Building</h3>
+                        <p data-en="Efficient workspace design with modular construction for rapid deployment" data-ka="ეფექტური სამუშაო სივრცის დიზაინი მოდულური კონსტრუქციით სწრაფი დეპლოიმენტისთვის" data-ru="Эффективный дизайн рабочего пространства с модульной конструкцией для быстрого развертывания">
+                            Efficient workspace design with modular construction for rapid deployment
+                        </p>
+                    </div>
+                </div>
+
+                <div class="prepared-project-card" onclick="window.location.href='prepared.html'">
+                    <div class="prepared-project-image">
+                        <img src="images/call.jpg" alt="Industrial Warehouse">
+                    </div>
+                    <div class="prepared-project-content">
+                        <h3 data-en="Industrial Warehouse" data-ka="სამრეწველო საწყობი" data-ru="Промышленный склад">Industrial Warehouse</h3>
+                        <p data-en="Durable storage solution with optimized space utilization and easy expansion" data-ka="გამძლე საცავის გადაწყვეტა ოპტიმიზირებული სივრცის გამოყენებით და მარტივი გაფართოებით" data-ru="Прочное складское решение с оптимизированным использованием пространства и легким расширением">
+                            Durable storage solution with optimized space utilization and easy expansion
+                        </p>
+                    </div>
+                </div>
+
+                <div class="prepared-project-card" onclick="window.location.href='prepared.html'">
+                    <div class="prepared-project-image">
+                        <img src="images/call.jpg" alt="Commercial Retail Space">
+                    </div>
+                    <div class="prepared-project-content">
+                        <h3 data-en="Commercial Retail Space" data-ka="კომერციული სავაჭრო სივრცე" data-ru="Коммерческое торговое пространство">Commercial Retail Space</h3>
+                        <p data-en="Flexible retail environment with customizable layouts and modern facade" data-ka="მოქნილი სავაჭრო გარემო კონფიგურირებადი განლაგებით და თანამედროვე ფასადით" data-ru="Гибкая торговая среда с настраиваемыми планировками и современным фасадом">
+                            Flexible retail environment with customizable layouts and modern facade
+                        </p>
+                    </div>
+                </div>
+
+                <div class="prepared-project-card" onclick="window.location.href='prepared.html'">
+                    <div class="prepared-project-image">
+                        <img src="images/call.jpg" alt="Residential Complex">
+                    </div>
+                    <div class="prepared-project-content">
+                        <h3 data-en="Residential Complex" data-ka="საცხოვრებელი კომპლექსი" data-ru="Жилой комплекс">Residential Complex</h3>
+                        <p data-en="Comfortable living spaces with energy-efficient design and modern amenities" data-ka="კომფორტული საცხოვრებელი სივრცეები ენერგოეფექტური დიზაინით და თანამედროვე უპირატესობებით" data-ru="Комфортные жилые помещения с энергоэффективным дизайном и современными удобствами">
+                            Comfortable living spaces with energy-efficient design and modern amenities
+                        </p>
+                    </div>
+                </div>
+
+                <div class="prepared-project-card" onclick="window.location.href='prepared.html'">
+                    <div class="prepared-project-image">
+                        <img src="images/call.jpg" alt="Educational Facility">
+                    </div>
+                    <div class="prepared-project-content">
+                        <h3 data-en="Educational Facility" data-ka="საგანმანათლებლო ობიექტი" data-ru="Образовательное учреждение">Educational Facility</h3>
+                        <p data-en="Modern learning environment with flexible classrooms and collaborative spaces" data-ka="თანამედროვე სასწავლო გარემო მოქნილი კლასებით და თანამშრომლობის სივრცეებით" data-ru="Современная учебная среда с гибкими классами и пространствами для сотрудничества">
+                            Modern learning environment with flexible classrooms and collaborative spaces
+                        </p>
+                    </div>
+                </div>
+
+                <div class="prepared-project-card" onclick="window.location.href='prepared.html'">
+                    <div class="prepared-project-image">
+                        <img src="images/call.jpg" alt="Healthcare Center">
+                    </div>
+                    <div class="prepared-project-content">
+                        <h3 data-en="Healthcare Center" data-ka="ჯანდაცვის ცენტრი" data-ru="Медицинский центр">Healthcare Center</h3>
+                        <p data-en="Sanitary medical facility with efficient workflow and patient-friendly design" data-ka="სანიტარული სამედიცინო ობიექტი ეფექტური სამუშაო პროცესით და პაციენტებისთვის მოწოდებული დიზაინით" data-ru="Санитарное медицинское учреждение с эффективным рабочим процессом и удобным для пациентов дизайном">
+                            Sanitary medical facility with efficient workflow and patient-friendly design
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beautiful Divider -->
+    <div class="section-divider">
+        <div class="divider-line"></div>
+        <div class="divider-icon">
+            <i class="fas fa-arrow-down"></i>
+        </div>
+    </div>
+
     <div class="container">
         <h2 class="section-title" data-en="Gallery" data-ka="გალერეა" data-ru="Галерея">Gallery</h2>
         <p class="section-description" data-en="Comprehensive solutions for all your construction and engineering needs" data-ka="ყოვლისმომცველი გადაწყვეტები თქვენი ყველა სამშენებლო და საინჟინრო საჭიროებისთვის" data-ru="Комплексные решения для всех ваших строительных и инженерных потребностей">
