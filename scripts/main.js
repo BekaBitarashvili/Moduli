@@ -197,14 +197,75 @@ const translations = {
     }
 };
 
-// Current language
-let currentLanguage = 'en';
+// Language Persistence - Add this to your main.js file
+// Replace the existing language switching section with this code
+
+// Current language - load from localStorage or default to 'en'
+let currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
 
 // DOM elements
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 const langButtons = document.querySelectorAll('.lang-btn');
 const navbar = document.querySelector('.navbar');
+
+// Set initial language on page load
+document.addEventListener('DOMContentLoaded', function () {
+    // Apply saved language
+    applyLanguage(currentLanguage);
+
+    // Update active button
+    langButtons.forEach(btn => {
+        if (btn.dataset.lang === currentLanguage) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+});
+
+// Language switching
+langButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // Remove active class from all buttons
+        langButtons.forEach(b => b.classList.remove('active'));
+        // Add active class to clicked button
+        btn.classList.add('active');
+
+        // Set current language
+        currentLanguage = btn.dataset.lang;
+
+        // Save to localStorage
+        localStorage.setItem('selectedLanguage', currentLanguage);
+
+        // Apply language
+        applyLanguage(currentLanguage);
+    });
+});
+
+// Apply language function
+function applyLanguage(lang) {
+    // Update elements with data attributes
+    document.querySelectorAll('[data-' + lang + ']').forEach(element => {
+        const text = element.getAttribute('data-' + lang);
+        if (text) {
+            element.textContent = text;
+        }
+    });
+
+    // Update placeholders
+    document.querySelectorAll('[data-' + lang + '-placeholder]').forEach(element => {
+        const placeholder = element.getAttribute('data-' + lang + '-placeholder');
+        if (placeholder) {
+            element.placeholder = placeholder;
+        }
+    });
+}
+
+// Update the existing updateLanguage function to use applyLanguage
+function updateLanguage() {
+    applyLanguage(currentLanguage);
+}
 
 // Mobile menu toggle
 hamburger.addEventListener('click', () => {
@@ -354,7 +415,7 @@ window.addEventListener('load', () => {
 });
 
 // Form handling
-document.querySelector('.registration-form')?.addEventListener('submit', function(e) {
+document.querySelector('.registration-form')?.addEventListener('submit', function (e) {
     e.preventDefault();
 
     // Get form data
@@ -366,8 +427,8 @@ document.querySelector('.registration-form')?.addEventListener('submit', functio
     // Simple validation
     if (!name || !email || !phone) {
         alert(currentLanguage === 'en' ? 'Please fill in all fields' :
-              currentLanguage === 'ka' ? 'გთხოვთ შეავსოთ ყველა ველი' :
-              'Пожалуйста, заполните все поля');
+            currentLanguage === 'ka' ? 'გთხოვთ შეავსოთ ყველა ველი' :
+                'Пожалуйста, заполните все поля');
         return;
     }
 
@@ -375,15 +436,15 @@ document.querySelector('.registration-form')?.addEventListener('submit', functio
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
         alert(currentLanguage === 'en' ? 'Please enter a valid email address' :
-              currentLanguage === 'ka' ? 'გთხოვთ შეიყვანოთ სწორი ელ-ფოსტის მისამართი' :
-              'Пожалуйста, введите действительный адрес электронной почты');
+            currentLanguage === 'ka' ? 'გთხოვთ შეიყვანოთ სწორი ელ-ფოსტის მისამართი' :
+                'Пожалуйста, введите действительный адрес электронной почты');
         return;
     }
 
     // Show success message
     alert(currentLanguage === 'en' ? 'Registration successful! We will contact you soon.' :
-          currentLanguage === 'ka' ? 'რეგისტრაცია წარმატებული! ჩვენ მალე დაგიკავშირდებით.' :
-          'Регистрация прошла успешно! Мы свяжемся с вами в ближайшее время.');
+        currentLanguage === 'ka' ? 'რეგისტრაცია წარმატებული! ჩვენ მალე დაგიკავშირდებით.' :
+            'Регистрация прошла успешно! Мы свяжемся с вами в ближайшее время.');
 
     // Reset form
     this.reset();
@@ -396,7 +457,7 @@ document.querySelector('.registration-form')?.addEventListener('submit', functio
     }, 200);
 });
 
-document.querySelector('.contact-form')?.addEventListener('submit', function(e) {
+document.querySelector('.contact-form')?.addEventListener('submit', function (e) {
     e.preventDefault();
 
     // Get form data
@@ -409,8 +470,8 @@ document.querySelector('.contact-form')?.addEventListener('submit', function(e) 
     // Simple validation
     if (!name || !email || !phone || !subject || !message) {
         alert(currentLanguage === 'en' ? 'Please fill in all fields' :
-              currentLanguage === 'ka' ? 'გთხოვთ შეავსოთ ყველა ველი' :
-              'Пожалуйста, заполните все поля');
+            currentLanguage === 'ka' ? 'გთხოვთ შეავსოთ ყველა ველი' :
+                'Пожалуйста, заполните все поля');
         return;
     }
 
@@ -418,15 +479,15 @@ document.querySelector('.contact-form')?.addEventListener('submit', function(e) 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
         alert(currentLanguage === 'en' ? 'Please enter a valid email address' :
-              currentLanguage === 'ka' ? 'გთხოვთ შეიყვანოთ სწორი ელ-ფოსტის მისამართი' :
-              'Пожалуйста, введите действительный адрес электронной почты');
+            currentLanguage === 'ka' ? 'გთხოვთ შეიყვანოთ სწორი ელ-ფოსტის მისამართი' :
+                'Пожалуйста, введите действительный адрес электронной почты');
         return;
     }
 
     // Show success message
     alert(currentLanguage === 'en' ? 'Message sent successfully! We will get back to you soon.' :
-          currentLanguage === 'ka' ? 'შეტყობინება წარმატებით გაიგზავნა! ჩვენ მალე დაგიკავშირდებით.' :
-          'Сообщение отправлено успешно! Мы скоро свяжемся с вами.');
+        currentLanguage === 'ka' ? 'შეტყობინება წარმატებით გაიგზავნა! ჩვენ მალე დაგიკავშირდებით.' :
+            'Сообщение отправлено успешно! Мы скоро свяжемся с вами.');
 
     // Reset form
     this.reset();
@@ -452,11 +513,11 @@ window.addEventListener('scroll', () => {
 // Add floating animation to project cards
 document.querySelectorAll('.project-card').forEach((card, index) => {
     card.style.animationDelay = `${index * 0.2}s`;
-    card.addEventListener('mouseenter', function() {
+    card.addEventListener('mouseenter', function () {
         this.style.transform = 'translateY(-20px) scale(1.02)';
     });
 
-    card.addEventListener('mouseleave', function() {
+    card.addEventListener('mouseleave', function () {
         this.style.transform = 'translateY(0) scale(1)';
     });
 });
@@ -465,18 +526,18 @@ document.querySelectorAll('.project-card').forEach((card, index) => {
 document.querySelectorAll('.sponsor-card').forEach((card, index) => {
     card.style.animationDelay = `${index * 0.1}s`;
 
-    card.addEventListener('mouseenter', function() {
+    card.addEventListener('mouseenter', function () {
         this.style.transform = 'translateY(-15px) rotate(2deg)';
     });
 
-    card.addEventListener('mouseleave', function() {
+    card.addEventListener('mouseleave', function () {
         this.style.transform = 'translateY(0) rotate(0deg)';
     });
 });
 
 // Add ripple effect to buttons
 function addRippleEffect(button) {
-    button.addEventListener('click', function(e) {
+    button.addEventListener('click', function (e) {
         const ripple = document.createElement('span');
         const rect = this.getBoundingClientRect();
         const size = Math.max(rect.width, rect.height);
@@ -659,18 +720,18 @@ if (window.innerWidth < 768) {
 }
 
 document.querySelectorAll('.showcase-card').forEach(card => {
-  card.addEventListener('mouseenter', () => {
-    card.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
-    card.style.transform = 'translateY(-12px) scale(1.05)';
-  });
-  card.addEventListener('mouseleave', () => {
-    card.style.transform = 'translateY(0) scale(1)';
-  });
+    card.addEventListener('mouseenter', () => {
+        card.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+        card.style.transform = 'translateY(-12px) scale(1.05)';
+    });
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'translateY(0) scale(1)';
+    });
 });
 
 
 // Odometer Animation Script
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const statNumbers = document.querySelectorAll('.stat-number');
     let animated = false;
 
@@ -718,26 +779,79 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-    const currentPage = window.location.pathname.split("/").pop();
+const currentPage = window.location.pathname.split("/").pop();
 
-    document.querySelectorAll(".nav-list a").forEach(link => {
-        const linkPage = link.getAttribute("href");
+document.querySelectorAll(".nav-list a").forEach(link => {
+    const linkPage = link.getAttribute("href");
 
-        // ignore hash links (#contact)
-        if (linkPage.startsWith("#")) return;
+    // ignore hash links (#contact)
+    if (linkPage.startsWith("#")) return;
 
-        if (linkPage === currentPage) {
-            link.classList.add("active");
-        }
-    });
+    if (linkPage === currentPage) {
+        link.classList.add("active");
+    }
+});
 
 // CopyEmail Script
 function copyEmail(email) {
-        navigator.clipboard.writeText(email)
-            .then(() => {
-                alert("Copied: " + email);
-            })
-            .catch(err => {
-                console.error("Copy failed", err);
-            });
+    navigator.clipboard.writeText(email)
+        .then(() => {
+            alert("Copied: " + email);
+        })
+        .catch(err => {
+            console.error("Copy failed", err);
+        });
+};
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const texts = {
+        en: "Industrial building structures\nDesign - Import - Installation",
+        ka: "ინდუსტრიული შენობა ნაგებობების\nპროექტირება - იმპორტი - ინსტალაცია",
+        ru: "Проектирование промышленных\nсооружений - Импорт - Монтаж"
+    };
+
+    const typingElement = document.getElementById("hero-typing-text");
+    const cursor = document.querySelector(".terminal-cursor");
+
+    let index = 0;
+    let currentText = "";
+    let typingTimeout;
+
+    function startTyping(text) {
+        clearTimeout(typingTimeout);
+        typingElement.innerHTML = "";
+        index = 0;
+        currentText = text;
+
+        function typeEffect() {
+            if (index < currentText.length) {
+                if (currentText[index] === "\n") {
+                    typingElement.innerHTML += "<br>";
+                } else {
+                    typingElement.innerHTML += currentText[index];
+                }
+                index++;
+                typingTimeout = setTimeout(typeEffect, 55);
+            }
+        }
+
+        typeEffect();
     }
+
+    // 🔹 საწყისი ენა (active ღილაკიდან)
+    const activeLangBtn = document.querySelector(".lang-btn.active");
+    const initialLang = activeLangBtn ? activeLangBtn.dataset.lang : "ka";
+    startTyping(texts[initialLang]);
+
+    // 🔹 ენის შეცვლაზე თავიდან ატრიალებს typing-ს
+    document.querySelectorAll(".lang-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+            const selectedLang = btn.dataset.lang;
+            if (texts[selectedLang]) {
+                startTyping(texts[selectedLang]);
+            }
+        });
+    });
+});
+
