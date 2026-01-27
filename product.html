@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
@@ -279,533 +280,842 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html" style="text-decoration: none; color: white">
-                    <span class="logo-text">Moduli</span>
-                </a>
-                <span class="logo-subtitle">Corporation</span>
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <a href="index.html" style="text-decoration: none; color: white">
+                <span class="logo-text">Moduli</span>
+            </a>
+            <span class="logo-subtitle">Corporation</span>
+        </div>
+        <div class="nav-menu">
+            <ul class="nav-list">
+                <li><a href="prepared.html" data-en="Prepared Projects" data-ka="მზა პროექტები"
+                       data-ru="Подготовленные проекты">Prepared Projects</a></li>
+                <li><a href="product.html" data-en="Product" data-ka="პროდუქტი" data-ru="Продукт">Product</a></li>
+                <li><a href="services.html" data-en="Services" data-ka="სერვისები" data-ru="Услуги">Services</a></li>
+                <li><a href="projects.html" data-en="Gallery" data-ka="გალერეა" data-ru="Галерея">Gallery</a></li>
+                <li><a href="about.html" data-en="About Us" data-ka="ჩვენს შესახებ" data-ru="О нас">About Us</a></li>
+                <li><a href="index.html#contact" data-en="Contact" data-ka="კონტაქტი" data-ru="Контакт">Contact</a></li>
+            </ul>
+        </div>
+        <div class="language-switcher">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="ka">KA</button>
+            <button class="lang-btn" data-lang="ru">RU</button>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+<!-- Product Container -->
+<div class="product-container">
+    <div class="product-header">
+        <h1 data-en="Our Products" data-ka="ჩვენი პროდუქტები" data-ru="Наши продукты">Our Products</h1>
+        <p data-en="Premium construction materials and solutions"
+           data-ka="პრემიუმ სამშენებლო მასალები და გადაწყვეტილებები"
+           data-ru="Премиальные строительные материалы и решения">Premium construction materials and solutions</p>
+    </div>
+
+    <!-- Horizontal Product Tabs -->
+    <div class="product-tabs">
+        <div class="product-tab" data-product="metal" data-en="Metal" data-ka="ლითონი" data-ru="Металл">
+            <i class="fas fa-cube"></i>
+            <span>Metal</span>
+        </div>
+        <div class="product-tab" data-product="panel" data-en="Sandwich Panel" data-ka="სენდვიჩ პანელი"
+             data-ru="Сэндвич-панели">
+            <i class="fas fa-layer-group"></i>
+            <span>Sandwich Panel</span>
+        </div>
+        <div class="product-tab" data-product="accessories" data-en="Facade Accessories & Mechanisms"
+             data-ka="საფასადე აქსესუარები და დამხმარე მექანიზმები" data-ru="Фасадные аксессуары и механизмы">
+            <i class="fas fa-shield-alt"></i>
+            <span>Facade Accessories & Mechanisms</span>
+        </div>
+    </div>
+
+    <!-- Product Content -->
+    <div class="product-content-wrapper">
+        <!-- METAL PRODUCT -->
+        <div class="product-content" data-product="metal">
+            <!-- Section 1 -->
+            <div class="product-showcase">
+                <h2 class="product-section-title" data-en="Metal Structures" data-ka="ლითონის კონსტრუქციები"
+                    data-ru="Металлические конструкции">Metal Structures</h2>
+                <div class="product-images-grid">
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Metal Beam">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Steel Beams" data-ka="ფოლადის ძელები" data-ru="Стальные балки">Steel Beams</h4>
+                            <p data-en="High-strength structural beams" data-ka="მაღალი სიმტკიცის კონსტრუქციული ძელები"
+                               data-ru="Высокопрочные конструкционные балки">High-strength structural beams</p>
+                        </div>
+                    </div>
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Metal Column">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Metal Columns" data-ka="ლითონის სვეტები" data-ru="Металлические колонны">Metal
+                                Columns</h4>
+                            <p data-en="Durable load-bearing columns" data-ka="გამძლე ატვირთვის მატარებელი სვეტები"
+                               data-ru="Прочные несущие колонны">Durable load-bearing columns</p>
+                        </div>
+                    </div>
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Metal Frame">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Steel Frames" data-ka="ფოლადის ჩარჩოები" data-ru="Стальные каркасы">Steel
+                                Frames</h4>
+                            <p data-en="Custom-designed metal frameworks"
+                               data-ka="ინდივიდუალურად დიზაინირებული ჩარჩოები"
+                               data-ru="Индивидуально разработанные каркасы">Custom-designed metal frameworks</p>
+                        </div>
+                    </div>
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Metal Truss">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Metal Trusses" data-ka="ლითონის ფერმები" data-ru="Металлические фермы">Metal
+                                Trusses</h4>
+                            <p data-en="Lightweight and strong roof trusses"
+                               data-ka="მსუბუქი და ძლიერი სახურავის ფერმები"
+                               data-ru="Легкие и прочные кровельные фермы">Lightweight and strong roof trusses</p>
+                        </div>
+                    </div>
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Metal Girder">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Metal Girders" data-ka="ლითონის გირდერები" data-ru="Металлические балки">Metal
+                                Girders</h4>
+                            <p data-en="Heavy-duty support girders" data-ka="მძიმე სიმძიმის გირდერები"
+                               data-ru="Сверхпрочные опорные балки">Heavy-duty support girders</p>
+                        </div>
+                    </div>
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Metal Purlin">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Metal Purlins" data-ka="ლითონის პურლინები" data-ru="Металлические прогоны">
+                                Metal Purlins</h4>
+                            <p data-en="Roof support structural elements"
+                               data-ka="სახურავის მხარდაჭერის კონსტრუქციული ელემენტები"
+                               data-ru="Элементы кровельной конструкции">Roof support structural elements</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="nav-menu">
-                <ul class="nav-list">
-                    <li><a href="prepared.html" data-en="Prepared Projects" data-ka="მზა პროექტები" data-ru="Подготовленные проекты">Prepared Projects</a></li>
-                    <li><a href="product.html" data-en="Product" data-ka="პროდუქტი" data-ru="Продукт">Product</a></li>
-                    <li><a href="services.html" data-en="Services" data-ka="სერვისები" data-ru="Услуги">Services</a></li>
-                    <li><a href="projects.html" data-en="Gallery" data-ka="გალერეა" data-ru="Галерея">Gallery</a></li>
-                    <li><a href="about.html" data-en="About Us" data-ka="ჩვენს შესახებ" data-ru="О нас">About Us</a></li>
-                    <li><a href="index.html#contact" data-en="Contact" data-ka="კონტაქტი" data-ru="Контакт">Contact</a></li>
-                </ul>
+
+            <!-- Divider -->
+            <div class="section-divider">
+                <div class="divider-line"></div>
+                <div class="divider-icon">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
             </div>
-            <div class="language-switcher">
-                <button class="lang-btn active" data-lang="en">EN</button>
-                <button class="lang-btn" data-lang="ka">KA</button>
-                <button class="lang-btn" data-lang="ru">RU</button>
-            </div>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+
+            <!-- Section 2 -->
+            <div class="product-showcase">
+                <h2 class="product-section-title" data-en="Metal Components" data-ka="ლითონის კომპონენტები"
+                    data-ru="Металлические компоненты">Metal Components</h2>
+                <div class="product-images-grid">
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Metal Bracket">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Steel Brackets" data-ka="ფოლადის ბრეკეტები" data-ru="Стальные кронштейны">Steel
+                                Brackets</h4>
+                            <p data-en="Reinforced connection brackets" data-ka="გამაგრებული დამაკავშირებელი ბრეკეტები"
+                               data-ru="Усиленные соединительные кронштейны">Reinforced connection brackets</p>
+                        </div>
+                    </div>
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Metal Plate">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Metal Plates" data-ka="ლითონის ფირფიტები" data-ru="Металлические плиты">Metal
+                                Plates</h4>
+                            <p data-en="High-quality steel plates" data-ka="მაღალი ხარისხის ფოლადის ფირფიტები"
+                               data-ru="Высококачественные стальные плиты">High-quality steel plates</p>
+                        </div>
+                    </div>
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Metal Anchor">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Metal Anchors" data-ka="ლითონის ანკერები" data-ru="Металлические анкеры">Metal
+                                Anchors</h4>
+                            <p data-en="Secure foundation anchoring systems"
+                               data-ka="უსაფრთხო ფუნდამენტის ანკერის სისტემები" data-ru="Надежные системы анкеровки">
+                                Secure foundation anchoring systems</p>
+                        </div>
+                    </div>
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Metal Fastener">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Metal Fasteners" data-ka="ლითონის დამაკავშირებლები"
+                                data-ru="Металлические крепежи">Metal Fasteners</h4>
+                            <p data-en="Industrial-grade fastening solutions"
+                               data-ka="ინდუსტრიული დონის დამაკავშირებელი გადაწყვეტილებები"
+                               data-ru="Промышленные крепежные решения">Industrial-grade fastening solutions</p>
+                        </div>
+                    </div>
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Metal Joint">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Metal Joints" data-ka="ლითონის სახსრები" data-ru="Металлические соединения">
+                                Metal Joints</h4>
+                            <p data-en="Precision-engineered connection joints"
+                               data-ka="პრეციზიულად დამუშავებული სახსრები" data-ru="Прецизионные соединительные узлы">
+                                Precision-engineered connection joints</p>
+                        </div>
+                    </div>
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Metal Deck">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Metal Decking" data-ka="ლითონის დეკინგი" data-ru="Металлический настил">Metal
+                                Decking</h4>
+                            <p data-en="Durable floor and roof decking" data-ka="გამძლე იატაკისა და სახურავის დეკინგი"
+                               data-ru="Прочный напольный и кровельный настил">Durable floor and roof decking</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
 
-    <!-- Product Container -->
-    <div class="product-container">
-        <div class="product-header">
-            <h1 data-en="Our Products" data-ka="ჩვენი პროდუქტები" data-ru="Наши продукты">Our Products</h1>
-            <p data-en="Premium construction materials and solutions" data-ka="პრემიუმ სამშენებლო მასალები და გადაწყვეტილებები" data-ru="Премиальные строительные материалы и решения">Premium construction materials and solutions</p>
+        <!-- SANDWICH PANEL PRODUCT -->
+        <div class="product-content" data-product="panel">
+            <!-- Section 1: Roof Panels -->
+            <div class="product-showcase">
+                <h2 class="product-section-title" data-en="Roof Panels" data-ka="სახურავის პანელები"
+                    data-ru="Кровельные панели">Roof Panels</h2>
+                <div class="product-images-grid">
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Roof Panel 1">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Insulated Roof Panel" data-ka="იზოლირებული სახურავის პანელი"
+                                data-ru="Изолированная кровельная панель">Insulated Roof Panel</h4>
+                            <p data-en="High thermal efficiency roof panels"
+                               data-ka="მაღალი თერმული ეფექტურობის პანელები" data-ru="Панели с высокой теплоизоляцией">
+                                High thermal efficiency roof panels</p>
+                        </div>
+                    </div>
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Roof Panel 2">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Metal Roof Panel" data-ka="ლითონის სახურავის პანელი"
+                                data-ru="Металлическая кровельная панель">Metal Roof Panel</h4>
+                            <p data-en="Durable weather-resistant panels" data-ka="გამძლე ამინდგაძლე პანელები"
+                               data-ru="Прочные атмосферостойкие панели">Durable weather-resistant panels</p>
+                        </div>
+                    </div>
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Roof Panel 3">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Composite Roof Panel" data-ka="კომპოზიტური სახურავის პანელი"
+                                data-ru="Композитная кровельная панель">Composite Roof Panel</h4>
+                            <p data-en="Lightweight composite construction" data-ka="მსუბუქი კომპოზიტური კონსტრუქცია"
+                               data-ru="Легкая композитная конструкция">Lightweight composite construction</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="section-divider">
+                <div class="divider-line"></div>
+                <div class="divider-icon">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+            </div>
+
+            <!-- Section 2: Wall Panels -->
+            <div class="product-showcase">
+                <h2 class="product-section-title" data-en="Wall Panels" data-ka="კედლის პანელები"
+                    data-ru="Стеновые панели">Wall Panels</h2>
+                <div class="product-images-grid">
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Wall Panel 1">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Insulated Wall Panel" data-ka="იზოლირებული კედლის პანელი"
+                                data-ru="Изолированная стеновая панель">Insulated Wall Panel</h4>
+                            <p data-en="Energy-efficient wall solutions"
+                               data-ka="ენერგოეფექტური კედლის გადაწყვეტილებები"
+                               data-ru="Энергоэффективные стеновые решения">Energy-efficient wall solutions</p>
+                        </div>
+                    </div>
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Wall Panel 2">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Decorative Wall Panel" data-ka="დეკორატიული კედლის პანელი"
+                                data-ru="Декоративная стеновая панель">Decorative Wall Panel</h4>
+                            <p data-en="Aesthetic exterior wall panels" data-ka="ესთეტიკური გარე კედლის პანელები"
+                               data-ru="Эстетичные наружные панели">Aesthetic exterior wall panels</p>
+                        </div>
+                    </div>
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Wall Panel 3">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Fire-Resistant Wall Panel" data-ka="ხანძარგაძლე კედლის პანელი"
+                                data-ru="Огнестойкая стеновая панель">Fire-Resistant Wall Panel</h4>
+                            <p data-en="Enhanced fire protection panels" data-ka="გაძლიერებული ხანძარდაცვის პანელები"
+                               data-ru="Панели с повышенной огнестойкостью">Enhanced fire protection panels</p>
+                        </div>
+                    </div>
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Wall Panel 4">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Acoustic Wall Panel" data-ka="აკუსტიკური კედლის პანელი"
+                                data-ru="Акустическая стеновая панель">Acoustic Wall Panel</h4>
+                            <p data-en="Sound-absorbing wall panels" data-ka="ხმის შთამნთქმელი კედლის პანელები"
+                               data-ru="Звукопоглощающие стеновые панели">Sound-absorbing wall panels</p>
+                        </div>
+                    </div>
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Wall Panel 5">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Moisture-Resistant Panel" data-ka="ტენგაძლე პანელი"
+                                data-ru="Влагостойкая панель">Moisture-Resistant Panel</h4>
+                            <p data-en="Waterproof wall panel systems" data-ka="წყალგაუმტარი კედლის პანელის სისტემები"
+                               data-ru="Водонепроницаемые панельные системы">Waterproof wall panel systems</p>
+                        </div>
+                    </div>
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Wall Panel 6">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Modular Wall Panel" data-ka="მოდულური კედლის პანელი"
+                                data-ru="Модульная стеновая панель">Modular Wall Panel</h4>
+                            <p data-en="Easy-install modular systems"
+                               data-ka="მარტივი დაინსტალირების მოდულური სისტემები"
+                               data-ru="Модульные системы легкой установки">Easy-install modular systems</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="section-divider">
+                <div class="divider-line"></div>
+                <div class="divider-icon">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+            </div>
+
+            <!-- Section 3: Cold Room Panels -->
+            <div class="product-showcase">
+                <h2 class="product-section-title" data-en="Cold Room Panels" data-ka="სამაცივრე პანელები"
+                    data-ru="Панели для холодильных камер">Cold Room Panels</h2>
+                <div class="product-images-grid">
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Cold Panel 1">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Freezer Panel" data-ka="გაყინვის პანელი" data-ru="Морозильная панель">Freezer
+                                Panel</h4>
+                            <p data-en="Ultra-insulated freezer panels" data-ka="სუპერიზოლირებული გაყინვის პანელები"
+                               data-ru="Суперизолированные морозильные панели">Ultra-insulated freezer panels</p>
+                        </div>
+                    </div>
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Cold Panel 2">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Refrigeration Panel" data-ka="მაცივრის პანელი" data-ru="Холодильная панель">
+                                Refrigeration Panel</h4>
+                            <p data-en="Temperature-controlled storage panels"
+                               data-ka="ტემპერატურაკონტროლირებადი პანელები" data-ru="Панели с контролем температуры">
+                                Temperature-controlled storage panels</p>
+                        </div>
+                    </div>
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Cold Panel 3">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Hygienic Cold Panel" data-ka="ჰიგიენური სამაცივრე პანელი"
+                                data-ru="Гигиеническая холодильная панель">Hygienic Cold Panel</h4>
+                            <p data-en="Food-grade sanitary panels" data-ka="საკვები დონის სანიტარული პანელები"
+                               data-ru="Санитарные панели пищевого класса">Food-grade sanitary panels</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="section-divider">
+                <div class="divider-line"></div>
+                <div class="divider-icon">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+            </div>
+
+            <!-- Section 4: Profiled Sheet -->
+            <div class="product-showcase">
+                <h2 class="product-section-title" data-en="Profiled Sheet" data-ka="პროფნასტილი" data-ru="Профнастил">
+                    Profiled Sheet</h2>
+                <div class="product-images-grid">
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Profiled Sheet 1">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Corrugated Sheet" data-ka="ნაკეცი ფურცელი" data-ru="Гофрированный лист">
+                                Corrugated Sheet</h4>
+                            <p data-en="High-strength corrugated profiles" data-ka="მაღალი სიმტკიცის ნაკეცი პროფილები"
+                               data-ru="Высокопрочные гофрированные профили">High-strength corrugated profiles</p>
+                        </div>
+                    </div>
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Profiled Sheet 2">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Roofing Profiled Sheet" data-ka="სახურავის პროფილირებული ფურცელი"
+                                data-ru="Кровельный профилированный лист">Roofing Profiled Sheet</h4>
+                            <p data-en="Durable roofing sheet solutions" data-ka="გამძლე სახურავის გადაწყვეტილებები"
+                               data-ru="Прочные кровельные решения">Durable roofing sheet solutions</p>
+                        </div>
+                    </div>
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Profiled Sheet 3">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Wall Cladding Sheet" data-ka="კედლის საფარი ფურცელი"
+                                data-ru="Стеновой облицовочный лист">Wall Cladding Sheet</h4>
+                            <p data-en="Protective wall cladding systems" data-ka="დამცავი კედლის საფარის სისტემები"
+                               data-ru="Защитные облицовочные системы">Protective wall cladding systems</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="section-divider">
+                <div class="divider-line"></div>
+                <div class="divider-icon">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+            </div>
+
+            <!-- Section 5: Accessories -->
+            <div class="product-showcase">
+                <h2 class="product-section-title"
+                    data-en="Accessories"
+                    data-ka="აქსესუარები"
+                    data-ru="Аксессуары">
+                    Accessories
+                </h2>
+
+                <div class="product-images-grid">
+
+                    <!-- 1 -->
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Accessory 1">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Fasteners" data-ka="სამაგრები" data-ru="Крепежи">Fasteners</h4>
+                            <p data-en="High quality fastening elements"
+                               data-ka="მაღალი ხარისხის სამაგრი ელემენტები"
+                               data-ru="Крепежные элементы высокого качества">
+                                High quality fastening elements
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 2 -->
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Accessory 2">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Sealants" data-ka="ჰერმეტიკები" data-ru="Герметики">Sealants</h4>
+                            <p data-en="Weather resistant sealing solutions"
+                               data-ka="ამინდგამძლე ჰერმეტიზაცია"
+                               data-ru="Атмосферостойкие герметики">
+                                Weather resistant sealing solutions
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 3 -->
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Accessory 3">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Corner Profiles" data-ka="კუთხის პროფილები" data-ru="Угловые профили">Corner
+                                Profiles</h4>
+                            <p data-en="Protective corner elements"
+                               data-ka="დამცავი კუთხის ელემენტები"
+                               data-ru="Защитные угловые элементы">
+                                Protective corner elements
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 4 -->
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Accessory 4">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Flashings" data-ka="ფლეშინგები" data-ru="Фартуки">Flashings</h4>
+                            <p data-en="Roof and wall protection flashings"
+                               data-ka="სახურავისა და კედლის დამცავი ფლეშინგები"
+                               data-ru="Защитные элементы кровли и стен">
+                                Roof and wall protection flashings
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 5 -->
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Accessory 5">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Gaskets" data-ka="შუალედები" data-ru="Прокладки">Gaskets</h4>
+                            <p data-en="Thermal insulation gaskets"
+                               data-ka="თერმული იზოლაციის შუალედები"
+                               data-ru="Теплоизоляционные прокладки">
+                                Thermal insulation gaskets
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 6 -->
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Accessory 6">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Mounting Rails" data-ka="სამონტაჟო რელსები" data-ru="Монтажные рейки">Mounting
+                                Rails</h4>
+                            <p data-en="Easy installation mounting rails"
+                               data-ka="მარტივი მონტაჟის რელსები"
+                               data-ru="Рейки для легкого монтажа">
+                                Easy installation mounting rails
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Accessory 7">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Mounting Rails" data-ka="სამონტაჟო რელსები" data-ru="Монтажные рейки">Mounting
+                                Rails</h4>
+                            <p data-en="Easy installation mounting rails"
+                               data-ka="მარტივი მონტაჟის რელსები"
+                               data-ru="Рейки для легкого монтажа">
+                                Easy installation mounting rails
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Accessory 8">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Mounting Rails" data-ka="სამონტაჟო რელსები" data-ru="Монтажные рейки">Mounting
+                                Rails</h4>
+                            <p data-en="Easy installation mounting rails"
+                               data-ka="მარტივი მონტაჟის რელსები"
+                               data-ru="Рейки для легкого монтажа">
+                                Easy installation mounting rails
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Accessory 9">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Mounting Rails" data-ka="სამონტაჟო რელსები" data-ru="Монтажные рейки">Mounting
+                                Rails</h4>
+                            <p data-en="Easy installation mounting rails"
+                               data-ka="მარტივი მონტაჟის რელსები"
+                               data-ru="Рейки для легкого монтажа">
+                                Easy installation mounting rails
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Accessory 10">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Mounting Rails" data-ka="სამონტაჟო რელსები" data-ru="Монтажные рейки">Mounting
+                                Rails</h4>
+                            <p data-en="Easy installation mounting rails"
+                               data-ka="მარტივი მონტაჟის რელსები"
+                               data-ru="Рейки для легкого монтажа">
+                                Easy installation mounting rails
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Accessory 11">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Mounting Rails" data-ka="სამონტაჟო რელსები" data-ru="Монтажные рейки">Mounting
+                                Rails</h4>
+                            <p data-en="Easy installation mounting rails"
+                               data-ka="მარტივი მონტაჟის რელსები"
+                               data-ru="Рейки для легкого монтажа">
+                                Easy installation mounting rails
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Accessory 12">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Mounting Rails" data-ka="სამონტაჟო რელსები" data-ru="Монтажные рейки">Mounting
+                                Rails</h4>
+                            <p data-en="Easy installation mounting rails"
+                               data-ka="მარტივი მონტაჟის რელსები"
+                               data-ru="Рейки для легкого монтажа">
+                                Easy installation mounting rails
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <!-- Horizontal Product Tabs -->
-        <div class="product-tabs">
-            <div class="product-tab" data-product="metal" data-en="Metal" data-ka="ლითონი" data-ru="Металл">
-                <i class="fas fa-cube"></i>
-                <span>Metal</span>
-            </div>
-            <div class="product-tab" data-product="panel" data-en="Sandwich Panel" data-ka="სენდვიჩ პანელი" data-ru="Сэндвич-панели">
-                <i class="fas fa-layer-group"></i>
-                <span>Sandwich Panel</span>
-            </div>
-            <div class="product-tab" data-product="accessories" data-en="Facade Accessories & Mechanisms" data-ka="საფასადე აქსესუარები და დამხმარე მექანიზმები" data-ru="Фасадные аксессуары и механизмы">
-                <i class="fas fa-shield-alt"></i>
-                <span>Facade Accessories & Mechanisms</span>
-            </div>
-        </div>
-
-        <!-- Product Content -->
-        <div class="product-content-wrapper">
-            <!-- METAL PRODUCT -->
-            <div class="product-content" data-product="metal">
-                <!-- Section 1 -->
-                <div class="product-showcase">
-                    <h2 class="product-section-title" data-en="Metal Structures" data-ka="ლითონის კონსტრუქციები" data-ru="Металлические конструкции">Metal Structures</h2>
-                    <div class="product-images-grid">
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Metal Beam">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Steel Beams" data-ka="ფოლადის ძელები" data-ru="Стальные балки">Steel Beams</h4>
-                                <p data-en="High-strength structural beams" data-ka="მაღალი სიმტკიცის კონსტრუქციული ძელები" data-ru="Высокопрочные конструкционные балки">High-strength structural beams</p>
-                            </div>
-                        </div>
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Metal Column">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Metal Columns" data-ka="ლითონის სვეტები" data-ru="Металлические колонны">Metal Columns</h4>
-                                <p data-en="Durable load-bearing columns" data-ka="გამძლე ატვირთვის მატარებელი სვეტები" data-ru="Прочные несущие колонны">Durable load-bearing columns</p>
-                            </div>
-                        </div>
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Metal Frame">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Steel Frames" data-ka="ფოლადის ჩარჩოები" data-ru="Стальные каркасы">Steel Frames</h4>
-                                <p data-en="Custom-designed metal frameworks" data-ka="ინდივიდუალურად დიზაინირებული ჩარჩოები" data-ru="Индивидуально разработанные каркасы">Custom-designed metal frameworks</p>
-                            </div>
-                        </div>
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Metal Truss">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Metal Trusses" data-ka="ლითონის ფერმები" data-ru="Металлические фермы">Metal Trusses</h4>
-                                <p data-en="Lightweight and strong roof trusses" data-ka="მსუბუქი და ძლიერი სახურავის ფერმები" data-ru="Легкие и прочные кровельные фермы">Lightweight and strong roof trusses</p>
-                            </div>
-                        </div>
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Metal Girder">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Metal Girders" data-ka="ლითონის გირდერები" data-ru="Металлические балки">Metal Girders</h4>
-                                <p data-en="Heavy-duty support girders" data-ka="მძიმე სიმძიმის გირდერები" data-ru="Сверхпрочные опорные балки">Heavy-duty support girders</p>
-                            </div>
-                        </div>
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Metal Purlin">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Metal Purlins" data-ka="ლითონის პურლინები" data-ru="Металлические прогоны">Metal Purlins</h4>
-                                <p data-en="Roof support structural elements" data-ka="სახურავის მხარდაჭერის კონსტრუქციული ელემენტები" data-ru="Элементы кровельной конструкции">Roof support structural elements</p>
-                            </div>
+        <!-- ACCESSORIES PRODUCT -->
+        <div class="product-content" data-product="accessories">
+            <!-- Section 1: Facade Accessories -->
+            <div class="product-showcase">
+                <h2 class="product-section-title" data-en="Facade Accessories" data-ka="საფასადე აქსესუარები"
+                    data-ru="Фасадные аксессуары">Facade Accessories</h2>
+                <div class="product-images-grid">
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Facade Accessory 1">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Facade Trim" data-ka="საფასადე მორთულობა" data-ru="Фасадная отделка">Facade
+                                Trim</h4>
+                            <p data-en="Decorative facade finishing elements"
+                               data-ka="დეკორატიული საფასადე დამამთავრებელი ელემენტები"
+                               data-ru="Декоративные элементы фасадной отделки">Decorative facade finishing elements</p>
                         </div>
                     </div>
-                </div>
-
-                <!-- Divider -->
-                <div class="section-divider">
-                    <div class="divider-line"></div>
-                    <div class="divider-icon">
-                        <i class="fas fa-arrow-down"></i>
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Facade Accessory 2">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Corner Profiles" data-ka="კუთხის პროფილები" data-ru="Угловые профили">Corner
+                                Profiles</h4>
+                            <p data-en="Protective corner trim profiles" data-ka="დამცავი კუთხის პროფილები"
+                               data-ru="Защитные угловые профили">Protective corner trim profiles</p>
+                        </div>
                     </div>
-                </div>
-
-                <!-- Section 2 -->
-                <div class="product-showcase">
-                    <h2 class="product-section-title" data-en="Metal Components" data-ka="ლითონის კომპონენტები" data-ru="Металлические компоненты">Metal Components</h2>
-                    <div class="product-images-grid">
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Metal Bracket">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Steel Brackets" data-ka="ფოლადის ბრეკეტები" data-ru="Стальные кронштейны">Steel Brackets</h4>
-                                <p data-en="Reinforced connection brackets" data-ka="გამაგრებული დამაკავშირებელი ბრეკეტები" data-ru="Усиленные соединительные кронштейны">Reinforced connection brackets</p>
-                            </div>
-                        </div>
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Metal Plate">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Metal Plates" data-ka="ლითონის ფირფიტები" data-ru="Металлические плиты">Metal Plates</h4>
-                                <p data-en="High-quality steel plates" data-ka="მაღალი ხარისხის ფოლადის ფირფიტები" data-ru="Высококачественные стальные плиты">High-quality steel plates</p>
-                            </div>
-                        </div>
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Metal Anchor">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Metal Anchors" data-ka="ლითონის ანკერები" data-ru="Металлические анкеры">Metal Anchors</h4>
-                                <p data-en="Secure foundation anchoring systems" data-ka="უსაფრთხო ფუნდამენტის ანკერის სისტემები" data-ru="Надежные системы анкеровки">Secure foundation anchoring systems</p>
-                            </div>
-                        </div>
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Metal Fastener">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Metal Fasteners" data-ka="ლითონის დამაკავშირებლები" data-ru="Металлические крепежи">Metal Fasteners</h4>
-                                <p data-en="Industrial-grade fastening solutions" data-ka="ინდუსტრიული დონის დამაკავშირებელი გადაწყვეტილებები" data-ru="Промышленные крепежные решения">Industrial-grade fastening solutions</p>
-                            </div>
-                        </div>
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Metal Joint">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Metal Joints" data-ka="ლითონის სახსრები" data-ru="Металлические соединения">Metal Joints</h4>
-                                <p data-en="Precision-engineered connection joints" data-ka="პრეციზიულად დამუშავებული სახსრები" data-ru="Прецизионные соединительные узлы">Precision-engineered connection joints</p>
-                            </div>
-                        </div>
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Metal Deck">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Metal Decking" data-ka="ლითონის დეკინგი" data-ru="Металлический настил">Metal Decking</h4>
-                                <p data-en="Durable floor and roof decking" data-ka="გამძლე იატაკისა და სახურავის დეკინგი" data-ru="Прочный напольный и кровельный настил">Durable floor and roof decking</p>
-                            </div>
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Facade Accessory 3">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Drip Edges" data-ka="წვეთსაწინააღმდეგო კიდეები" data-ru="Капельники">Drip
+                                Edges</h4>
+                            <p data-en="Water drainage edge systems" data-ka="წყლის დრენაჟის სისტემები"
+                               data-ru="Системы водоотвода">Water drainage edge systems</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- SANDWICH PANEL PRODUCT -->
-            <div class="product-content" data-product="panel">
-                <!-- Section 1: Roof Panels -->
-                <div class="product-showcase">
-                    <h2 class="product-section-title" data-en="Roof Panels" data-ka="სახურავის პანელები" data-ru="Кровельные панели">Roof Panels</h2>
-                    <div class="product-images-grid">
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Roof Panel 1">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Insulated Roof Panel" data-ka="იზოლირებული სახურავის პანელი" data-ru="Изолированная кровельная панель">Insulated Roof Panel</h4>
-                                <p data-en="High thermal efficiency roof panels" data-ka="მაღალი თერმული ეფექტურობის პანელები" data-ru="Панели с высокой теплоизоляцией">High thermal efficiency roof panels</p>
-                            </div>
-                        </div>
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Roof Panel 2">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Metal Roof Panel" data-ka="ლითონის სახურავის პანელი" data-ru="Металлическая кровельная панель">Metal Roof Panel</h4>
-                                <p data-en="Durable weather-resistant panels" data-ka="გამძლე ამინდგაძლე პანელები" data-ru="Прочные атмосферостойкие панели">Durable weather-resistant panels</p>
-                            </div>
-                        </div>
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Roof Panel 3">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Composite Roof Panel" data-ka="კომპოზიტური სახურავის პანელი" data-ru="Композитная кровельная панель">Composite Roof Panel</h4>
-                                <p data-en="Lightweight composite construction" data-ka="მსუბუქი კომპოზიტური კონსტრუქცია" data-ru="Легкая композитная конструкция">Lightweight composite construction</p>
-                            </div>
+            <!-- Divider -->
+            <div class="section-divider">
+                <div class="divider-line"></div>
+                <div class="divider-icon">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+            </div>
+
+            <!-- Section 2: Cold Room & External Doors -->
+            <div class="product-showcase">
+                <h2 class="product-section-title" data-en="Cold Room & External Doors"
+                    data-ka="სამაცივრე და გარე კარები" data-ru="Холодильные и наружные двери">Cold Room & External
+                    Doors</h2>
+                <div class="product-images-grid">
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Door 1">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Insulated Cold Door" data-ka="იზოლირებული სამაცივრე კარი"
+                                data-ru="Изолированная холодильная дверь">Insulated Cold Door</h4>
+                            <p data-en="Heavy-duty refrigeration doors" data-ka="მძიმე დატვირთვის სამაცივრე კარები"
+                               data-ru="Промышленные холодильные двери">Heavy-duty refrigeration doors</p>
                         </div>
                     </div>
-                </div>
-
-                <!-- Divider -->
-                <div class="section-divider">
-                    <div class="divider-line"></div>
-                    <div class="divider-icon">
-                        <i class="fas fa-arrow-down"></i>
-                    </div>
-                </div>
-
-                <!-- Section 2: Wall Panels -->
-                <div class="product-showcase">
-                    <h2 class="product-section-title" data-en="Wall Panels" data-ka="კედლის პანელები" data-ru="Стеновые панели">Wall Panels</h2>
-                    <div class="product-images-grid">
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Wall Panel 1">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Insulated Wall Panel" data-ka="იზოლირებული კედლის პანელი" data-ru="Изолированная стеновая панель">Insulated Wall Panel</h4>
-                                <p data-en="Energy-efficient wall solutions" data-ka="ენერგოეფექტური კედლის გადაწყვეტილებები" data-ru="Энергоэффективные стеновые решения">Energy-efficient wall solutions</p>
-                            </div>
-                        </div>
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Wall Panel 2">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Decorative Wall Panel" data-ka="დეკორატიული კედლის პანელი" data-ru="Декоративная стеновая панель">Decorative Wall Panel</h4>
-                                <p data-en="Aesthetic exterior wall panels" data-ka="ესთეტიკური გარე კედლის პანელები" data-ru="Эстетичные наружные панели">Aesthetic exterior wall panels</p>
-                            </div>
-                        </div>
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Wall Panel 3">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Fire-Resistant Wall Panel" data-ka="ხანძარგაძლე კედლის პანელი" data-ru="Огнестойкая стеновая панель">Fire-Resistant Wall Panel</h4>
-                                <p data-en="Enhanced fire protection panels" data-ka="გაძლიერებული ხანძარდაცვის პანელები" data-ru="Панели с повышенной огнестойкостью">Enhanced fire protection panels</p>
-                            </div>
-                        </div>
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Wall Panel 4">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Acoustic Wall Panel" data-ka="აკუსტიკური კედლის პანელი" data-ru="Акустическая стеновая панель">Acoustic Wall Panel</h4>
-                                <p data-en="Sound-absorbing wall panels" data-ka="ხმის შთამნთქმელი კედლის პანელები" data-ru="Звукопоглощающие стеновые панели">Sound-absorbing wall panels</p>
-                            </div>
-                        </div>
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Wall Panel 5">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Moisture-Resistant Panel" data-ka="ტენგაძლე პანელი" data-ru="Влагостойкая панель">Moisture-Resistant Panel</h4>
-                                <p data-en="Waterproof wall panel systems" data-ka="წყალგაუმტარი კედლის პანელის სისტემები" data-ru="Водонепроницаемые панельные системы">Waterproof wall panel systems</p>
-                            </div>
-                        </div>
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Wall Panel 6">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Modular Wall Panel" data-ka="მოდულური კედლის პანელი" data-ru="Модульная стеновая панель">Modular Wall Panel</h4>
-                                <p data-en="Easy-install modular systems" data-ka="მარტივი დაინსტალირების მოდულური სისტემები" data-ru="Модульные системы легкой установки">Easy-install modular systems</p>
-                            </div>
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Door 2">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Sliding Cold Door" data-ka="გადასაწევი სამაცივრე კარი"
+                                data-ru="Раздвижная холодильная дверь">Sliding Cold Door</h4>
+                            <p data-en="Space-saving sliding door systems"
+                               data-ka="სივრცის დამზოგველი გადასაწევი კარები"
+                               data-ru="Раздвижные двери экономящие пространство">Space-saving sliding door systems</p>
                         </div>
                     </div>
-                </div>
-
-                <!-- Divider -->
-                <div class="section-divider">
-                    <div class="divider-line"></div>
-                    <div class="divider-icon">
-                        <i class="fas fa-arrow-down"></i>
-                    </div>
-                </div>
-
-                <!-- Section 3: Cold Room Panels -->
-                <div class="product-showcase">
-                    <h2 class="product-section-title" data-en="Cold Room Panels" data-ka="სამაცივრე პანელები" data-ru="Панели для холодильных камер">Cold Room Panels</h2>
-                    <div class="product-images-grid">
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Cold Panel 1">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Freezer Panel" data-ka="გაყინვის პანელი" data-ru="Морозильная панель">Freezer Panel</h4>
-                                <p data-en="Ultra-insulated freezer panels" data-ka="სუპერიზოლირებული გაყინვის პანელები" data-ru="Суперизолированные морозильные панели">Ultra-insulated freezer panels</p>
-                            </div>
-                        </div>
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Cold Panel 2">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Refrigeration Panel" data-ka="მაცივრის პანელი" data-ru="Холодильная панель">Refrigeration Panel</h4>
-                                <p data-en="Temperature-controlled storage panels" data-ka="ტემპერატურაკონტროლირებადი პანელები" data-ru="Панели с контролем температуры">Temperature-controlled storage panels</p>
-                            </div>
-                        </div>
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Cold Panel 3">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Hygienic Cold Panel" data-ka="ჰიგიენური სამაცივრე პანელი" data-ru="Гигиеническая холодильная панель">Hygienic Cold Panel</h4>
-                                <p data-en="Food-grade sanitary panels" data-ka="საკვები დონის სანიტარული პანელები" data-ru="Санитарные панели пищевого класса">Food-grade sanitary panels</p>
-                            </div>
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Door 3">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Hinged Cold Door" data-ka="ჩამოკიდებული სამაცივრე კარი"
+                                data-ru="Распашная холодильная дверь">Hinged Cold Door</h4>
+                            <p data-en="Traditional hinged door designs"
+                               data-ka="ტრადიციული ჩამოკიდებული კარების დიზაინი" data-ru="Традиционные распашные двери">
+                                Traditional hinged door designs</p>
                         </div>
                     </div>
-                </div>
-
-                <!-- Divider -->
-                <div class="section-divider">
-                    <div class="divider-line"></div>
-                    <div class="divider-icon">
-                        <i class="fas fa-arrow-down"></i>
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Door 4">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Industrial Door" data-ka="ინდუსტრიული კარი" data-ru="Промышленная дверь">
+                                Industrial Door</h4>
+                            <p data-en="Heavy-duty industrial entrance doors"
+                               data-ka="მძიმე დატვირთვის ინდუსტრიული კარები" data-ru="Промышленные входные двери">
+                                Heavy-duty industrial entrance doors</p>
+                        </div>
                     </div>
-                </div>
-
-                <!-- Section 4: Profiled Sheet -->
-                <div class="product-showcase">
-                    <h2 class="product-section-title" data-en="Profiled Sheet" data-ka="პროფნასტილი" data-ru="Профнастил">Profiled Sheet</h2>
-                    <div class="product-images-grid">
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Profiled Sheet 1">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Corrugated Sheet" data-ka="ნაკეცი ფურცელი" data-ru="Гофрированный лист">Corrugated Sheet</h4>
-                                <p data-en="High-strength corrugated profiles" data-ka="მაღალი სიმტკიცის ნაკეცი პროფილები" data-ru="Высокопрочные гофрированные профили">High-strength corrugated profiles</p>
-                            </div>
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Door 5">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Fire-Rated Door" data-ka="ხანძარგაძლე კარი" data-ru="Огнестойкая дверь">
+                                Fire-Rated Door</h4>
+                            <p data-en="Fire-resistant safety doors" data-ka="ხანძარგაძლე უსაფრთხოების კარები"
+                               data-ru="Огнестойкие противопожарные двери">Fire-resistant safety doors</p>
                         </div>
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Profiled Sheet 2">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Roofing Profiled Sheet" data-ka="სახურავის პროფილირებული ფურცელი" data-ru="Кровельный профилированный лист">Roofing Profiled Sheet</h4>
-                                <p data-en="Durable roofing sheet solutions" data-ka="გამძლე სახურავის გადაწყვეტილებები" data-ru="Прочные кровельные решения">Durable roofing sheet solutions</p>
-                            </div>
-                        </div>
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Profiled Sheet 3">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Wall Cladding Sheet" data-ka="კედლის საფარი ფურცელი" data-ru="Стеновой облицовочный лист">Wall Cladding Sheet</h4>
-                                <p data-en="Protective wall cladding systems" data-ka="დამცავი კედლის საფარის სისტემები" data-ru="Защитные облицовочные системы">Protective wall cladding systems</p>
-                            </div>
+                    </div>
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Door 6">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Automatic Door" data-ka="ავტომატური კარი" data-ru="Автоматическая дверь">
+                                Automatic Door</h4>
+                            <p data-en="Motorized automatic door systems"
+                               data-ka="მოტორიზებული ავტომატური კარის სისტემები"
+                               data-ru="Моторизованные автоматические двери">Motorized automatic door systems</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- ACCESSORIES PRODUCT -->
-            <div class="product-content" data-product="accessories">
-                <!-- Section 1: Facade Accessories -->
-                <div class="product-showcase">
-                    <h2 class="product-section-title" data-en="Facade Accessories" data-ka="საფასადე აქსესუარები" data-ru="Фасадные аксессуары">Facade Accessories</h2>
-                    <div class="product-images-grid">
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Facade Accessory 1">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Facade Trim" data-ka="საფასადე მორთულობა" data-ru="Фасадная отделка">Facade Trim</h4>
-                                <p data-en="Decorative facade finishing elements" data-ka="დეკორატიული საფასადე დამამთავრებელი ელემენტები" data-ru="Декоративные элементы фасадной отделки">Decorative facade finishing elements</p>
-                            </div>
+            <!-- Divider -->
+            <div class="section-divider">
+                <div class="divider-line"></div>
+                <div class="divider-icon">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+            </div>
+
+            <!-- Section 3: Dock Levelers -->
+            <div class="product-showcase">
+                <h2 class="product-section-title" data-en="Dock Levelers" data-ka="დოკლეველერები"
+                    data-ru="Уравнительные платформы">Dock Levelers</h2>
+                <div class="product-images-grid">
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Dock Leveler 1">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Hydraulic Dock Leveler" data-ka="ჰიდრავლიკური დოკლეველერი"
+                                data-ru="Гидравлическая платформа">Hydraulic Dock Leveler</h4>
+                            <p data-en="Heavy-duty hydraulic loading systems"
+                               data-ka="მძიმე დატვირთვის ჰიდრავლიკური სისტემები"
+                               data-ru="Гидравлические системы погрузки">Heavy-duty hydraulic loading systems</p>
                         </div>
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Facade Accessory 2">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Corner Profiles" data-ka="კუთხის პროფილები" data-ru="Угловые профили">Corner Profiles</h4>
-                                <p data-en="Protective corner trim profiles" data-ka="დამცავი კუთხის პროფილები" data-ru="Защитные угловые профили">Protective corner trim profiles</p>
-                            </div>
+                    </div>
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Dock Leveler 2">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Mechanical Dock Leveler" data-ka="მექანიკური დოკლეველერი"
+                                data-ru="Механическая платформа">Mechanical Dock Leveler</h4>
+                            <p data-en="Reliable mechanical leveling platforms"
+                               data-ka="საიმედო მექანიკური გასწორების პლატფორმები"
+                               data-ru="Надежные механические платформы">Reliable mechanical leveling platforms</p>
                         </div>
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Facade Accessory 3">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Drip Edges" data-ka="წვეთსაწინააღმდეგო კიდეები" data-ru="Капельники">Drip Edges</h4>
-                                <p data-en="Water drainage edge systems" data-ka="წყლის დრენაჟის სისტემები" data-ru="Системы водоотвода">Water drainage edge systems</p>
-                            </div>
+                    </div>
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Dock Leveler 3">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Air-Powered Dock Leveler" data-ka="პნევმატური დოკლეველერი"
+                                data-ru="Пневматическая платформа">Air-Powered Dock Leveler</h4>
+                            <p data-en="Energy-efficient air-powered systems"
+                               data-ka="ენერგოეფექტური პნევმატური სისტემები"
+                               data-ru="Энергоэффективные пневматические системы">Energy-efficient air-powered
+                                systems</p>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Divider -->
-                <div class="section-divider">
-                    <div class="divider-line"></div>
-                    <div class="divider-icon">
-                        <i class="fas fa-arrow-down"></i>
-                    </div>
+            <!-- Divider -->
+            <div class="section-divider">
+                <div class="divider-line"></div>
+                <div class="divider-icon">
+                    <i class="fas fa-arrow-down"></i>
                 </div>
+            </div>
 
-                <!-- Section 2: Cold Room & External Doors -->
-                <div class="product-showcase">
-                    <h2 class="product-section-title" data-en="Cold Room & External Doors" data-ka="სამაცივრე და გარე კარები" data-ru="Холодильные и наружные двери">Cold Room & External Doors</h2>
-                    <div class="product-images-grid">
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Door 1">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Insulated Cold Door" data-ka="იზოლირებული სამაცივრე კარი" data-ru="Изолированная холодильная дверь">Insulated Cold Door</h4>
-                                <p data-en="Heavy-duty refrigeration doors" data-ka="მძიმე დატვირთვის სამაცივრე კარები" data-ru="Промышленные холодильные двери">Heavy-duty refrigeration doors</p>
-                            </div>
-                        </div>
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Door 2">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Sliding Cold Door" data-ka="გადასაწევი სამაცივრე კარი" data-ru="Раздвижная холодильная дверь">Sliding Cold Door</h4>
-                                <p data-en="Space-saving sliding door systems" data-ka="სივრცის დამზოგველი გადასაწევი კარები" data-ru="Раздвижные двери экономящие пространство">Space-saving sliding door systems</p>
-                            </div>
-                        </div>
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Door 3">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Hinged Cold Door" data-ka="ჩამოკიდებული სამაცივრე კარი" data-ru="Распашная холодильная дверь">Hinged Cold Door</h4>
-                                <p data-en="Traditional hinged door designs" data-ka="ტრადიციული ჩამოკიდებული კარების დიზაინი" data-ru="Традиционные распашные двери">Traditional hinged door designs</p>
-                            </div>
-                        </div>
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Door 4">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Industrial Door" data-ka="ინდუსტრიული კარი" data-ru="Промышленная дверь">Industrial Door</h4>
-                                <p data-en="Heavy-duty industrial entrance doors" data-ka="მძიმე დატვირთვის ინდუსტრიული კარები" data-ru="Промышленные входные двери">Heavy-duty industrial entrance doors</p>
-                            </div>
-                        </div>
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Door 5">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Fire-Rated Door" data-ka="ხანძარგაძლე კარი" data-ru="Огнестойкая дверь">Fire-Rated Door</h4>
-                                <p data-en="Fire-resistant safety doors" data-ka="ხანძარგაძლე უსაფრთხოების კარები" data-ru="Огнестойкие противопожарные двери">Fire-resistant safety doors</p>
-                            </div>
-                        </div>
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Door 6">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Automatic Door" data-ka="ავტომატური კარი" data-ru="Автоматическая дверь">Automatic Door</h4>
-                                <p data-en="Motorized automatic door systems" data-ka="მოტორიზებული ავტომატური კარის სისტემები" data-ru="Моторизованные автоматические двери">Motorized automatic door systems</p>
-                            </div>
+            <!-- Section 4: Overhead Crane -->
+            <div class="product-showcase">
+                <h2 class="product-section-title" data-en="Overhead Crane" data-ka="ხიდურა კრანი"
+                    data-ru="Мостовой кран">Overhead Crane</h2>
+                <div class="product-images-grid">
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Crane 1">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Single Girder Crane" data-ka="ერთბალკიანი კრანი" data-ru="Однобалочный кран">
+                                Single Girder Crane</h4>
+                            <p data-en="Compact single-beam overhead crane"
+                               data-ka="კომპაქტური ერთბალკიანი ხიდურა კრანი" data-ru="Компактный однобалочный кран">
+                                Compact single-beam overhead crane</p>
                         </div>
                     </div>
-                </div>
-
-                <!-- Divider -->
-                <div class="section-divider">
-                    <div class="divider-line"></div>
-                    <div class="divider-icon">
-                        <i class="fas fa-arrow-down"></i>
-                    </div>
-                </div>
-
-                <!-- Section 3: Dock Levelers -->
-                <div class="product-showcase">
-                    <h2 class="product-section-title" data-en="Dock Levelers" data-ka="დოკლეველერები" data-ru="Уравнительные платформы">Dock Levelers</h2>
-                    <div class="product-images-grid">
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Dock Leveler 1">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Hydraulic Dock Leveler" data-ka="ჰიდრავლიკური დოკლეველერი" data-ru="Гидравлическая платформа">Hydraulic Dock Leveler</h4>
-                                <p data-en="Heavy-duty hydraulic loading systems" data-ka="მძიმე დატვირთვის ჰიდრავლიკური სისტემები" data-ru="Гидравлические системы погрузки">Heavy-duty hydraulic loading systems</p>
-                            </div>
-                        </div>
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Dock Leveler 2">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Mechanical Dock Leveler" data-ka="მექანიკური დოკლეველერი" data-ru="Механическая платформа">Mechanical Dock Leveler</h4>
-                                <p data-en="Reliable mechanical leveling platforms" data-ka="საიმედო მექანიკური გასწორების პლატფორმები" data-ru="Надежные механические платформы">Reliable mechanical leveling platforms</p>
-                            </div>
-                        </div>
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Dock Leveler 3">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Air-Powered Dock Leveler" data-ka="პნევმატური დოკლეველერი" data-ru="Пневматическая платформа">Air-Powered Dock Leveler</h4>
-                                <p data-en="Energy-efficient air-powered systems" data-ka="ენერგოეფექტური პნევმატური სისტემები" data-ru="Энергоэффективные пневматические системы">Energy-efficient air-powered systems</p>
-                            </div>
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Crane 2">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Double Girder Crane" data-ka="ორბალკიანი კრანი" data-ru="Двухбалочный кран">
+                                Double Girder Crane</h4>
+                            <p data-en="Heavy-duty double-beam crane systems"
+                               data-ka="მძიმე დატვირთვის ორბალკიანი კრანი"
+                               data-ru="Двухбалочный кран большой грузоподъемности">Heavy-duty double-beam crane
+                                systems</p>
                         </div>
                     </div>
-                </div>
-
-                <!-- Divider -->
-                <div class="section-divider">
-                    <div class="divider-line"></div>
-                    <div class="divider-icon">
-                        <i class="fas fa-arrow-down"></i>
-                    </div>
-                </div>
-
-                <!-- Section 4: Overhead Crane -->
-                <div class="product-showcase">
-                    <h2 class="product-section-title" data-en="Overhead Crane" data-ka="ხიდურა კრანი" data-ru="Мостовой кран">Overhead Crane</h2>
-                    <div class="product-images-grid">
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Crane 1">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Single Girder Crane" data-ka="ერთბალკიანი კრანი" data-ru="Однобалочный кран">Single Girder Crane</h4>
-                                <p data-en="Compact single-beam overhead crane" data-ka="კომპაქტური ერთბალკიანი ხიდურა კრანი" data-ru="Компактный однобалочный кран">Compact single-beam overhead crane</p>
-                            </div>
-                        </div>
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Crane 2">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Double Girder Crane" data-ka="ორბალკიანი კრანი" data-ru="Двухбалочный кран">Double Girder Crane</h4>
-                                <p data-en="Heavy-duty double-beam crane systems" data-ka="მძიმე დატვირთვის ორბალკიანი კრანი" data-ru="Двухбалочный кран большой грузоподъемности">Heavy-duty double-beam crane systems</p>
-                            </div>
-                        </div>
-                        <div class="product-image-item">
-                            <img src="images/constr2.jpg" alt="Crane 3">
-                            <div class="product-image-overlay">
-                                <h4 data-en="Electric Hoist Crane" data-ka="ელექტრო სამაწევარო კრანი" data-ru="Электрический подъемный кран">Electric Hoist Crane</h4>
-                                <p data-en="Motorized electric lifting solutions" data-ka="მოტორიზებული ელექტრო ამწევი გადაწყვეტილებები" data-ru="Моторизованные подъемные системы">Motorized electric lifting solutions</p>
-                            </div>
+                    <div class="product-image-item">
+                        <img src="images/constr2.jpg" alt="Crane 3">
+                        <div class="product-image-overlay">
+                            <h4 data-en="Electric Hoist Crane" data-ka="ელექტრო სამაწევარო კრანი"
+                                data-ru="Электрический подъемный кран">Electric Hoist Crane</h4>
+                            <p data-en="Motorized electric lifting solutions"
+                               data-ka="მოტორიზებული ელექტრო ამწევი გადაწყვეტილებები"
+                               data-ru="Моторизованные подъемные системы">Motorized electric lifting solutions</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <span class="logo-text">Moduli</span>
-                    <span class="logo-subtitle">Corporation</span>
-                </div>
-                <nav class="footer-nav">
-                    <ul>
-                        <li><a href="prepared.html" data-en="Prepared Projects" data-ka="მზა პროექტები" data-ru="Подготовленные проекты">Prepared Projects</a></li>
-                        <li><a href="product.html" data-en="Product" data-ka="პროდუქტი" data-ru="Продукт">Product</a></li>
-                        <li><a href="services.html" data-en="Services" data-ka="სერვისები" data-ru="Услуги">Services</a></li>
-                        <li><a href="projects.html" data-en="Gallery" data-ka="გალერეა" data-ru="Галерея">Gallery</a></li>
-                        <li><a href="about.html" data-en="About Us" data-ka="ჩვენს შესახებ" data-ru="О нас">About Us</a></li>
-                        <li><a href="index.html#contact" data-en="Contact" data-ka="კონტაქტი" data-ru="Контакт">Contact</a></li>
-                    </ul>
-                </nav>
-                <div class="social-links">
-                    <a href="#" class="social-link facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-link linkedin"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="social-link youtube"><i class="fab fa-youtube"></i></a>
-                    <a href="#" class="social-link instagram"><i class="fab fa-instagram"></i></a>
-                </div>
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="logo-text">Moduli</span>
+                <span class="logo-subtitle">Corporation</span>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 <span data-en="All Rights Reserved" data-ka="ყველა უფლება დაცულია" data-ru="Все права защищены">All Rights Reserved</span> © <span data-en="Designed By" data-ka="დიზაინი" data-ru="Разработано">Designed By</span> <a href="index.html">Moduli</a></p>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="prepared.html" data-en="Prepared Projects" data-ka="მზა პროექტები"
+                           data-ru="Подготовленные проекты">Prepared Projects</a></li>
+                    <li><a href="product.html" data-en="Product" data-ka="პროდუქტი" data-ru="Продукт">Product</a></li>
+                    <li><a href="services.html" data-en="Services" data-ka="სერვისები" data-ru="Услуги">Services</a>
+                    </li>
+                    <li><a href="projects.html" data-en="Gallery" data-ka="გალერეა" data-ru="Галерея">Gallery</a></li>
+                    <li><a href="about.html" data-en="About Us" data-ka="ჩვენს შესახებ" data-ru="О нас">About Us</a>
+                    </li>
+                    <li><a href="index.html#contact" data-en="Contact" data-ka="კონტაქტი" data-ru="Контакт">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="social-links">
+                <a href="#" class="social-link facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link linkedin"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-link youtube"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="social-link instagram"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
-    </footer>
+        <div class="footer-bottom">
+            <p>&copy; 2026 <span data-en="All Rights Reserved" data-ka="ყველა უფლება დაცულია"
+                                 data-ru="Все права защищены">All Rights Reserved</span> © <span data-en="Designed By"
+                                                                                                 data-ka="დიზაინი"
+                                                                                                 data-ru="Разработано">Designed By</span>
+                <a href="index.html">Moduli</a></p>
+        </div>
+    </div>
+</footer>
 
-    <script src="scripts/main.js"></script>
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
+<script src="scripts/main.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
         const productTabs = document.querySelectorAll('.product-tab');
         const productContents = document.querySelectorAll('.product-content');
 
         productTabs.forEach(tab => {
-            tab.addEventListener('click', function() {
+            tab.addEventListener('click', function () {
                 const targetProduct = this.getAttribute('data-product');
 
                 productTabs.forEach(t => t.classList.remove('active'));
@@ -824,6 +1134,6 @@
             productTabs[0].click();
         }
     });
-    </script>
+</script>
 </body>
 </html>
