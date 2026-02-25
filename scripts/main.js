@@ -855,3 +855,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+<!-- YouTube Video Autoplay on Scroll Script -->
+
+// YouTube Video Autoplay on Scroll
+document.addEventListener('DOMContentLoaded', function () {
+    const videoWrapper = document.getElementById('videoWrapper');
+    const youtubeIframe = document.getElementById('youtubeVideo');
+
+    // Function to check if element is in viewport
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.bottom >= 0
+        );
+    }
+
+    // Function to play video when in viewport
+    function checkAndPlayVideo() {
+        if (isInViewport(videoWrapper)) {
+            // Send play command to YouTube iframe
+            youtubeIframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+            window.removeEventListener('scroll', checkAndPlayVideo);
+        }
+    }
+
+    // Listen for scroll events
+    window.addEventListener('scroll', checkAndPlayVideo);
+
+    // Also check on initial load
+    checkAndPlayVideo();
+});
