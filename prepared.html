@@ -918,6 +918,112 @@
                 padding: 8px 15px;
             }
         }
+
+
+        /* Mobile Responsive for Refrigerator and Non-Standart Grids */
+        @media (max-width: 768px) {
+            /* Refrigerator grid - 1 card per row on mobile */
+            .project-detail[data-project="custom-1"] .non-standart-grid,
+            .project-detail[data-project="custom-2"] .non-standart-grid {
+                grid-template-columns: 1fr !important;
+                gap: 20px;
+            }
+
+            /* Make cards slightly smaller on mobile but still visible */
+            .project-detail[data-project="custom-1"] .non-standart-card,
+            .project-detail[data-project="custom-2"] .non-standart-card {
+                height: 280px;
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            /* Adjust overlay text for mobile */
+            .project-detail[data-project="custom-1"] .non-standart-overlay h3,
+            .project-detail[data-project="custom-2"] .non-standart-overlay h3 {
+                font-size: 18px;
+            }
+
+            .project-detail[data-project="custom-1"] .non-standart-overlay p,
+            .project-detail[data-project="custom-2"] .non-standart-overlay p {
+                font-size: 13px;
+            }
+
+            /* Modal adjustments for mobile */
+            .ns-modal-content {
+                flex-direction: column;
+            }
+
+            .ns-modal-gallery {
+                padding: 15px;
+            }
+
+            .ns-modal-info {
+                width: 100%;
+                max-height: 250px;
+                padding: 15px;
+            }
+
+            .ns-main-image-container {
+                height: 200px;
+            }
+
+            .ns-thumbnail {
+                width: 60px;
+                height: 60px;
+            }
+
+            /* Title and description adjustments */
+            .non-standart-title {
+                font-size: 24px;
+                margin-bottom: 15px;
+            }
+
+            .non-standart-description {
+                font-size: 14px;
+                margin-bottom: 30px;
+                padding: 0 15px;
+            }
+        }
+
+        /* Even smaller screens */
+        @media (max-width: 480px) {
+            .project-detail[data-project="custom-1"] .non-standart-card,
+            .project-detail[data-project="custom-2"] .non-standart-card {
+                height: 250px;
+            }
+
+            .ns-main-image-container {
+                height: 180px;
+            }
+
+            .ns-thumbnail {
+                width: 50px;
+                height: 50px;
+            }
+
+            .non-standart-title {
+                font-size: 22px;
+            }
+        }
+
+        /* Ensure desktop version stays with 3 cards */
+        @media (min-width: 769px) {
+            .project-detail[data-project="custom-1"] .non-standart-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+            }
+
+            .project-detail[data-project="custom-2"] .non-standart-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+            }
+        }
+
+        /* Tablet version (2 cards) */
+        @media (min-width: 769px) and (max-width: 992px) {
+            .project-detail[data-project="custom-1"] .non-standart-grid,
+            .project-detail[data-project="custom-2"] .non-standart-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
     </style>
 </head>
 <body>
